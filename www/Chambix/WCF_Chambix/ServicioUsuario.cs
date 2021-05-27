@@ -45,7 +45,7 @@ namespace WCF_Chambix
             }
         }
 
-        public Boolean UpdatePost(UserBE objUserBE)
+        public Boolean UpdateUser(UserBE objUserBE)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
@@ -80,7 +80,7 @@ namespace WCF_Chambix
             }
         }
 
-        public Boolean LogicDeletePost(UserBE objUserBE)
+        public Boolean LogicDeleteUser(UserBE objUserBE)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try

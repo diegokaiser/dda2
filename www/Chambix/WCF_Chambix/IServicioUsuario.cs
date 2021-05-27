@@ -18,7 +18,7 @@ namespace WCF_Chambix
         Boolean UpdateUser(UserBE objUserBE);
 
         [OperationContract]
-        Boolean LogicDeleteUser(PostBE objPostBE);
+        Boolean LogicDeleteUser(UserBE objUserBE);
 
         [OperationContract]
         UserBE GetUser(Int16 idUser);
