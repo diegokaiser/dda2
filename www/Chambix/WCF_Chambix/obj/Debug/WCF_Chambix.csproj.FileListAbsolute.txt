@@ -10,3 +10,15 @@ C:\Users\kerwin\Desktop\Desarrollo de aplicaciones 2\dda2\www\Chambix\WCF_Chambi
 C:\Users\kerwin\Desktop\Desarrollo de aplicaciones 2\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.CopyComplete
 C:\Users\kerwin\Desktop\Desarrollo de aplicaciones 2\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.dll
 C:\Users\kerwin\Desktop\Desarrollo de aplicaciones 2\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.pdb
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\bin\Debug\WCF_Chambix.dll.config
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\bin\Debug\WCF_Chambix.dll
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\bin\Debug\WCF_Chambix.pdb
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.dll
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.xml
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csprojAssemblyReference.cache
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.CoreCompileInputs.cache
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.CopyComplete
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.dll
+C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoGithub\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.pdb
