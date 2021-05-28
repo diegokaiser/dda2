@@ -24,13 +24,13 @@ namespace WCF_Chambix
                 objPost.tituloPost      = objPostBE.tituloPost;
                 objPost.descripcionPost = objPostBE.descripcionPost;
                 objPost.precioPost      = Convert.ToDecimal(objPostBE.precioPost);
-                objPost.imagenPost      = objPostBE.imagenPost;
-                objPost.valoracionPost  = objPostBE.valoracionPost;
-                objPost.estadoPost      = Convert.ToBoolean(objPostBE.estadoPost);
+                objPost.imagenPost      = "url";
+                objPost.valoracionPost  = 0;
+                objPost.estadoPost      = true;
                 objPost.create_at       = Convert.ToDateTime(objPostBE.create_at);
-                objPost.create_by       = objPostBE.create_by;
-                objPost.update_at       = Convert.ToDateTime(objPostBE.update_at);
-                objPost.update_by       = objPostBE.update_by;
+                objPost.create_by   = String.Empty;
+                objPost.update_at       = null;
+                objPost.update_by    = String.Empty;
                 Chambix.tb_Post.Add(objPost);
                 Chambix.SaveChanges();
                 return true;
@@ -50,7 +50,7 @@ namespace WCF_Chambix
                                    where objPst.idPost == objPostBE.idPost
                                    select objPst).FirstOrDefault();
                 objPost.idPost          = objPostBE.idPost;
-                objPost.idUsuario       = objPostBE.idUsuario;
+                objPost.idUsuario       = objPost.idUsuario;
                 objPost.idSubcategoria  = objPostBE.idSubcategoria;
                 objPost.idDistrito      = Convert.ToByte(objPostBE.idDistrito);
                 objPost.tituloPost      = objPostBE.tituloPost;
@@ -59,10 +59,10 @@ namespace WCF_Chambix
                 objPost.imagenPost      = objPostBE.imagenPost;
                 objPost.valoracionPost  = objPostBE.valoracionPost;
                 objPost.estadoPost      = Convert.ToBoolean(objPostBE.estadoPost);
-                objPost.create_at       = Convert.ToDateTime(objPostBE.create_at);
-                objPost.create_by       = objPostBE.create_by;
-                objPost.update_at       = Convert.ToDateTime(objPostBE.update_at);
-                objPost.update_by       = objPostBE.update_by;
+                objPost.create_at        = objPost.create_at;
+                objPost.create_by        = objPost.create_by;
+                objPost.update_at       = null;
+                objPost.update_by       = String.Empty;
                 Chambix.SaveChanges();
                 return true;
             }

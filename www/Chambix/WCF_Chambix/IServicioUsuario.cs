@@ -27,13 +27,13 @@ namespace WCF_Chambix
         List<UserBE> GetAllUsers();
 
         [OperationContract]
-        List<UserBE> GetAllUsersClients(Int16 tipoUsuario);
+        List<UserBE> GetAllUsersClients();
 
         [OperationContract]
-        List<UserBE> GetAllUsersProfesionals(Int16 tipoUsuario);
+        List<UserBE> GetAllUsersProfesionals();
 
         [OperationContract]
-        List<UserBE> GetAllUsersAdmins(Int16 tipoUsuario);
+        List<UserBE> GetAllUsersAdmins();
     }
     [DataContract]
     [Serializable]
