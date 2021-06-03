@@ -20,14 +20,8 @@ namespace WCF_Chambix
                 
                 objServicio.idPost = objServicioBE.idPost;
                 objServicio.idUsuario= objServicioBE.idUsuario;
-                objServicio.estadoServicio = Convert.ToBoolean(objServicioBE.estadoServicio);
-                objServicio.create_at = objServicioBE.create_at;
-                objServicio.create_by = objServicioBE.create_by;
-                objServicio.update_at = objServicioBE.update_at;
-                objServicio.update_by = objServicioBE.update_by;
                 Chambix.tb_Servicio.Add(objServicio);
-                Chambix.SaveChanges();
-                
+                Chambix.SaveChanges();             
                 return true;
             }
             catch (EntityException ex)
@@ -45,14 +39,10 @@ namespace WCF_Chambix
                                    where objServ.idServicio == objServicioBE.idServicio
                                    select objServ).FirstOrDefault();
 
-                objServicio.idPost = objServicioBE.idPost;
-                objServicio.idUsuario = objServicioBE.idUsuario;
+                objServicio.idServicio = objServicio.idServicio;
+                objServicio.idPost = objServicio.idPost;
+                objServicio.idUsuario = objServicio.idUsuario;
                 objServicio.estadoServicio = Convert.ToBoolean(objServicioBE.estadoServicio);
-                objServicio.create_at = objServicioBE.create_at;
-                objServicio.create_by = objServicioBE.create_by;
-                objServicio.update_at = objServicioBE.update_at;
-                objServicio.update_by = objServicioBE.update_by;
-
                 Chambix.SaveChanges();
                 return true;
             }

@@ -16,7 +16,7 @@
     <Key>
       <PropertyRef Name="idDistrito" />
     </Key>
-    <Property Name="idDistrito" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idDistrito" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombreDistrito" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="create_at" Type="DateTime" Precision="3" />
     <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
@@ -32,7 +32,7 @@
     <Property Name="idPost" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idUsuario" Type="Int32" Nullable="false" />
     <Property Name="idSubcategoria" Type="Int32" Nullable="false" />
-    <Property Name="idDistrito" Type="Byte" />
+    <Property Name="idDistrito" Type="Int16" />
     <Property Name="tituloPost" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="descripcionPost" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="precioPost" Type="Decimal" Precision="19" Scale="4" />
@@ -136,7 +136,7 @@
     <Property Name="nombreUsuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="apellidoUsuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="contrasenaUsuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="idDistrito" Type="Byte" />
+    <Property Name="idDistrito" Type="Int16" />
     <Property Name="emailUsuario" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="cellUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="rankUsuario" Type="Int32" />
@@ -299,7 +299,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="SistemaServiciosEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="SistemaServiciosEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tb_Categoria" EntityType="Self.tb_Categoria" />
     <EntitySet Name="tb_Distrito" EntityType="Self.tb_Distrito" />
     <EntitySet Name="tb_Post" EntityType="Self.tb_Post" />

@@ -12,6 +12,8 @@ namespace WCF_Chambix
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class SistemaServiciosEntities : DbContext
     {
@@ -34,5 +36,387 @@ namespace WCF_Chambix
         public virtual DbSet<tb_Testimonio> tb_Testimonio { get; set; }
         public virtual DbSet<tb_TipoCuenta> tb_TipoCuenta { get; set; }
         public virtual DbSet<tb_Usuario> tb_Usuario { get; set; }
+    
+        public virtual int usp_ActualizarCategoria(Nullable<int> vIdCategoria, string vnombreCategoria)
+        {
+            var vIdCategoriaParameter = vIdCategoria.HasValue ?
+                new ObjectParameter("vIdCategoria", vIdCategoria) :
+                new ObjectParameter("vIdCategoria", typeof(int));
+    
+            var vnombreCategoriaParameter = vnombreCategoria != null ?
+                new ObjectParameter("vnombreCategoria", vnombreCategoria) :
+                new ObjectParameter("vnombreCategoria", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_ActualizarCategoria", vIdCategoriaParameter, vnombreCategoriaParameter);
+        }
+    
+        public virtual int usp_ActualizarPost(Nullable<int> vidPost, Nullable<int> vidUsuario, Nullable<int> vidSubcategoria, Nullable<byte> vidDistrito, string vtituloPost, string vdescripcionPost, Nullable<decimal> vprecioPost, string vimagenPost, Nullable<int> valoracionPost, Nullable<bool> vestadoPost)
+        {
+            var vidPostParameter = vidPost.HasValue ?
+                new ObjectParameter("vidPost", vidPost) :
+                new ObjectParameter("vidPost", typeof(int));
+    
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            var vidSubcategoriaParameter = vidSubcategoria.HasValue ?
+                new ObjectParameter("vidSubcategoria", vidSubcategoria) :
+                new ObjectParameter("vidSubcategoria", typeof(int));
+    
+            var vidDistritoParameter = vidDistrito.HasValue ?
+                new ObjectParameter("vidDistrito", vidDistrito) :
+                new ObjectParameter("vidDistrito", typeof(byte));
+    
+            var vtituloPostParameter = vtituloPost != null ?
+                new ObjectParameter("vtituloPost", vtituloPost) :
+                new ObjectParameter("vtituloPost", typeof(string));
+    
+            var vdescripcionPostParameter = vdescripcionPost != null ?
+                new ObjectParameter("vdescripcionPost", vdescripcionPost) :
+                new ObjectParameter("vdescripcionPost", typeof(string));
+    
+            var vprecioPostParameter = vprecioPost.HasValue ?
+                new ObjectParameter("vprecioPost", vprecioPost) :
+                new ObjectParameter("vprecioPost", typeof(decimal));
+    
+            var vimagenPostParameter = vimagenPost != null ?
+                new ObjectParameter("vimagenPost", vimagenPost) :
+                new ObjectParameter("vimagenPost", typeof(string));
+    
+            var valoracionPostParameter = valoracionPost.HasValue ?
+                new ObjectParameter("valoracionPost", valoracionPost) :
+                new ObjectParameter("valoracionPost", typeof(int));
+    
+            var vestadoPostParameter = vestadoPost.HasValue ?
+                new ObjectParameter("vestadoPost", vestadoPost) :
+                new ObjectParameter("vestadoPost", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_ActualizarPost", vidPostParameter, vidUsuarioParameter, vidSubcategoriaParameter, vidDistritoParameter, vtituloPostParameter, vdescripcionPostParameter, vprecioPostParameter, vimagenPostParameter, valoracionPostParameter, vestadoPostParameter);
+        }
+    
+        public virtual int usp_ActualizarReplica(Nullable<int> vidReplica, Nullable<int> vidUsuario, Nullable<int> vidTestimonio, string vtituloReplica, string vdescripcionReplica, Nullable<bool> vestadoReplica)
+        {
+            var vidReplicaParameter = vidReplica.HasValue ?
+                new ObjectParameter("vidReplica", vidReplica) :
+                new ObjectParameter("vidReplica", typeof(int));
+    
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            var vidTestimonioParameter = vidTestimonio.HasValue ?
+                new ObjectParameter("vidTestimonio", vidTestimonio) :
+                new ObjectParameter("vidTestimonio", typeof(int));
+    
+            var vtituloReplicaParameter = vtituloReplica != null ?
+                new ObjectParameter("vtituloReplica", vtituloReplica) :
+                new ObjectParameter("vtituloReplica", typeof(string));
+    
+            var vdescripcionReplicaParameter = vdescripcionReplica != null ?
+                new ObjectParameter("vdescripcionReplica", vdescripcionReplica) :
+                new ObjectParameter("vdescripcionReplica", typeof(string));
+    
+            var vestadoReplicaParameter = vestadoReplica.HasValue ?
+                new ObjectParameter("vestadoReplica", vestadoReplica) :
+                new ObjectParameter("vestadoReplica", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_ActualizarReplica", vidReplicaParameter, vidUsuarioParameter, vidTestimonioParameter, vtituloReplicaParameter, vdescripcionReplicaParameter, vestadoReplicaParameter);
+        }
+    
+        public virtual int usp_ActualizarServicio(Nullable<int> idServicio, Nullable<int> vidPost, Nullable<int> vidUsuario, Nullable<bool> vestadoServicio)
+        {
+            var idServicioParameter = idServicio.HasValue ?
+                new ObjectParameter("idServicio", idServicio) :
+                new ObjectParameter("idServicio", typeof(int));
+    
+            var vidPostParameter = vidPost.HasValue ?
+                new ObjectParameter("vidPost", vidPost) :
+                new ObjectParameter("vidPost", typeof(int));
+    
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            var vestadoServicioParameter = vestadoServicio.HasValue ?
+                new ObjectParameter("vestadoServicio", vestadoServicio) :
+                new ObjectParameter("vestadoServicio", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_ActualizarServicio", idServicioParameter, vidPostParameter, vidUsuarioParameter, vestadoServicioParameter);
+        }
+    
+        public virtual int usp_ActualizarTestimonios(Nullable<int> vidTestimonio, Nullable<int> vidUsuario, Nullable<int> vidPost, string vtituloTestimonio, string vdescripcionTestimonio, Nullable<bool> vestadoTestimonio)
+        {
+            var vidTestimonioParameter = vidTestimonio.HasValue ?
+                new ObjectParameter("vidTestimonio", vidTestimonio) :
+                new ObjectParameter("vidTestimonio", typeof(int));
+    
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            var vidPostParameter = vidPost.HasValue ?
+                new ObjectParameter("vidPost", vidPost) :
+                new ObjectParameter("vidPost", typeof(int));
+    
+            var vtituloTestimonioParameter = vtituloTestimonio != null ?
+                new ObjectParameter("vtituloTestimonio", vtituloTestimonio) :
+                new ObjectParameter("vtituloTestimonio", typeof(string));
+    
+            var vdescripcionTestimonioParameter = vdescripcionTestimonio != null ?
+                new ObjectParameter("vdescripcionTestimonio", vdescripcionTestimonio) :
+                new ObjectParameter("vdescripcionTestimonio", typeof(string));
+    
+            var vestadoTestimonioParameter = vestadoTestimonio.HasValue ?
+                new ObjectParameter("vestadoTestimonio", vestadoTestimonio) :
+                new ObjectParameter("vestadoTestimonio", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_ActualizarTestimonios", vidTestimonioParameter, vidUsuarioParameter, vidPostParameter, vtituloTestimonioParameter, vdescripcionTestimonioParameter, vestadoTestimonioParameter);
+        }
+    
+        public virtual int usp_ActualizarUsuario(Nullable<int> vidUsuario, Nullable<byte> vtipoUsuario, Nullable<bool> vestadoUsuario, string vnombreUsuario, string vapellidoUsuario, string vcontrasenaUsuario, Nullable<byte> vidDistrito, string vemailUsuario, string vcellUsuario, Nullable<int> vrankUsuario, string vwspUsusario, string vocupacionUsuario, Nullable<byte> vidTipoCuenta)
+        {
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            var vtipoUsuarioParameter = vtipoUsuario.HasValue ?
+                new ObjectParameter("vtipoUsuario", vtipoUsuario) :
+                new ObjectParameter("vtipoUsuario", typeof(byte));
+    
+            var vestadoUsuarioParameter = vestadoUsuario.HasValue ?
+                new ObjectParameter("vestadoUsuario", vestadoUsuario) :
+                new ObjectParameter("vestadoUsuario", typeof(bool));
+    
+            var vnombreUsuarioParameter = vnombreUsuario != null ?
+                new ObjectParameter("vnombreUsuario", vnombreUsuario) :
+                new ObjectParameter("vnombreUsuario", typeof(string));
+    
+            var vapellidoUsuarioParameter = vapellidoUsuario != null ?
+                new ObjectParameter("vapellidoUsuario", vapellidoUsuario) :
+                new ObjectParameter("vapellidoUsuario", typeof(string));
+    
+            var vcontrasenaUsuarioParameter = vcontrasenaUsuario != null ?
+                new ObjectParameter("vcontrasenaUsuario", vcontrasenaUsuario) :
+                new ObjectParameter("vcontrasenaUsuario", typeof(string));
+    
+            var vidDistritoParameter = vidDistrito.HasValue ?
+                new ObjectParameter("vidDistrito", vidDistrito) :
+                new ObjectParameter("vidDistrito", typeof(byte));
+    
+            var vemailUsuarioParameter = vemailUsuario != null ?
+                new ObjectParameter("vemailUsuario", vemailUsuario) :
+                new ObjectParameter("vemailUsuario", typeof(string));
+    
+            var vcellUsuarioParameter = vcellUsuario != null ?
+                new ObjectParameter("vcellUsuario", vcellUsuario) :
+                new ObjectParameter("vcellUsuario", typeof(string));
+    
+            var vrankUsuarioParameter = vrankUsuario.HasValue ?
+                new ObjectParameter("vrankUsuario", vrankUsuario) :
+                new ObjectParameter("vrankUsuario", typeof(int));
+    
+            var vwspUsusarioParameter = vwspUsusario != null ?
+                new ObjectParameter("vwspUsusario", vwspUsusario) :
+                new ObjectParameter("vwspUsusario", typeof(string));
+    
+            var vocupacionUsuarioParameter = vocupacionUsuario != null ?
+                new ObjectParameter("vocupacionUsuario", vocupacionUsuario) :
+                new ObjectParameter("vocupacionUsuario", typeof(string));
+    
+            var vidTipoCuentaParameter = vidTipoCuenta.HasValue ?
+                new ObjectParameter("vidTipoCuenta", vidTipoCuenta) :
+                new ObjectParameter("vidTipoCuenta", typeof(byte));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_ActualizarUsuario", vidUsuarioParameter, vtipoUsuarioParameter, vestadoUsuarioParameter, vnombreUsuarioParameter, vapellidoUsuarioParameter, vcontrasenaUsuarioParameter, vidDistritoParameter, vemailUsuarioParameter, vcellUsuarioParameter, vrankUsuarioParameter, vwspUsusarioParameter, vocupacionUsuarioParameter, vidTipoCuentaParameter);
+        }
+    
+        public virtual int usp_EliminarCategoria(Nullable<int> vIdCategoria)
+        {
+            var vIdCategoriaParameter = vIdCategoria.HasValue ?
+                new ObjectParameter("vIdCategoria", vIdCategoria) :
+                new ObjectParameter("vIdCategoria", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_EliminarCategoria", vIdCategoriaParameter);
+        }
+    
+        public virtual int usp_EliminarPost(Nullable<int> vidPost)
+        {
+            var vidPostParameter = vidPost.HasValue ?
+                new ObjectParameter("vidPost", vidPost) :
+                new ObjectParameter("vidPost", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_EliminarPost", vidPostParameter);
+        }
+    
+        public virtual int usp_EliminarReplica(Nullable<int> vidReplica)
+        {
+            var vidReplicaParameter = vidReplica.HasValue ?
+                new ObjectParameter("vidReplica", vidReplica) :
+                new ObjectParameter("vidReplica", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_EliminarReplica", vidReplicaParameter);
+        }
+    
+        public virtual int usp_EliminarServicio(Nullable<int> idServicio)
+        {
+            var idServicioParameter = idServicio.HasValue ?
+                new ObjectParameter("idServicio", idServicio) :
+                new ObjectParameter("idServicio", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_EliminarServicio", idServicioParameter);
+        }
+    
+        public virtual int usp_EliminarTestimonios(Nullable<int> vidTestimonio)
+        {
+            var vidTestimonioParameter = vidTestimonio.HasValue ?
+                new ObjectParameter("vidTestimonio", vidTestimonio) :
+                new ObjectParameter("vidTestimonio", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_EliminarTestimonios", vidTestimonioParameter);
+        }
+    
+        public virtual int usp_EliminarUsuario(Nullable<int> vidUsuario)
+        {
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_EliminarUsuario", vidUsuarioParameter);
+        }
+    
+        public virtual int usp_InsertarCategoria(string vnombreCategoria)
+        {
+            var vnombreCategoriaParameter = vnombreCategoria != null ?
+                new ObjectParameter("vnombreCategoria", vnombreCategoria) :
+                new ObjectParameter("vnombreCategoria", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertarCategoria", vnombreCategoriaParameter);
+        }
+    
+        public virtual int usp_InsertarPost(Nullable<int> vidUsuario, Nullable<int> vidSubcategoria, Nullable<byte> vidDistrito, string vtituloPost, string vdescripcionPost, Nullable<decimal> vprecioPost, string vimagenPost)
+        {
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            var vidSubcategoriaParameter = vidSubcategoria.HasValue ?
+                new ObjectParameter("vidSubcategoria", vidSubcategoria) :
+                new ObjectParameter("vidSubcategoria", typeof(int));
+    
+            var vidDistritoParameter = vidDistrito.HasValue ?
+                new ObjectParameter("vidDistrito", vidDistrito) :
+                new ObjectParameter("vidDistrito", typeof(byte));
+    
+            var vtituloPostParameter = vtituloPost != null ?
+                new ObjectParameter("vtituloPost", vtituloPost) :
+                new ObjectParameter("vtituloPost", typeof(string));
+    
+            var vdescripcionPostParameter = vdescripcionPost != null ?
+                new ObjectParameter("vdescripcionPost", vdescripcionPost) :
+                new ObjectParameter("vdescripcionPost", typeof(string));
+    
+            var vprecioPostParameter = vprecioPost.HasValue ?
+                new ObjectParameter("vprecioPost", vprecioPost) :
+                new ObjectParameter("vprecioPost", typeof(decimal));
+    
+            var vimagenPostParameter = vimagenPost != null ?
+                new ObjectParameter("vimagenPost", vimagenPost) :
+                new ObjectParameter("vimagenPost", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertarPost", vidUsuarioParameter, vidSubcategoriaParameter, vidDistritoParameter, vtituloPostParameter, vdescripcionPostParameter, vprecioPostParameter, vimagenPostParameter);
+        }
+    
+        public virtual int usp_InsertarReplica(Nullable<int> vidUsuario, Nullable<int> vidTestimonio, string vtituloReplica, string vdescripcionReplica)
+        {
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            var vidTestimonioParameter = vidTestimonio.HasValue ?
+                new ObjectParameter("vidTestimonio", vidTestimonio) :
+                new ObjectParameter("vidTestimonio", typeof(int));
+    
+            var vtituloReplicaParameter = vtituloReplica != null ?
+                new ObjectParameter("vtituloReplica", vtituloReplica) :
+                new ObjectParameter("vtituloReplica", typeof(string));
+    
+            var vdescripcionReplicaParameter = vdescripcionReplica != null ?
+                new ObjectParameter("vdescripcionReplica", vdescripcionReplica) :
+                new ObjectParameter("vdescripcionReplica", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertarReplica", vidUsuarioParameter, vidTestimonioParameter, vtituloReplicaParameter, vdescripcionReplicaParameter);
+        }
+    
+        public virtual int usp_InsertarServicio(Nullable<int> vidPost, Nullable<int> vidUsuario)
+        {
+            var vidPostParameter = vidPost.HasValue ?
+                new ObjectParameter("vidPost", vidPost) :
+                new ObjectParameter("vidPost", typeof(int));
+    
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertarServicio", vidPostParameter, vidUsuarioParameter);
+        }
+    
+        public virtual int usp_InsertarTestimonios(Nullable<int> vidUsuario, Nullable<int> vidPost, string vtituloTestimonio, string vdescripcionTestimonio)
+        {
+            var vidUsuarioParameter = vidUsuario.HasValue ?
+                new ObjectParameter("vidUsuario", vidUsuario) :
+                new ObjectParameter("vidUsuario", typeof(int));
+    
+            var vidPostParameter = vidPost.HasValue ?
+                new ObjectParameter("vidPost", vidPost) :
+                new ObjectParameter("vidPost", typeof(int));
+    
+            var vtituloTestimonioParameter = vtituloTestimonio != null ?
+                new ObjectParameter("vtituloTestimonio", vtituloTestimonio) :
+                new ObjectParameter("vtituloTestimonio", typeof(string));
+    
+            var vdescripcionTestimonioParameter = vdescripcionTestimonio != null ?
+                new ObjectParameter("vdescripcionTestimonio", vdescripcionTestimonio) :
+                new ObjectParameter("vdescripcionTestimonio", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertarTestimonios", vidUsuarioParameter, vidPostParameter, vtituloTestimonioParameter, vdescripcionTestimonioParameter);
+        }
+    
+        public virtual int usp_InsertarUsuario(string vnombreUsuario, string vapellidoUsuario, string vcontrasenaUsuario, Nullable<byte> vidDistrito, string vemailUsuario, string vcellUsuario, string vwspUsusario, string vocupacionUsuario)
+        {
+            var vnombreUsuarioParameter = vnombreUsuario != null ?
+                new ObjectParameter("vnombreUsuario", vnombreUsuario) :
+                new ObjectParameter("vnombreUsuario", typeof(string));
+    
+            var vapellidoUsuarioParameter = vapellidoUsuario != null ?
+                new ObjectParameter("vapellidoUsuario", vapellidoUsuario) :
+                new ObjectParameter("vapellidoUsuario", typeof(string));
+    
+            var vcontrasenaUsuarioParameter = vcontrasenaUsuario != null ?
+                new ObjectParameter("vcontrasenaUsuario", vcontrasenaUsuario) :
+                new ObjectParameter("vcontrasenaUsuario", typeof(string));
+    
+            var vidDistritoParameter = vidDistrito.HasValue ?
+                new ObjectParameter("vidDistrito", vidDistrito) :
+                new ObjectParameter("vidDistrito", typeof(byte));
+    
+            var vemailUsuarioParameter = vemailUsuario != null ?
+                new ObjectParameter("vemailUsuario", vemailUsuario) :
+                new ObjectParameter("vemailUsuario", typeof(string));
+    
+            var vcellUsuarioParameter = vcellUsuario != null ?
+                new ObjectParameter("vcellUsuario", vcellUsuario) :
+                new ObjectParameter("vcellUsuario", typeof(string));
+    
+            var vwspUsusarioParameter = vwspUsusario != null ?
+                new ObjectParameter("vwspUsusario", vwspUsusario) :
+                new ObjectParameter("vwspUsusario", typeof(string));
+    
+            var vocupacionUsuarioParameter = vocupacionUsuario != null ?
+                new ObjectParameter("vocupacionUsuario", vocupacionUsuario) :
+                new ObjectParameter("vocupacionUsuario", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertarUsuario", vnombreUsuarioParameter, vapellidoUsuarioParameter, vcontrasenaUsuarioParameter, vidDistritoParameter, vemailUsuarioParameter, vcellUsuarioParameter, vwspUsusarioParameter, vocupacionUsuarioParameter);
+        }
     }
 }
