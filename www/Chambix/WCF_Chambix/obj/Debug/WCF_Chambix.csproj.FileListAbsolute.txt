@@ -58,3 +58,15 @@ C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\Proyec
 C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoServicios\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.dll
 C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoServicios\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.pdb
 C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoServicios\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csprojAssemblyReference.cache
+F:\Chambix\www\Chambix\WCF_Chambix\bin\Debug\WCF_Chambix.dll.config
+F:\Chambix\www\Chambix\WCF_Chambix\bin\Debug\WCF_Chambix.dll
+F:\Chambix\www\Chambix\WCF_Chambix\bin\Debug\WCF_Chambix.pdb
+F:\Chambix\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.dll
+F:\Chambix\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.SqlServer.dll
+F:\Chambix\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.xml
+F:\Chambix\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.SqlServer.xml
+F:\Chambix\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.AssemblyReference.cache
+F:\Chambix\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.CoreCompileInputs.cache
+F:\Chambix\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.CopyComplete
+F:\Chambix\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.dll
+F:\Chambix\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.pdb
