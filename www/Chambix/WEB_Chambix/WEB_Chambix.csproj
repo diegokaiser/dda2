@@ -131,6 +131,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\tb_CategoriaController.cs" />
+    <Compile Include="Controllers\tb_ServicioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -355,6 +356,11 @@
     <Content Include="Views\tb_Categoria\Details.cshtml" />
     <Content Include="Views\tb_Categoria\Edit.cshtml" />
     <Content Include="Views\tb_Categoria\Index.cshtml" />
+    <Content Include="Views\tb_Servicio\Create.cshtml" />
+    <Content Include="Views\tb_Servicio\Delete.cshtml" />
+    <Content Include="Views\tb_Servicio\Details.cshtml" />
+    <Content Include="Views\tb_Servicio\Edit.cshtml" />
+    <Content Include="Views\tb_Servicio\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,94 @@
+﻿@model WEB_Chambix.Models.tb_Servicio
+
+@{
+    ViewBag.Title = "Dettales del servicio";
+}
+
+<style>
+    .boton, .boton > a {
+        background-color: #3797da;
+        color: white;
+        text-decoration: none
+    }
+
+    .boton2, .boton2 > a {
+        background-color: #00cdb3;
+        color: white;
+        text-decoration: none
+    }
+</style>
+
+
+<h2>Detalles del Servicio</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.estadoServicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoServicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.create_at)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.create_at)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.create_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.create_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.update_at)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.update_at)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.update_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.update_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_Post.tituloPost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_Post.tituloPost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_Usuario.nombreUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_Usuario.nombreUsuario)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <span class="boton btn btn-default">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.idServicio }) |
+    </span>
+</div>
+<div>
+    <span class="boton2 btn btn-default">
+        @Html.ActionLink("Regresar a la Lista", "Index")
+    </span>
+</div>
