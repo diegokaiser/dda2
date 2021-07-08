@@ -11,11 +11,6 @@ namespace WCF_Chambix
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioDistrito" en el código y en el archivo de configuración a la vez.
     public class ServicioDistrito : IServicioDistrito
     {
-        public void DoWork()
-        {
-        }
-
-
 
         public List<DistritoBE> GetAllDistritos()
         {
