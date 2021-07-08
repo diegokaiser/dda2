@@ -174,3 +174,5 @@ C:\01-Educaion\EP\Chambix\WEB_Chambix\bin\EntityFramework.dll
 C:\01-Educaion\EP\Chambix\WEB_Chambix\bin\EntityFramework.SqlServer.dll
 C:\01-Educaion\EP\Chambix\WEB_Chambix\bin\EntityFramework.xml
 C:\01-Educaion\EP\Chambix\WEB_Chambix\bin\EntityFramework.SqlServer.xml
+D:\Fio\Desktop\ISIL\2021-I\Jueves\Desarrollod de Aplicaciones 2\proyecto_final\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.dll
+D:\Fio\Desktop\ISIL\2021-I\Jueves\Desarrollod de Aplicaciones 2\proyecto_final\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.pdb
