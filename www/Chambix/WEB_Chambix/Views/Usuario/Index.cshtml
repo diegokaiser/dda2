@@ -74,57 +74,102 @@
         </div>
         <table class="table table-latitude">
             <thead>
-            <th>
-                Nombre
-                @* @Html.DisplayNameFor(model => model.nombreUsuario)*@
-            </th>
-            <th>
-                Fecha de creación
-                @*  @Html.DisplayNameFor(model => model.create_at)*@
-            </th>
-            <th>
-                Creado por
-                @* @Html.DisplayNameFor(model => model.create_by)*@
-            </th>
-            <th>
-                Fecha de actualizacion
-                @* @Html.DisplayNameFor(model => model.update_at)*@
-            </th>
-            <th>
-                Actualizado por
-                @*@Html.DisplayNameFor(model => model.update_by)*@
-            </th>
-            <th>Accicones</th>
+                <th>
+                    Nombre
+                    @* @Html.DisplayNameFor(model => model.nombreUsuario)*@
+                </th>
+                <th>
+                    Apellido
+                    @* @Html.DisplayNameFor(model => model.apellidoUsuario)*@
+                </th>
+                <th>
+                    Distrito
+                    @* @Html.DisplayNameFor(model => model.idDistrito)*@
+                </th>
+                <th>
+                    Email
+                    @* @Html.DisplayNameFor(model => model.emailUsuario)*@
+                </th>
+                <th>
+                    Celular
+                    @* @Html.DisplayNameFor(model => model.cellUsuario)*@
+                </th>
+                <th>
+                    Whatsapp
+                    @* @Html.DisplayNameFor(model => model.wspUsuario)*@
+                </th>
+                <th>
+                    Ocupación
+                    @* @Html.DisplayNameFor(model => model.ocupacionUsuario)*@
+                </th>
+
+
+                <th>
+                    Fecha de creación
+                    @*  @Html.DisplayNameFor(model => model.create_at)*@
+                </th>
+                <th>
+                    Creado por
+                    @* @Html.DisplayNameFor(model => model.create_by)*@
+                </th>
+                <th>
+                    Fecha de actualizacion
+                    @* @Html.DisplayNameFor(model => model.update_at)*@
+                </th>
+                <th>
+                    Actualizado por
+                    @*@Html.DisplayNameFor(model => model.update_by)*@
+                </th>
+                <th>Accicones</th>
             </tr>
             </thead>
             <tfoot>
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.nombreUsuario)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.create_at)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.create_by)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.update_at)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.update_by)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Editar", "Edit", new { id = item.idUsuario }) |
-                            @Html.ActionLink("Detalles", "Details", new { id = item.idUsuario }) |
-                            @Html.ActionLink("Eliminar", "Delete", new { id = item.idUsuario })
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombreUsuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.apellidoUsuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.idDistrito)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.emailUsuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cellUsuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.wspUsuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ocupacionUsuario)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.create_at)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.create_by)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.update_at)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.update_by)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.idUsuario }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = item.idUsuario }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.idUsuario })
+                    </td>
+                </tr>
                 }
             </tfoot>
-                
+
 
         </table>
     </div>
