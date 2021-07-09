@@ -1,0 +1,95 @@
+﻿@model WEB_Chambix.Models.tb_Categoria
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@*https://localhost:44389/tb_Categoria/Details/1*@
+
+
+<style>
+
+    .btnER a {
+        border-radius: 5px;
+        padding: 5px 7px;
+        color: #fff;
+        text-decoration: none
+    }
+
+    .btnER a:nth-child(1) {
+        background-color: #3797da
+    }
+
+        .btnER a:nth-child(2) {
+            background-color: #FF5532
+        }
+</style>
+
+<section class="posts">
+    <div class="container">
+        <h2> Detalle de Categoria</h2>
+
+        <div>
+            <h4> </h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    Nombre
+                    @*@Html.DisplayNameFor(model => model.nombreCategoria)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.nombreCategoria)
+                </dd>
+
+                <dt>
+                    Fecha de creación
+                    @*@Html.DisplayNameFor(model => model.create_at)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.create_at)
+                </dd>
+
+                <dt>
+                    Creado por
+                    @*@Html.DisplayNameFor(model => model.create_by)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.create_by)
+                </dd>
+
+                <dt>
+                    Fecha de actualizacion
+                    @*@Html.DisplayNameFor(model => model.update_at)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.update_at)
+                </dd>
+
+                <dt>
+                    Actualizado por
+                    @* @Html.DisplayNameFor(model => model.update_by)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.update_by)
+                </dd>
+
+            </dl>
+        </div>
+        <div class="btnER">
+            <p>
+                @Html.ActionLink("Editar", "Edit", new { id = Model.idCategoria }) |
+                @Html.ActionLink("Regresar", "Index")
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
