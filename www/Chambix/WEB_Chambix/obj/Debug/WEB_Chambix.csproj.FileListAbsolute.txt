@@ -79,8 +79,11 @@ F:\Chambix\www\Chambix\WEB_Chambix\bin\es\System.Web.Razor.resources.dll
 F:\Chambix\www\Chambix\WEB_Chambix\bin\es\System.Web.WebPages.resources.dll
 F:\Chambix\www\Chambix\WEB_Chambix\bin\es\System.Web.WebPages.Deployment.resources.dll
 F:\Chambix\www\Chambix\WEB_Chambix\bin\es\System.Web.WebPages.Razor.resources.dll
-F:\Chambix\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csproj.AssemblyReference.cache
 F:\Chambix\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csproj.CoreCompileInputs.cache
 F:\Chambix\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csproj.CopyComplete
 F:\Chambix\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.dll
 F:\Chambix\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.pdb
+F:\Chambix\www\Chambix\WEB_Chambix\bin\EntityFramework.dll
+F:\Chambix\www\Chambix\WEB_Chambix\bin\EntityFramework.SqlServer.dll
+F:\Chambix\www\Chambix\WEB_Chambix\bin\EntityFramework.xml
+F:\Chambix\www\Chambix\WEB_Chambix\bin\EntityFramework.SqlServer.xml

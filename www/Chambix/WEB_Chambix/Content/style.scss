@@ -7,6 +7,127 @@ body {
     font-weight: 300;
 }
 
+/* globales */
+.crud {
+    margin: 0 0 35px 0;
+
+    &_create-new {
+        a {
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+            border-radius: 4px;
+            color: white;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 4px;
+            min-width: 88px;
+            padding: 6px 12px;
+            text-align: center;
+            text-decoration: none;
+            transition: .35s ease;
+
+            &:hover {
+                background-color: #449d44;
+                border-color: #398439;
+            }
+        }
+    }
+
+    &_back {
+        a {
+            background-color: #fff;
+            border: 1px solid transparent;
+            border-color: #ccc;
+            border-radius: 4px;
+            color: #333;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 4px;
+            min-width: 88px;
+            padding: 6px 12px;
+            text-align: center;
+            text-decoration: none;
+            transition: .35s ease;
+
+            &:hover {
+                color: #333;
+                background-color: #e6e6e6;
+                border-color: #adadad;
+            }
+        }
+    }
+
+    &-edit {
+        label {
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+}
+table {
+    &.table {
+        tr {
+            th {
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            td {
+                select {
+                    &[disabled="disabled"] {
+                        cursor: not-allowed;
+                    }
+                }
+
+                a {
+                    border-radius: 4px;
+                    color: white;
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-top: 4px;
+                    min-width: 88px;
+                    padding: 6px 12px;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: .35s ease;
+
+                    &:nth-child(1) {
+                        background-color: #5cb85c;
+                        border-color: #4cae4c;
+                        margin-top: 0;
+
+                        &:hover {
+                            background-color: #449d44;
+                            border-color: #398439;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        background-color: #5bc0de;
+                        border-color: #46b8da;
+
+                        &:hover {
+                            background-color: #31b0d5;
+                            border-color: #269abc;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        background-color: #d9534f;
+                        border-color: #d43f3a;
+
+                        &:hover {
+                            background-color: #c9302c;
+                            border-color: #ac2925;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* header */
 .alert-banner {
     align-items: center;
@@ -45,12 +166,12 @@ body {
 }
 
 header {
-    margin: 14px 0;
     nav {
         margin-bottom: 0;
 
         &.navbar {
             margin-bottom: 0;
+
             &-default {
                 background-color: transparent;
                 border-color: transparent;
@@ -481,7 +602,6 @@ header {
     }
 }
 
-
 /* post */
 .posts {
     background-color: #edeff6;
@@ -491,7 +611,7 @@ header {
         background-color: white;
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
         border-radius: 4px;
-        margin-top: 21px;
+        margin-top: 28px;
         padding: 35px 21px 28px 21px;
 
         &-body {
@@ -572,7 +692,7 @@ header {
     &-cities {
         background-color: #F7F7F7;
         border-top: 1px solid #ccc;
-        padding: 28px 0 35px 0;
+        padding: 49px 0 35px 0;
 
         h2 {
             font-size: 16px;
@@ -614,7 +734,7 @@ header {
 
     &-shared {
         background-color: #EAEAEA;
-        padding: 21px 0 42px 0;
+        padding: 42px 0 42px 0;
 
         &-news {
             margin-bottom: 35px;
@@ -751,6 +871,7 @@ header {
                         a {
                             color: #2F58CA;
                             font-weight: 600;
+                            text-decoration: none;
                         }
                     }
                 }

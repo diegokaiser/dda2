@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<WEB_Chambix.Models.tb_Post>
+
+@{
     ViewBag.Title = "Chambix - Encuentra localmente servicios de mantenimiento y mejora para tu hogar";
 }
 
@@ -6,166 +8,28 @@
     <div class="container">
         <div class="row">
             <!-- Esto tiene que hacer loop de los resultados -->
-            <div class="col-sm-12 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#" class="card-title">
-                            <h3>J Dimarzo Construction Corp.</h3>
-                        </a>
-                        <div class="card-keys">
-                            <span class="badge badge-secondary">Elite Service</span>
-                            <span class="badge badge-secondary">Free Estimates</span>
-                        </div>
-                        <p class="card-text">
-                            Etiam ut dignissim dui. Duis et orci ac nibh commodo bibendum. Phasellus eget libero quis lectus gravida consequat.
-                            Pellentesque rhoncus gravida est, nec convallis leo finibus ut. Aenean interdum dolor non tellus vulputate vehicula.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        </p>
-                        <div class="card-actions">
-                            <a href="#" class="btn btn-primary">Obtener una cotización</a>
-                            <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#" class="card-title">
-                            <h3>J Dimarzo Construction Corp.</h3>
-                        </a>
-                        <div class="card-keys">
-                            <span class="badge badge-secondary">Elite Service</span>
-                            <span class="badge badge-secondary">Free Estimates</span>
-                        </div>
-                        <p class="card-text">
-                            Etiam ut dignissim dui. Duis et orci ac nibh commodo bibendum. Phasellus eget libero quis lectus gravida consequat.
-                            Pellentesque rhoncus gravida est, nec convallis leo finibus ut. Aenean interdum dolor non tellus vulputate vehicula.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        </p>
-                        <div class="card-actions">
-                            <a href="#" class="btn btn-primary">Obtener una cotización</a>
-                            <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" class="card-title">
+                                <h3>@Html.DisplayFor(modelItem => item.tb_Usuario.nombreUsuario)</h3>
+                            </a>
+                            <div class="card-keys">
+                                <span class="badge badge-secondary">@Html.DisplayFor(modelItem => item.tb_SubCategoria.nombreSubCategoria)</span>
+                            </div>
+                            <p class="card-text">
+                                @Html.DisplayFor(modelItem => item.descripcionPost)
+                            </p>
+                            <div class="card-actions">
+                                @Html.ActionLink("Me interesa", "Post", new { id = item.idPost }, htmlAttributes: new { @class = "btn btn-primary" })
+                                <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-            <div class="col-sm-12 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#" class="card-title">
-                            <h3>J Dimarzo Construction Corp.</h3>
-                        </a>
-                        <div class="card-keys">
-                            <span class="badge badge-secondary">Elite Service</span>
-                            <span class="badge badge-secondary">Free Estimates</span>
-                        </div>
-                        <p class="card-text">
-                            Etiam ut dignissim dui. Duis et orci ac nibh commodo bibendum. Phasellus eget libero quis lectus gravida consequat.
-                            Pellentesque rhoncus gravida est, nec convallis leo finibus ut. Aenean interdum dolor non tellus vulputate vehicula.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        </p>
-                        <div class="card-actions">
-                            <a href="#" class="btn btn-primary">Obtener una cotización</a>
-                            <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#" class="card-title">
-                            <h3>J Dimarzo Construction Corp.</h3>
-                        </a>
-                        <div class="card-keys">
-                            <span class="badge badge-secondary">Elite Service</span>
-                            <span class="badge badge-secondary">Free Estimates</span>
-                        </div>
-                        <p class="card-text">
-                            Etiam ut dignissim dui. Duis et orci ac nibh commodo bibendum. Phasellus eget libero quis lectus gravida consequat.
-                            Pellentesque rhoncus gravida est, nec convallis leo finibus ut. Aenean interdum dolor non tellus vulputate vehicula.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        </p>
-                        <div class="card-actions">
-                            <a href="#" class="btn btn-primary">Obtener una cotización</a>
-                            <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-sm-12 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#" class="card-title">
-                            <h3>J Dimarzo Construction Corp.</h3>
-                        </a>
-                        <div class="card-keys">
-                            <span class="badge badge-secondary">Elite Service</span>
-                            <span class="badge badge-secondary">Free Estimates</span>
-                        </div>
-                        <p class="card-text">
-                            Etiam ut dignissim dui. Duis et orci ac nibh commodo bibendum. Phasellus eget libero quis lectus gravida consequat.
-                            Pellentesque rhoncus gravida est, nec convallis leo finibus ut. Aenean interdum dolor non tellus vulputate vehicula.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        </p>
-                        <div class="card-actions">
-                            <a href="#" class="btn btn-primary">Obtener una cotización</a>
-                            <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#" class="card-title">
-                            <h3>J Dimarzo Construction Corp.</h3>
-                        </a>
-                        <div class="card-keys">
-                            <span class="badge badge-secondary">Elite Service</span>
-                            <span class="badge badge-secondary">Free Estimates</span>
-                        </div>
-                        <p class="card-text">
-                            Etiam ut dignissim dui. Duis et orci ac nibh commodo bibendum. Phasellus eget libero quis lectus gravida consequat.
-                            Pellentesque rhoncus gravida est, nec convallis leo finibus ut. Aenean interdum dolor non tellus vulputate vehicula.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        </p>
-                        <div class="card-actions">
-                            <a href="#" class="btn btn-primary">Obtener una cotización</a>
-                            <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-sm-12 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#" class="card-title">
-                            <h3>J Dimarzo Construction Corp.</h3>
-                        </a>
-                        <div class="card-keys">
-                            <span class="badge badge-secondary">Elite Service</span>
-                            <span class="badge badge-secondary">Free Estimates</span>
-                        </div>
-                        <p class="card-text">
-                            Etiam ut dignissim dui. Duis et orci ac nibh commodo bibendum. Phasellus eget libero quis lectus gravida consequat.
-                            Pellentesque rhoncus gravida est, nec convallis leo finibus ut. Aenean interdum dolor non tellus vulputate vehicula.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        </p>
-                        <div class="card-actions">
-                            <a href="#" class="btn btn-primary">Obtener una cotización</a>
-                            <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>

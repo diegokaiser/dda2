@@ -1,0 +1,118 @@
+﻿@model IEnumerable<WEB_Chambix.Models.tb_Post>
+
+@{
+    ViewBag.Title = "Posts";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Listado de Posts</h2>
+            <p class="crud_create-new">
+                @Html.ActionLink("Crear Nuevo", "Create")
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="crud table-responsive">
+                <table class="table table-hover table-bordered table-striped">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.tituloPost)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.descripcionPost)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.precioPost)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.imagenPost)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.valoracionPost)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.estadoPost)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.create_at)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.create_by)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.update_at)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.update_by)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.tb_Distrito.nombreDistrito)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.tb_SubCategoria.nombreSubCategoria)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.tb_Usuario.nombreUsuario)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tituloPost)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.descripcionPost)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.precioPost)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.imagenPost)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.valoracionPost)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.estadoPost)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.create_at)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.create_by)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.update_at)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.update_by)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tb_Distrito.nombreDistrito)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tb_SubCategoria.nombreSubCategoria)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tb_Usuario.nombreUsuario)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Editar", "Edit", new { id = item.idPost })
+                                @Html.ActionLink("Consultar", "Details", new { id = item.idPost })
+                                @Html.ActionLink("Eliminar", "Delete", new { id = item.idPost })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

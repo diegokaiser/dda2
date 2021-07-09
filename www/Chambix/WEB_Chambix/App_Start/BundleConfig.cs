@@ -23,7 +23,7 @@ namespace WEB_Chambix
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap/bootstrap.css",
                       "~/Content/font-awesome.css",
                       "~/Content/style.css",
                       "~/Content/site.css"));
