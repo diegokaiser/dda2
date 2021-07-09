@@ -65,6 +65,12 @@ body {
         }
     }
 }
+
+input,
+select {
+    border-radius: 7px !important;
+}
+
 table {
     &.table {
         tr {
@@ -124,6 +130,27 @@ table {
                     }
                 }
             }
+        }
+    }
+}
+
+.btn {
+    &-login {
+        background-color: #ef4624;
+        border: 2px solid #ef4624;
+        border-radius: 42px !important;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        margin-right: 21px;
+        padding: 8px 21px;
+        min-width: 210px;
+        transition: .35s ease;
+
+        &:hover {
+            background-color: white;
+            color: #ef4624;
         }
     }
 }
@@ -602,6 +629,80 @@ header {
         }
     }
 }
+
+/* login */
+.login {
+    margin: 70px 0;
+
+    .form {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 21px;
+
+        &-heading {
+            align-items: center;
+            background-color: #070441;
+            border-radius: 21px 21px 0 0;
+            display: flex;
+            padding: 28px 63px;
+
+            h2 {
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 35px;
+                margin: 0;
+            }
+
+            &-link {
+                color: white;
+                font-size: 18px;
+                margin-left: 35px;
+                position: relative;
+                text-decoration: none;
+
+                &::before {
+                    background-color: #FAA500;
+                    bottom: -7px;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    opacity: 0;
+                    position: absolute;
+                    width: 100%;
+                    transition: .35s ease;
+                }
+
+                &:first-of-type {
+                    margin-left: auto;
+                }
+
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+
+                &.active {
+                    &::before {
+                        opacity: 1;
+                        background-color: #FF5532;
+                    }
+                }
+            }
+        }
+
+        &-body {
+            border: 1px solid #EAEAEA;
+            border-radius: 0 0 21px 21px;
+            border-top: 0;
+            padding: 42px 0 42px 63px;
+        }
+
+        &-group {
+            margin-bottom: 21px;
+        }
+    }
+}
+
 
 /* post */
 .posts {
