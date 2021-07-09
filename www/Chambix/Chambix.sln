@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_Chambix", "WCF_Chambix\WCF_Chambix.csproj", "{2EBD631F-6823-4282-BF0A-063A3874CDE1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_Chambix", "WEB_Chambix\WEB_Chambix.csproj", "{596CF85E-3C7E-42FB-AC90-D464EF94D88F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2EBD631F-6823-4282-BF0A-063A3874CDE1} = {2EBD631F-6823-4282-BF0A-063A3874CDE1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
