@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="SistemaServiciosModel.tb_Distrito" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SistemaServiciosModel.tb_Post" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SistemaServiciosModel.tb_Replica" Width="1.5" PointX="13.5" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SistemaServiciosModel.tb_Servicio" Width="1.5" PointX="8.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_Servicio" Width="2.75" PointX="8.125" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SistemaServiciosModel.tb_SubCategoria" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SistemaServiciosModel.tb_Testimonio" Width="1.5" PointX="11.25" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SistemaServiciosModel.tb_TipoCuenta" Width="1.5" PointX="3.75" PointY="3.25" IsExpanded="true" />

@@ -113,13 +113,15 @@ table.table tr td a {
       font-weight: 600;
       text-decoration: underline; }
 
-header nav {
-  margin-bottom: 0; }
-  header nav.navbar {
+header {
+  margin: 14px 0; }
+  header nav {
     margin-bottom: 0; }
-    header nav.navbar-default {
-      background-color: transparent;
-      border-color: transparent; }
+    header nav.navbar {
+      margin-bottom: 0; }
+      header nav.navbar-default {
+        background-color: transparent;
+        border-color: transparent; }
 
 /* home */
 .home-banner {

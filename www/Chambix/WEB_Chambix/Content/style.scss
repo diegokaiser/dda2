@@ -166,6 +166,7 @@ table {
 }
 
 header {
+    margin: 14px 0;
     nav {
         margin-bottom: 0;
 
@@ -602,10 +603,12 @@ header {
     }
 }
 
+
 /* post */
 .posts {
     background-color: #edeff6;
     padding: 42px 0 49px 0;
+    width:50%
 
     .card {
         background-color: white;
@@ -919,3 +922,6 @@ header {
         }
     }
 }
+
+
+   
