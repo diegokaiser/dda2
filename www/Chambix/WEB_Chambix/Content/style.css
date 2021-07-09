@@ -291,6 +291,7 @@ header nav {
     grid-template-columns: repeat(4, 1fr);
     margin-top: 21px;
     min-width: fit-content;
+    padding: 0;
     width: 100%; }
     .home-servicios-grilla a {
       align-items: center;
@@ -536,6 +537,8 @@ header nav {
         background-color: #2F58CA;
         border-color: #2F58CA;
         color: white; }
+    .footer-shared-news .form-group {
+      margin-bottom: 21px; }
   .footer-shared-social-stay {
     margin-bottom: 35px; }
     .footer-shared-social-stay h3 {
