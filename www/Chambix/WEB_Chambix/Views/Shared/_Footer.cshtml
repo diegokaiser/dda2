@@ -82,13 +82,13 @@
                             <h3>Servicios para propietarios</h3>
                             <ul>
                                 <li>
-                                    <a href="#">Buscar profesionales</a>
+                                    @Html.ActionLink("Buscar profesionales", "Index", "Post", null)
                                 </li>
                                 <li>
-                                    <a href="#">Directorio de profesionales</a>
+                                    @Html.ActionLink("Directorio de profesionales", "Index", "User", null)
                                 </li>
                                 <li>
-                                    <a href="#">Servicios de precios fijos</a>
+                                    @Html.ActionLink("Servicios de precios fijos", "Index", "Post", null)
                                 </li>
                                 <li>
                                     <a href="#">Ofertas y Descuentos</a>
@@ -99,7 +99,7 @@
                             <h3>Recursos para propietarios</h3>
                             <ul>
                                 <li>
-                                    <a href="#">Mi cuenta</a>
+                                    @Html.ActionLink("Mi cuenta", "Index", "User", null)
                                 </li>
                                 <li>
                                     <a href="#">Guía de costes reales</a>
@@ -124,10 +124,11 @@
                             <h3>Para profesionales de servicios</h3>
                             <ul>
                                 <li>
-                                    <a href="#">Iniciar Sesión</a>
+                                    @Html.ActionLink("Iniciar Sesión", "Index", "Login", null)
                                 </li>
                                 <li>
-                                    <a href="#">Unirse a nuestra Red de Profesionales</a>
+                                    @Html.ActionLink("Unirse a nuestra Red de Profesionales", "Register", "Login", null)
+                                    <a href="#"></a>
                                 </li>
                                 <li>
                                     <a href="#">Centro de recursos profesionales</a>

@@ -240,7 +240,7 @@
                     <div class="col-sm-12 col-md-6">
                         <div class="home-servicios-a">
                             <!-- TODO: Este link debe llevar al listado de TODOS los posts -->
-                            <a class="btn" href="#">Explorar todos los servicios</a>
+                            @Html.ActionLink("Explorar todos los servicios", "Index", "Post", null)
                         </div>
                     </div>
                 </div>
@@ -497,7 +497,7 @@
             </div>
             <div class="col-sm-12 col-md-4">
                 <!-- TODO: Este link debe llevar a registro -->
-                <a href="#" class="links-primary">Únete a nuestra red</a>
+                @Html.ActionLink("Únete a nuestra red", "Register", "Login", null)
             </div>
         </div>
     </div>
