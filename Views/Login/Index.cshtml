@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WEB_Chambix.Models.tb_Usuario>
+
+@{
+    ViewBag.Title = "Chambix - Encuentra localmente servicios de mantenimiento y mejora para tu hogar";
+}
+
+<section class="login">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8">
+                <div class="form">
+                    <form id="frm">
+                        <div class="form-heading">
+                            <h2>¡Bienvenido!</h2>
+                            @Html.ActionLink("Iniciar Sesión", "Index", "Login", htmlAttributes: new { @class = "form-heading-link active" })
+                            @Html.ActionLink("Registrarse", "Register", "Login", htmlAttributes: new { @class = "form-heading-link" })
+                        </div>
+                        <div class="form-body">
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="emailUsuario" id="login-email" placeholder="Correo electrónico">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="contrasenaUsuario" id="login-password" placeholder="Password">
+                            </div>
+                            <input type="submit" class="btn btn-login" value="Continuar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</section>
+
+@{
+    var a = 1;
+}
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            console.log("asdasd");
+            $("#frm").submit(function (e) {
+                e.preventDefault();
+                url    = "@Url.Content("~/Login/Enter")"
+                params = $(this).serialize();
+                $.post(url, params, function (data) {
+                    if (data == "1") {
+                        document.location.href = "@Url.Content("~/")";
+                    } else {
+                        document.location.href = "@Url.Content("~/Login/Error")";
+                    }
+                })
+            })
+        })
+    </script>
+}
