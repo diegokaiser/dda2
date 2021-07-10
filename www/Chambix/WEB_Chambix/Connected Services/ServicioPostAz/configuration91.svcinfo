@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Y+/T+VBXwCf/yChxHX9nvsYlYSfaIwNVAbAMatJX+yk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="WScFXSoBfEe3cFNEvkvEp4wANZxi/0Opty/WmquACJM=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IServicioPost">
       <properties>
@@ -110,10 +110,10 @@
         </property>
       </properties>
     </bindingConfiguration>
-    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpsBinding_IServicioPost">
+    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpsBinding_IServicioPost2">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpsBinding_IServicioPost</serializedValue>
+          <serializedValue>BasicHttpsBinding_IServicioPost2</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -306,7 +306,7 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpsBinding_IServicioPost" contract="ServicioPostAz.IServicioPost" bindingType="basicHttpBinding" address="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc" bindingConfiguration="BasicHttpsBinding_IServicioPost">
+    <endpoint name="BasicHttpsBinding_IServicioPost" contract="ServicioPostAz.IServicioPost" bindingType="basicHttpBinding" address="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc" bindingConfiguration="BasicHttpsBinding_IServicioPost2">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc</serializedValue>
@@ -318,7 +318,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpsBinding_IServicioPost</serializedValue>
+          <serializedValue>BasicHttpsBinding_IServicioPost2</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>ServicioPostAz.IServicioPost</serializedValue>

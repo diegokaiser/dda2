@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e611d73d-608e-4ea4-bec0-148c60bae609" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="79a2c47b-e9e6-495c-ac87-f3080680fa50" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioCategoria.disco" MetadataType="Disco" ID="af2050b0-e092-4e7a-ad08-56d26f2d7ab0" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?disco" />
-    <MetadataFile FileName="ServicioCategoria.wsdl" MetadataType="Wsdl" ID="b5f5448f-ef0b-4642-bbe0-db6769477848" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?wsdl" />
-    <MetadataFile FileName="ServicioCategoria.xsd" MetadataType="Schema" ID="a3cf8fad-b609-4e99-8118-631c639c63e9" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?xsd=xsd0" />
-    <MetadataFile FileName="ServicioCategoria1.xsd" MetadataType="Schema" ID="ac9504f3-412d-4fea-88e9-d70d2cdc6c43" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?xsd=xsd1" />
-    <MetadataFile FileName="ServicioCategoria2.xsd" MetadataType="Schema" ID="807858c1-b59b-487c-b741-504f21cc9ad1" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioCategoria.disco" MetadataType="Disco" ID="6ce9bf0c-0789-4828-954e-7ff34376182a" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?disco" />
+    <MetadataFile FileName="ServicioCategoria.wsdl" MetadataType="Wsdl" ID="bd4f786e-6584-49a6-aad0-4f64b45140d4" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?wsdl" />
+    <MetadataFile FileName="ServicioCategoria.xsd" MetadataType="Schema" ID="366000bf-9bb3-454e-88ad-c5c07f509272" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioCategoria1.xsd" MetadataType="Schema" ID="92754bb3-2d0f-4b1f-99f8-558cdcbc5a3a" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioCategoria2.xsd" MetadataType="Schema" ID="1d1464b2-e93f-41e9-aaa0-811cc06dc698" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

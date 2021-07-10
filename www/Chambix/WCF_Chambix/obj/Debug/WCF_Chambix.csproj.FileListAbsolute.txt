@@ -70,3 +70,15 @@ F:\Chambix\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.CoreCompileInput
 F:\Chambix\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.CopyComplete
 F:\Chambix\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.dll
 F:\Chambix\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.pdb
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\bin\Debug\WCF_Chambix.dll.config
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\bin\Debug\WCF_Chambix.dll
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\bin\Debug\WCF_Chambix.pdb
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.dll
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.xml
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csprojAssemblyReference.cache
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.CoreCompileInputs.cache
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.csproj.CopyComplete
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.dll
+C:\Users\PERSONAL\Desktop\Ep3ChambixHoy\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.pdb

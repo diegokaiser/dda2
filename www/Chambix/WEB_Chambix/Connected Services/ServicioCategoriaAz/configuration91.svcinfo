@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="xiRbE8UT/wseJwc72TCCWJdiyHSHBM9zdkxMn8XQs3I=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="JeGI2cErsT/+YLTUhYWh64ah2DMGzIe0FFpeMWFruUc=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IServicioCategoria">
+    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IServicioCategoria1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IServicioCategoria</serializedValue>
+          <serializedValue>BasicHttpBinding_IServicioCategoria1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -110,10 +110,10 @@
         </property>
       </properties>
     </bindingConfiguration>
-    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpsBinding_IServicioCategoria">
+    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpsBinding_IServicioCategoria1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpsBinding_IServicioCategoria</serializedValue>
+          <serializedValue>BasicHttpsBinding_IServicioCategoria1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -221,7 +221,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IServicioCategoria" contract="ServicioCategoriaAz.IServicioCategoria" bindingType="basicHttpBinding" address="http://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc" bindingConfiguration="BasicHttpBinding_IServicioCategoria">
+    <endpoint name="BasicHttpBinding_IServicioCategoria" contract="ServicioCategoriaAz.IServicioCategoria" bindingType="basicHttpBinding" address="http://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc" bindingConfiguration="BasicHttpBinding_IServicioCategoria1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc</serializedValue>
@@ -233,7 +233,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IServicioCategoria</serializedValue>
+          <serializedValue>BasicHttpBinding_IServicioCategoria1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>ServicioCategoriaAz.IServicioCategoria</serializedValue>
@@ -306,7 +306,7 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpsBinding_IServicioCategoria" contract="ServicioCategoriaAz.IServicioCategoria" bindingType="basicHttpBinding" address="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc" bindingConfiguration="BasicHttpsBinding_IServicioCategoria">
+    <endpoint name="BasicHttpsBinding_IServicioCategoria" contract="ServicioCategoriaAz.IServicioCategoria" bindingType="basicHttpBinding" address="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc" bindingConfiguration="BasicHttpsBinding_IServicioCategoria1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc</serializedValue>
@@ -318,7 +318,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpsBinding_IServicioCategoria</serializedValue>
+          <serializedValue>BasicHttpsBinding_IServicioCategoria1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>ServicioCategoriaAz.IServicioCategoria</serializedValue>

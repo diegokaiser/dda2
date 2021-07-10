@@ -41,6 +41,8 @@ namespace WCF_Chambix
         private Int16 mvaridSubcategoria;
         private Int16 mvaridDistrito;
         private String mvartituloPost;
+        private String mvarNombreCategoria;
+        private String mvarNombreUsuario;
         private String mvardescripcionPost;
         private Decimal mvarprecioPost;
         private String mvarimagenPost;
@@ -148,5 +150,18 @@ namespace WCF_Chambix
             get { return mvarupdate_by; }
             set { mvarupdate_by = value; }
         }
+        [DataMember]
+        public String NombreCategoria
+        {
+            get { return mvarNombreCategoria; }
+            set { mvarNombreCategoria = value; }
+        }
+        [DataMember]
+        public String NombreUsuario
+        {
+            get { return mvarNombreUsuario; }
+            set { mvarNombreUsuario = value; }
+        }
     }
 }
+

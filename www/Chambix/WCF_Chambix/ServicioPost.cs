@@ -142,7 +142,7 @@ namespace WCF_Chambix
             }
         }
 
-        public List<PostBE> GetAllPostsPorCategoria(Int16 idSubCategoria)
+        public List<PostBE> GetAllPostsPorCategoria(Int16 idCategoria)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
@@ -150,7 +150,7 @@ namespace WCF_Chambix
                 List<PostBE> objPostLists = new List<PostBE>();
                 var query = (from objPst in Chambix.tb_Post
                              where objPst.estadoPost == true
-                             && objPst.idSubcategoria == idSubCategoria
+                             && objPst.tb_SubCategoria.tb_Categoria.idCategoria == idCategoria
                              select objPst);
                 foreach (var objPost in query)
                 {
@@ -166,6 +166,9 @@ namespace WCF_Chambix
                     objPostBE.valoracionPost = Convert.ToInt16(objPost.valoracionPost);
                     objPostBE.estadoPost = Convert.ToInt16(objPost.estadoPost);
                     objPostBE.create_at = (DateTime)objPost.create_at;
+                    objPostBE.NombreCategoria = (objPost.tb_SubCategoria.tb_Categoria.nombreCategoria);
+                    objPostBE.NombreUsuario = (objPost.tb_Usuario.nombreUsuario);
+
                     objPostLists.Add(objPostBE);
                 }
                 return objPostLists;

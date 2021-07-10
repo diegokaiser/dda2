@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="NWeFEa4KGNlSCmqx1Xqp0kFGZBorM5I1dgWdb57Fb6s=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IServicioTestimonio">
+    <bindingConfiguration bindingType="basicHttpsBinding" name="basicHttpsBinding_IServicioTestimonio">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IServicioTestimonio</serializedValue>
+          <serializedValue>basicHttpsBinding_IServicioTestimonio</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IServicioTestimonio" contract="ServicioTestimonioLc.IServicioTestimonio" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/WCF_Chambix/ServicioTestimonio/" bindingConfiguration="BasicHttpBinding_IServicioTestimonio">
+    <endpoint name="basicHttpsBinding_IServicioTestimonio" contract="ServicioTestimonioLc.IServicioTestimonio" bindingType="basicHttpsBinding" address="http://localhost:8733/Design_Time_Addresses/WCF_Chambix/ServicioTestimonio/" bindingConfiguration="basicHttpsBinding_IServicioTestimonio">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8733/Design_Time_Addresses/WCF_Chambix/ServicioTestimonio/</serializedValue>
@@ -121,10 +121,10 @@
           <serializedValue />
         </property>
         <property path="/binding" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>basicHttpBinding</serializedValue>
+          <serializedValue>basicHttpsBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IServicioTestimonio</serializedValue>
+          <serializedValue>basicHttpsBinding_IServicioTestimonio</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>ServicioTestimonioLc.IServicioTestimonio</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IServicioTestimonio</serializedValue>
+          <serializedValue>basicHttpsBinding_IServicioTestimonio</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

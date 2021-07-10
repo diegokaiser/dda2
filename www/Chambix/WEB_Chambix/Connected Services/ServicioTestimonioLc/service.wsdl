@@ -59,7 +59,7 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IServicioTestimonio/GetAllTestimonioResponse" message="tns:IServicioTestimonio_GetAllTestimonio_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpBinding_IServicioTestimonio" type="tns:IServicioTestimonio">
+  <wsdl:binding name="basicHttpsBinding_IServicioTestimonio" type="tns:IServicioTestimonio">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="InsertTestimonio">
       <soap:operation soapAction="http://tempuri.org/IServicioTestimonio/InsertTestimonio" style="document" />
@@ -108,7 +108,7 @@
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="ServicioTestimonio">
-    <wsdl:port name="BasicHttpBinding_IServicioTestimonio" binding="tns:BasicHttpBinding_IServicioTestimonio">
+    <wsdl:port name="basicHttpsBinding_IServicioTestimonio" binding="tns:basicHttpsBinding_IServicioTestimonio">
       <soap:address location="http://localhost:8733/Design_Time_Addresses/WCF_Chambix/ServicioTestimonio/" />
     </wsdl:port>
   </wsdl:service>
