@@ -1,0 +1,141 @@
+﻿@model WEB_Chambix.Models.tb_Post
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Eliminar</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="crud crud-edit">
+                <h3>¿Estás seguro que quieres eliminar esto?</h3>
+                <div>
+                    <h4>@Html.DisplayFor(model => model.tituloPost)</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tituloPost)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.tituloPost)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.descripcionPost)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.descripcionPost)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.precioPost)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.precioPost)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.imagenPost)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.imagenPost)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.valoracionPost)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.valoracionPost)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.estadoPost)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.estadoPost)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.create_at)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.create_at)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.create_by)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.create_by)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.update_at)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.update_at)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.update_by)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.update_by)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tb_Distrito.nombreDistrito)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.tb_Distrito.nombreDistrito)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tb_SubCategoria.nombreSubCategoria)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.tb_SubCategoria.nombreSubCategoria)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tb_Usuario.nombreUsuario)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.tb_Usuario.nombreUsuario)
+                        </dd>
+
+                    </dl>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color crud_back">
+                            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+                            @Html.ActionLink("Regresar al listado", "Index")
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
