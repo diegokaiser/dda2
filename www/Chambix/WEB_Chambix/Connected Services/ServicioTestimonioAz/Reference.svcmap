@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dbc783fd-6abf-4398-a822-f1551c2d1610" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://chambixwcf20210708224304.azurewebsites.net/ServicioTestimonio.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioTestimonio.xsd" MetadataType="Schema" ID="33afa08e-f11d-4a36-8ed5-5c98ffcf987e" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioTestimonio.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioTestimonio1.xsd" MetadataType="Schema" ID="db64f583-781d-410a-82cb-7fa5cefeaf8c" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioTestimonio.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioTestimonio.wsdl" MetadataType="Wsdl" ID="e72fb66c-d423-41d5-b404-ae914a145f42" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioTestimonio.svc?wsdl" />
+    <MetadataFile FileName="ServicioTestimonio.disco" MetadataType="Disco" ID="606f616e-f270-4afb-9a9d-abd0de026bb4" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioTestimonio.svc?disco" />
+    <MetadataFile FileName="ServicioTestimonio2.xsd" MetadataType="Schema" ID="89cf10b4-764f-4fdd-824c-62cc2468e59e" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioTestimonio.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

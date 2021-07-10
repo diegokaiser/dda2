@@ -1,0 +1,107 @@
+﻿@model WEB_Chambix.Models.tb_Servicio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<style>
+    .btnER a {
+        border-radius: 5px;
+        padding: 5px 7px;
+        color: #fff;
+        text-decoration: none
+    }
+
+        .btnER a:nth-child(1) {
+            background-color: #3797da
+        }
+
+        .btnER a:nth-child(2) {
+            background-color: #FF5532
+        }
+</style>
+
+<section class="posts">
+    <div class="container">
+        <h2>
+            Detalle de Post</h2>
+
+            <div>
+                <h4></h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Estado de Servicio
+                        @*@Html.DisplayNameFor(model => model.estadoServicio)*@
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.estadoServicio)
+                    </dd>
+
+                    <dt>
+                        Fecha de creación
+                        @* @Html.DisplayNameFor(model => model.create_at)*@
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.create_at)
+                    </dd>
+
+                    <dt>
+                        Creado por
+                       @* @Html.DisplayNameFor(model => model.create_by)*@
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.create_by)
+                    </dd>
+
+                    <dt>
+                        Fecha de actualizacion
+                       @* @Html.DisplayNameFor(model => model.update_at)*@
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.update_at)
+                    </dd>
+
+                    <dt>
+                        Actualizado por
+                        @*@Html.DisplayNameFor(model => model.update_by)*@
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.update_by)
+                    </dd>
+
+                    <dt>
+                        Titulo
+                       @* @Html.DisplayNameFor(model => model.tb_Post.tituloPost)*@
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.tb_Post.tituloPost)
+                    </dd>
+
+                    <dt>
+                        Usuario
+                       @* @Html.DisplayNameFor(model => model.tb_Usuario.nombreUsuario)*@
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.tb_Usuario.nombreUsuario)
+                    </dd>
+
+                </dl>
+            </div>
+            <div class="btnER">
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.idServicio }) |
+                    @Html.ActionLink("Regresar", "Index")
+                </p>
+            </div>
+
+    </div>
+</section>

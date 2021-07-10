@@ -1,0 +1,504 @@
+﻿@{
+    ViewBag.Title = "Chambix - Encuentra localmente servicios de mantenimiento y mejora para tu hogar";
+}
+
+<div class="container">
+    <div class="home-banner">
+        <div class="row">
+            <div class="col-12">
+                <div class="home-banner-hero-image"></div>
+                <div class="home-banner-hero-overlay"></div>
+                <div class="home-banner-hero-content">
+                    <h1><span>Encuentra</span><span>localmente</span><span>profesionales</span><span>de</span><span>confianza</span>para cualquier proyecto en tu hogar</h1>
+                    <div class="home-banner-hero-content-search">
+                        <form action="/" method="post">
+                            <div class="home-banner-hero-content-search-container">
+                                <!--  TODO: Este buscador debe listar post de acuerdo a la palabra clave buscada -->
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <input type="text" name="name" placeholder="¿Qué servicio necesitas?" />
+                                <input type="submit" name="name" value="Buscar" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-populares">
+        <div class="row">
+            <div class="col-12">
+                <h2>Proyectos populares</h2>
+                <!-- TODO: Estas categorias deberian existir, cada uno de estos enlaces debe mostrar una vista FILTRADA con post pertenecientes a esta categoria -->
+                <ul>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.8887 24.9648H20.6177V21.3298C20.6177 15.3168 25.5097 10.4238 31.5247 10.4238H40.0067V17.6938H31.5247C29.5197 17.6938 27.8887 19.3248 27.8887 21.3298V24.9648Z" fill="#D5DBF1"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.8887 24.9648H20.6177V21.3298C20.6177 15.3168 25.5097 10.4238 31.5247 10.4238H40.0067V17.6938H31.5247C29.5197 17.6938 27.8887 19.3248 27.8887 21.3298V24.9648Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9825 39.5068H8.50049V32.2358H16.9825C18.9865 32.2358 20.6185 30.6048 20.6185 28.6008V24.9648H27.8885V28.6008C27.8885 34.6138 22.9965 39.5068 16.9825 39.5068Z" fill="#D5DBF1"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9825 39.5068H8.50049V32.2358H16.9825C18.9865 32.2358 20.6185 30.6048 20.6185 28.6008V24.9648H27.8885V28.6008C27.8885 34.6138 22.9965 39.5068 16.9825 39.5068Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M40.0068 20.1181V8.00009" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M8.5 29.8124V41.9294" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6321 26.701H27.7711V23.235H20.6321V26.701Z" fill="#10103F"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Plomería</a></li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M32.2839 41.689H42.7009V24.504H32.2839V41.689Z" fill="#D5DBF1"></path>
+                                <path d="M32.2847 24.504H42.7017V41.689H32.2847" stroke="#070441" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.49902 41.689H15.917V24.504H5.49902V41.689Z" fill="#D5DBF1"></path>
+                                <path d="M15.9175 24.504H5.49951V41.689H15.9175" stroke="#070441" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9175 16.3204L21.5045 10.7264V6.5004H26.6965V10.7264L32.2845 16.3044L21.5045 16.3204H15.9175Z" fill="white"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9175 16.3204L21.5045 10.7264V6.5004H26.6965V10.7264L32.2845 16.3044L21.5045 16.3204H15.9175Z" stroke="#070441" stroke-linejoin="round"></path>
+                                <path d="M13.4626 28.1866H7.95459" stroke="#070441"></path>
+                                <path d="M34.7397 28.1866H40.2467" stroke="#070441"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.918 24.504V41.689H32.284V31.622V24.504H15.918Z" fill="#D5DBF1"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9175 24.504H32.2845V31.622V41.689H15.9175V24.504Z" stroke="#070441" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.373 38.416H29.83V31.051H18.373V38.416Z" fill="#070441"></path>
+                                <path d="M18.3726 28.1866H29.8296" stroke="#070441"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Remodelación de cocina</a>
+                    </li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4205 27.8078H40.2455V35.5298C40.2455 39.3208 37.1475 42.3938 33.3245 42.3938H15.4205C11.5985 42.3938 8.49951 39.3208 8.49951 35.5298V27.8078H11.2735H15.4205Z" fill="#D5DBF1"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4205 27.8078H40.2455V35.5298C40.2455 39.3208 37.1475 42.3938 33.3245 42.3938H15.4205C11.5985 42.3938 8.49951 39.3208 8.49951 35.5298V27.8078H11.2735H15.4205Z" stroke="#070441" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.49951 36.3879H40.2455C40.2455 39.7039 37.5565 42.3939 34.2395 42.3939H14.5055C11.1885 42.3939 8.49951 39.7039 8.49951 36.3879Z" fill="#070441"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.9976 15.7961H29.9496C29.9496 12.9521 27.6446 10.6481 24.8016 10.6481C23.1536 10.6481 21.6866 11.4221 20.7446 12.6271C20.0606 13.5011 19.6536 14.6011 19.6536 15.7961H22.7296H26.9976Z" fill="white"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.9976 15.7961H29.9496C29.9496 12.9521 27.6446 10.6481 24.8016 10.6481C23.1536 10.6481 21.6866 11.4221 20.7446 12.6271C20.0606 13.5011 19.6536 14.6011 19.6536 15.7961H22.7296H26.9976Z" stroke="#070441" stroke-linejoin="round"></path>
+                                <path d="M35.0973 27.6604V10.6174C35.0973 7.7914 32.7923 5.5004 29.9503 5.5004C27.1073 5.5004 24.8013 7.7914 24.8013 10.6174" stroke="#070441" stroke-linejoin="round"></path>
+                                <path d="M21.7983 19.6565V23.0895" stroke="#070441" stroke-linecap="round"></path>
+                                <path d="M24.6938 19.6565V23.0895" stroke="#070441" stroke-linecap="round"></path>
+                                <path d="M27.5474 19.6565V23.0895" stroke="#070441" stroke-linecap="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Remodelación de baño</a>
+                    </li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.5024 12.5006H42.5044V28.2526H27.5024" fill="white"></path>
+                                <path d="M27.5024 12.5006H42.5044V28.2526H27.5024" stroke="#070441" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.49902 39.5035H23.751V9.5005H6.49902V39.5035Z" fill="#D5DBF1"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 39.5035H23.752V9.4995H6.5V39.5035Z" stroke="#070441"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0017 24.1266C20.8297 24.1266 21.5017 24.7986 21.5017 25.6266C21.5017 26.4556 20.8297 27.1266 20.0017 27.1266C19.1737 27.1266 18.5017 26.4556 18.5017 25.6266C18.5017 24.7986 19.1737 24.1266 20.0017 24.1266Z" fill="#070441"></path>
+                                <path d="M34.6284 12.5006V28.2526" stroke="#070441" stroke-linecap="square"></path>
+                                <path d="M27.8774 20.3766H42.1294" stroke="#070441" stroke-linecap="square"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Ventanas y Puertas</a>
+                    </li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5325 15.5006L25.6835 28.8696H43.8445L32.5775 15.5006H14.5325ZM3.38354 28.8696L14.5325 15.5006L3.38354 28.8696Z" fill="#D5DBF1"></path>
+                                <path d="M3.38354 28.8694L14.5325 15.5004L25.6835 28.8694H43.8445L32.5775 15.5004H14.5325" stroke="#070441" stroke-linejoin="round"></path>
+                                <path d="M25.4939 33.4173H44.1209" stroke="#070441" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Techado y paredes</a>
+                    </li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 41.6985H34.828V7.5005H13.5V41.6985Z" fill="#D5DBF1"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 41.6975H34.828V7.4995H13.5V41.6975Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.696 22.0475H29.278V12.7885H18.696V22.0475Z" fill="white"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.696 22.0475H29.278V12.7885H18.696V22.0475Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M22.2229 15.1656V16.9296" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M25.7502 15.1656V16.9296" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M23.9963 17.9205V19.6845" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.696 36.4545H29.278V27.1955H18.696V36.4545Z" fill="white"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.696 36.4545H29.278V27.1955H18.696V36.4545Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M22.2229 29.5719V31.3359" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M25.7502 29.5719V31.3359" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M23.9963 32.3277V34.0917" stroke="#10103F" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Electricidad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-temporadas">
+        <div class="row">
+            <div class="col-12">
+                <h2>Prepárate para el invierno</h2>
+                <!-- TODO: Estas categorias deberian existir, cada uno de estos enlaces debe mostrar una vista FILTRADA con post pertenecientes a esta categoria -->
+                <ul>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M35.6124 34.5125L9.45337 8.3535" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M29.5751 40.5486L26.5561 37.5296C26.0011 36.9746 26.0011 36.0726 26.5561 35.5186L36.6181 25.4566C37.1751 24.9016 38.0741 24.9016 38.6301 25.4566L41.6481 28.4756" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M32.5938 37.53L28.5698 33.506" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M38.63 31.4939L34.606 27.4689" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M31.8956 13.8376L15.5386 30.1946" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.76276 36.9861L8.74676 36.9701C7.08376 35.3081 7.08376 32.6121 8.74676 30.9491L12.5198 27.1761L18.5578 33.2131L14.7838 36.9861C13.1208 38.6491 10.4248 38.6491 8.76276 36.9861Z" fill="#D5DBF1"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.76276 36.9861L8.74676 36.9701C7.08376 35.3081 7.08376 32.6121 8.74676 30.9491L12.5198 27.1761L18.5578 33.2131L14.7838 36.9861C13.1208 38.6491 10.4248 38.6491 8.76276 36.9861Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M33.9083 15.8503L29.8833 11.8253L32.9013 8.8073L36.9263 12.8313L33.9083 15.8503Z" fill="white"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M33.9083 15.8503L29.8833 11.8253L32.9013 8.8073L36.9263 12.8313L33.9083 15.8503Z" stroke="#10103F" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Calefacción</a>
+                    </li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="79" height="80" viewBox="0 0 79 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M50.0517 49.3732L31.3686 30.1965L26.8398 34.8049L45.523 53.9815L50.0517 49.3732Z" fill="#15123F"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M50.0517 49.3732L31.3686 30.1965L26.8398 34.8049L45.523 53.9815L50.0517 49.3732Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.3691 30.197L50.0523 49.3737L65.6698 35.357L45.0251 14.167L31.3691 30.197Z" fill="white"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M50.0513 49.3732L31.3682 30.1965L45.0241 14.1665L65.6688 35.3565L50.0513 49.3732Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M55.0609 24.9609L48.9961 31.1859" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M49.3202 19.0688L45.5498 22.9372" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M60.801 30.8528L57.0322 34.7228" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M45.6365 53.7482C44.0907 55.3349 41.2053 58.3982 38.2386 56.2966C35.2963 54.2116 33.8301 54.3632 32.3232 55.4416C31.6396 56.1449 31.5763 56.2566 30.8992 57.4466C30.3649 58.3816 29.4995 59.8999 27.7637 62.6999C26.9664 63.9816 24.7597 66.9633 21.4293 66.9799C19.8396 66.9883 17.9804 66.2833 16.4362 64.6966C14.8887 63.1099 14.2035 61.2032 14.21 59.5699C14.2262 56.1532 17.1328 53.8866 18.3815 53.0699C21.1078 51.2866 22.5871 50.3982 23.4996 49.8516C24.6574 49.1549 24.7645 49.0899 25.4514 48.3882C26.502 46.8416 26.6514 45.3366 24.62 42.3182C22.5708 39.2732 25.2858 36.4966 26.83 34.9099" fill="#D5DBF1"></path>
+                                <path d="M45.6365 53.7482C44.0907 55.3349 41.2053 58.3982 38.2386 56.2966C35.2963 54.2116 33.8301 54.3632 32.3232 55.4416C31.6396 56.1449 31.5763 56.2566 30.8992 57.4466C30.3649 58.3816 29.4995 59.8999 27.7637 62.6999C26.9664 63.9816 24.7597 66.9633 21.4293 66.9799C19.8396 66.9883 17.9804 66.2833 16.4362 64.6966C14.8887 63.1099 14.2035 61.2032 14.21 59.5699C14.2262 56.1532 17.1328 53.8866 18.3815 53.0699C21.1078 51.2866 22.5871 50.3982 23.4996 49.8516C24.6574 49.1549 24.7645 49.0899 25.4514 48.3882C26.502 46.8416 26.6514 45.3366 24.62 42.3182C22.5708 39.2732 25.2858 36.4966 26.83 34.9099" stroke="#10103F" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Pintura y aislamiento</a>
+                    </li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00439 43.2022C6.41539 43.1892 7.78139 42.9572 8.99439 42.1782C9.68439 41.7352 10.3434 41.2462 11.0214 40.7852C13.2034 39.2982 15.7444 39.2992 17.9334 40.7872C18.3424 41.0662 18.7444 41.3572 19.1454 41.6492C21.9924 43.7242 25.8374 43.7542 28.7184 41.7232C29.1704 41.4032 29.6194 41.0812 30.0764 40.7692C32.2284 39.3022 34.7764 39.3062 36.9354 40.7832C37.3444 41.0632 37.7574 41.3402 38.1514 41.6392C39.4544 42.6262 40.9084 43.1712 42.4734 43.1762V28.8542C40.9084 28.8482 39.4544 28.3052 38.1514 27.3172C37.7574 27.0182 37.3444 26.7422 36.9354 26.4622C34.7764 24.9852 32.2284 24.9792 30.0764 26.4472C29.6194 26.7602 29.1704 27.0822 28.7184 27.4002C25.8374 29.4322 21.9924 29.4022 19.1454 27.3282C18.7444 27.0362 18.3424 26.7452 17.9334 26.4662C15.7444 24.9762 13.2034 24.9762 11.0214 26.4632C10.3434 26.9252 9.68439 27.4142 8.99439 27.8562C7.78139 28.6362 6.41539 28.8682 5.00439 28.8812V43.2022Z" fill="#D5DBF1"></path>
+                                <path d="M42.4734 40.1759C40.9094 40.1709 39.4544 39.6259 38.1524 38.6389C37.7574 38.3399 37.3444 38.0639 36.9354 37.7829C34.7774 36.3069 32.2284 36.3019 30.0774 37.7699C29.6194 38.0809 29.1704 38.4039 28.7184 38.7229C25.8374 40.7539 21.9934 40.7249 19.1454 38.6499C18.7444 38.3579 18.3424 38.0669 17.9334 37.7869C15.7444 36.2989 13.2034 36.2979 11.0214 37.7849C10.3434 38.2459 9.68439 38.7359 8.99439 39.1779C7.78239 39.9569 6.41539 40.1899 5.00439 40.2019" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M42.4734 31.8546C40.9094 31.8486 39.4544 31.3046 38.1524 30.3176C37.7574 30.0186 37.3444 29.7426 36.9354 29.4616C34.7774 27.9856 32.2284 27.9796 30.0774 29.4476C29.6194 29.7596 29.1704 30.0826 28.7184 30.4006C25.8374 32.4326 21.9934 32.4026 19.1454 30.3286C18.7444 30.0366 18.3424 29.7456 17.9334 29.4656C15.7444 27.9766 13.2034 27.9766 11.0214 29.4626C10.3434 29.9246 9.68439 30.4146 8.99439 30.8566C7.78239 31.6356 6.41539 31.8686 5.00439 31.8806" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M24.4119 7.24811C23.7949 6.35211 22.9849 5.78811 21.9219 5.56911C19.8089 5.13411 17.6199 6.80311 17.5819 8.95711C17.5369 11.5121 17.5709 26.5301 17.5709 29.1441" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M37.8377 7.24811C37.2217 6.35211 36.4117 5.78811 35.3487 5.56911C33.2357 5.13411 31.0467 6.80311 31.0087 8.95711C30.9637 11.5121 30.9977 26.3411 30.9977 28.9551" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M17.5847 17.8438L30.8207 17.8988" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M17.5591 24.1143L30.7961 24.1693" stroke="#10103F" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Piscinas y bañeras</a>
+                    </li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="79" height="80" viewBox="0 0 79 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29.514 47.7013V24.1196H14.0135L8.27832 38.048V47.7013" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.3862 39.0374V31.0391H16.821L13.5264 39.0374H24.3862Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M43.9151 17.5002L34.1514 22.3269V37.2202L44.2805 42.5986H53.3135L70.7659 37.3569V22.6036L53.0683 17.5002H43.9151Z" fill="#10103F"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M34.1504 22.3269V37.2202L44.2795 42.5986H53.3126L70.7649 37.3586V22.6036L53.0674 17.5002H43.9158L34.1504 22.3269Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M38.4222 47.287V39.427" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M61.8549 47.2869V35.9785" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M28.9374 57.1331C28.9374 60.7497 26.0795 63.6814 22.5559 63.6814C19.0323 63.6814 16.1777 60.7497 16.1777 57.1331C16.1777 53.5164 19.0323 50.5847 22.5559 50.5847C26.0795 50.5847 28.9374 53.5164 28.9374 57.1331Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M64.368 57.1331C64.368 60.7497 61.5102 63.6814 57.9866 63.6814C54.463 63.6814 51.6084 60.7497 51.6084 57.1331C51.6084 53.5164 54.463 50.5847 57.9866 50.5847C61.5102 50.5847 64.368 53.5164 64.368 57.1331Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M28.0342 53.1764H53.0825" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M63.4452 53.1764H72.7105V47.3364H8.19629V53.1764H17.5655" stroke="#10103F" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Hormigón, ladrillo y piedra</a>
+                    </li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 8.49969V16.2177H31.465L27.01 8.49969H5Z" fill="#D5DBF1"></path>
+                                <path d="M4.99951 16.2175H31.4645L27.0095 8.49951H4.99951" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 18.7894V26.5064H37.404L32.949 18.7894H5Z" fill="#D5DBF1"></path>
+                                <path d="M4.99951 26.5065H37.4045L32.9495 18.7895H4.99951" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 28.7704V39.8824H43.167V36.4874L38.712 28.7704H5Z" fill="#D5DBF1"></path>
+                                <path d="M4.99951 28.7702H38.7125L43.1675 36.4882V39.8822H4.99951" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path d="M43.1676 36.488H5.00464" stroke="#10103F" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Cubiertas y cocheras</a>
+                    </li>
+                    <li>
+                        <a href="#" class="ico">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 9.50049V18.8925H39.526L38.353 9.50049H9Z" fill="#D5DBF1"></path>
+                                <path d="M8.99976 9.50012H38.3528L39.5258 18.8931H8.99976" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 18.8929V28.2849H39.526L38.353 18.8929H9Z" fill="#D5DBF1"></path>
+                                <path d="M8.99976 18.8926H38.3528L39.5258 28.2856H8.99976" stroke="#10103F" stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 28.2853V37.6773H39.526L38.353 28.2853H9Z" fill="#D5DBF1"></path>
+                                <path d="M8.99976 28.2852H38.3528L39.5258 37.6782H8.99976" stroke="#10103F" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#">Jardinería</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="home-servicios">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h2>Más proyectos</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="home-servicios-a">
+                            <!-- TODO: Este link debe llevar al listado de TODOS los posts -->
+                            <a class="btn" href="#">Explorar todos los servicios</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="home-servicios-grilla">
+                        <!-- TODO: Estas categorias deberian existir, cada uno de estos enlaces debe mostrar una vista FILTRADA con post pertenecientes a esta categoria -->
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.79932 20.453L10.5723 20.502V41.077H24.1323V8.784L6.79932 20.453Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2727 41.0765H37.8327V20.5015L41.6067 20.4525L24.2727 8.78448V41.0765Z" fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50049 20.5015L24.1465 8.49951L41.7915 20.5015H6.50049Z" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.572 41.0769H37.719V20.5019H10.572V41.0769Z" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M37.719 34.2183H24.146" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M37.719 27.3599H24.146" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M24.146 41.0767V8.49969" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M30.933 13.6441H24.146" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M30.9331 13.6441V41.0771" stroke="#070441" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span>Adiciones y remodelaciones</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5005 5.49969V40.5847H34.3845V20.0317V5.49969H13.5005Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5002 5.49969H34.3842V20.0317V40.5847H13.5002V5.49969Z" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M13.5334 19.8786H34.2214" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5005 40.5844V43.5514H34.3845V42.0064V40.5844H13.5005Z" fill="#15123F"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5002 43.5514H34.3842V42.0064V40.5844H13.5002V43.5514Z" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M30.1838 11.7223V15.7853" stroke="#070441"></path>
+                                    <path d="M30.1838 22.7223V26.7853" stroke="#070441"></path>
+                                    <path d="M17.7903 35.279V37.342" stroke="#070441"></path>
+                                    <path d="M20.7903 35.279V37.342" stroke="#070441"></path>
+                                    <path d="M23.7903 35.279V37.342" stroke="#070441"></path>
+                                    <path d="M26.7903 35.279V37.342" stroke="#070441"></path>
+                                    <path d="M29.7903 35.279V37.342" stroke="#070441"></path>
+                                </svg>
+                            </i>
+                            <span>Accesorios</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <svg width="78" height="80" viewBox="0 0 78 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0946 28.0633V65.305C18.6118 65.305 15.7394 65.245 13.3232 65.1666C8.85944 65.025 5.77589 62.0666 5.76615 57.8983C5.73854 46.9916 5.75641 32.3666 5.75965 21.46" fill="#D5DBF1"></path>
+                                    <path d="M21.0946 28.0633V65.305C18.6118 65.305 15.7394 65.245 13.3232 65.1666C8.85944 65.025 5.77589 62.0666 5.76615 57.8983C5.73854 46.9916 5.75641 32.3666 5.75965 21.46" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M72.0146 14.2596C72.0114 20.1929 72.0097 24.5263 72.0065 30.4596C72.0033 37.4446 72.0032 44.4313 71.9935 51.4163C71.9902 54.0363 70.7562 56.0063 68.2328 57.2963C68.2328 57.2963 67.1888 57.9979 65.7533 57.9979C65.3149 58.0096 61.5494 58.0163 58.789 58.0196L32.9434 58.0063C28.7946 58.0013 21.8043 57.9979 21.2619 57.9979V57.1813C21.2619 47.6879 21.2635 38.1946 21.2619 28.7013C21.2619 27.7246 21.0346 27.5146 19.9775 27.5129C17.5987 27.5113 15.2199 27.5563 12.8443 27.5013C9.86302 27.4329 7.56538 26.2063 6.38165 23.6846C5.18493 21.1363 5.51131 18.6329 7.46471 16.4346C8.94397 14.7696 10.951 14.1646 13.26 14.1663C30.5938 14.1796 44.9853 14.1629 62.3191 14.1863L72.0146 14.2596Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M72.0146 14.2596C72.0114 20.1929 72.0097 24.5263 72.0065 30.4596C72.0032 37.4446 72.0032 44.4313 71.9935 51.4163C71.9903 54.0363 70.7562 56.0063 68.2328 57.2963C68.2328 57.2963 67.1888 57.9979 65.7533 57.9979C65.3149 58.0096 61.5494 58.0163 58.789 58.0196L32.9434 58.0063C28.7946 58.0013 21.8043 57.9979 21.2619 57.9979V57.1813C21.2619 47.6879 21.2635 38.1946 21.2619 28.7013C21.2619 27.7246 21.0346 27.5146 19.9775 27.5129C17.5987 27.5113 15.2199 27.5563 12.8443 27.5013C9.86302 27.4329 7.56538 26.2063 6.38165 23.6846C5.18493 21.1363 5.51131 18.6329 7.46471 16.4346C8.94397 14.7696 10.951 14.1646 13.26 14.1663C30.5938 14.1796 44.9853 14.1629 62.3191 14.1863L72.0146 14.2596Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.8105 40.0554V48.5438H63.309V24.0271H29.8105V33.3854V40.0554Z" fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.8105 40.0554V48.5438H63.309V24.0271H29.8105V33.3854V40.0554Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M63.0583 35.765H42.6279" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M42.6283 39.3263V32.428" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M54.3099 24.1685V29.8135" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M54.3099 43.156V48.801" stroke="#10103F" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span>Arquitectos e ingenieros</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.50049 9.49991V26.7439V38.9359H40.4215V9.49991H8.50049Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.4212 38.9366H8.50024V26.7446V9.4996H40.4212V38.9366Z" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M28.843 28.4415V33.2185" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M19.8704 28.4415V33.2185" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M24.3625 9.34381V38.7598" stroke="#10103F" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span>Armarios y encimeras</span>
+                        </a>
+
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1874 15.4833L13.4924 19.1783C13.3684 19.3013 13.2044 19.3703 13.0304 19.3703C12.8554 19.3703 12.6914 19.3013 12.5684 19.1783L10.4974 17.2173C10.2424 16.9633 10.2424 16.5483 10.4974 16.2953L10.9584 15.8333L13.7314 13.0613L14.1934 12.5993C14.4404 12.3523 14.8704 12.3523 15.1174 12.5993L17.1874 14.5603C17.3114 14.6833 17.3784 14.8473 17.3784 15.0223C17.3784 15.1963 17.3114 15.3603 17.1874 15.4833Z" fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.58 20.2978L22.096 16.0268L13.989 23.8398L14.475 26.4088L16.432 25.9468L17.237 28.0588C17.237 28.0588 18.438 26.8678 18.972 26.7618C19.504 26.6548 21.019 26.1298 21.807 25.3268C22.594 24.5248 26.58 20.2978 26.58 20.2978Z" fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.58 20.2978L22.096 16.0268L13.989 23.8398L14.475 26.4088L16.432 25.9468L17.237 28.0588C17.237 28.0588 18.438 26.8678 18.972 26.7618C19.504 26.6548 21.019 26.1298 21.807 25.3268C22.594 24.5248 26.58 20.2978 26.58 20.2978Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.3993 23.2587L41.8723 35.3487L38.2233 38.8657L34.7813 39.6777L34.2513 36.4277L30.8093 37.2387L30.2813 33.9877L26.8393 34.8007L26.3093 31.5487L22.1753 32.2317L23.8723 28.8397L29.3993 23.2587Z" fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.3993 23.2587L41.8723 35.3487L38.2233 38.8657L34.7813 39.6777L34.2513 36.4277L30.8093 37.2387L30.2813 33.9877L26.8393 34.8007L26.3093 31.5487L22.1753 32.2317L23.8723 28.8397L29.3993 23.2587Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2257 41.6073C13.2257 41.6073 20.9097 33.5643 21.8287 32.6483C22.7447 31.7313 23.2627 30.1763 23.2627 30.1763C23.4827 29.5163 24.0667 28.5723 24.5587 28.0803L34.9617 17.7733L36.7977 19.6093L36.2377 20.1703C35.7457 20.6633 35.7457 21.4693 36.2377 21.9613L38.1177 23.8423C38.6097 24.3353 39.4157 24.3353 39.9087 23.8423L43.6257 20.1263C44.1197 19.6333 44.1197 18.8273 43.6257 18.3353L41.7447 16.4533C41.2517 15.9603 40.4457 15.9603 39.9537 16.4533L39.8127 16.5923L37.9777 14.7573L35.2207 12.0063C32.7207 9.5323 30.5157 8.7623 28.5947 8.7623C25.8347 8.7623 24.4797 11.9443 24.9787 12.0403C25.8347 12.2043 27.0597 9.8533 31.5947 14.3883C31.7997 14.5933 31.9997 14.8093 32.2077 15.0193L21.8067 25.3273C21.3147 25.8193 20.3707 26.4033 19.7087 26.6243C19.7087 26.6243 18.1557 27.1403 17.2377 28.0583C16.3187 28.9763 8.5647 37.0253 8.5647 37.0253L13.2257 41.6073Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2257 41.6073C13.2257 41.6073 20.9097 33.5643 21.8287 32.6483C22.7447 31.7313 23.2627 30.1763 23.2627 30.1763C23.4827 29.5163 24.0667 28.5723 24.5587 28.0803L34.9617 17.7733L36.7977 19.6093L36.2377 20.1703C35.7457 20.6633 35.7457 21.4693 36.2377 21.9613L38.1177 23.8423C38.6097 24.3353 39.4157 24.3353 39.9087 23.8423L43.6257 20.1263C44.1197 19.6333 44.1197 18.8273 43.6257 18.3353L41.7447 16.4533C41.2517 15.9603 40.4457 15.9603 39.9537 16.4533L39.8127 16.5923L37.9777 14.7573L35.2207 12.0063C32.7207 9.5323 30.5157 8.7623 28.5947 8.7623C25.8347 8.7623 24.4797 11.9443 24.9787 12.0403C25.8347 12.2043 27.0597 9.8533 31.5947 14.3883C31.7997 14.5933 31.9997 14.8093 32.2077 15.0193L21.8067 25.3273C21.3147 25.8193 20.3707 26.4033 19.7087 26.6243C19.7087 26.6243 18.1557 27.1403 17.2377 28.0583C16.3187 28.9763 8.5647 37.0253 8.5647 37.0253L13.2257 41.6073Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1875 15.4833L13.4925 19.1783C13.3685 19.3013 13.2045 19.3703 13.0305 19.3703C12.8555 19.3703 12.6915 19.3013 12.5685 19.1783L10.4975 17.2173C10.2425 16.9633 10.2425 16.5483 10.4975 16.2953L10.9585 15.8333L13.7315 13.0613L14.1935 12.5993C14.4405 12.3523 14.8705 12.3523 15.1175 12.5993L17.1875 14.5603C17.3115 14.6833 17.3785 14.8473 17.3785 15.0223C17.3785 15.1963 17.3115 15.3603 17.1875 15.4833ZM21.4265 14.4563L14.8305 7.8593C14.3505 7.3793 13.5165 7.3793 13.0385 7.8593L12.1425 8.7543L6.76651 14.1293L5.87151 15.0253C5.37551 15.5193 5.37551 16.3233 5.87151 16.8173L12.4675 23.4143C12.7075 23.6523 13.0255 23.7853 13.3635 23.7853C13.7025 23.7853 14.0195 23.6523 14.2595 23.4143L21.4265 16.2483C21.6665 16.0083 21.7975 15.6893 21.7975 15.3523C21.7975 15.0143 21.6665 14.6953 21.4265 14.4563Z" fill="#15123F"></path>
+                                    <path d="M17.1875 15.4833L16.8354 15.1283L16.834 15.1297L17.1875 15.4833ZM13.4925 19.1783L13.8446 19.5333L13.8461 19.5319L13.4925 19.1783ZM12.5685 19.1783L12.9222 18.8246L12.9123 18.8152L12.5685 19.1783ZM10.4975 17.2173L10.1445 17.5717L10.1537 17.5804L10.4975 17.2173ZM10.4975 16.2953L10.8497 16.6502L10.8514 16.6485L10.4975 16.2953ZM10.9585 15.8333L10.605 15.4797L10.6046 15.4801L10.9585 15.8333ZM13.7315 13.0613L14.085 13.4149L14.0851 13.4149L13.7315 13.0613ZM14.1935 12.5993L13.84 12.2457L14.1935 12.5993ZM15.1175 12.5993L14.7638 12.953L14.7736 12.9623L15.1175 12.5993ZM17.1875 14.5603L17.5397 14.2052L17.5314 14.1973L17.1875 14.5603ZM21.4265 14.4563L21.0729 14.8098L21.0737 14.8106L21.4265 14.4563ZM14.8305 7.8593L15.1841 7.50577L15.1841 7.50574L14.8305 7.8593ZM13.0385 7.8593L13.3919 8.21305L13.3928 8.21211L13.0385 7.8593ZM12.1425 8.7543L11.7892 8.40055L11.789 8.40071L12.1425 8.7543ZM6.76651 14.1293L6.41299 13.7757L6.41276 13.7759L6.76651 14.1293ZM5.87151 15.0253L6.22435 15.3796L6.22526 15.3787L5.87151 15.0253ZM5.87151 16.8173L6.22509 16.4638L6.22435 16.463L5.87151 16.8173ZM12.4675 23.4143L12.1139 23.7678L12.1154 23.7693L12.4675 23.4143ZM14.2595 23.4143L14.6116 23.7693L14.613 23.7679L14.2595 23.4143ZM21.4265 16.2483L21.78 16.6019L21.7801 16.6019L21.4265 16.2483ZM16.834 15.1297L13.139 18.8247L13.8461 19.5319L17.5411 15.8369L16.834 15.1297ZM13.1404 18.8233C13.1078 18.8556 13.0695 18.8703 13.0305 18.8703V19.8703C13.3395 19.8703 13.6292 19.747 13.8446 19.5333L13.1404 18.8233ZM13.0305 18.8703C12.9898 18.8703 12.9525 18.8552 12.9221 18.8247L12.215 19.5319C12.4305 19.7474 12.7212 19.8703 13.0305 19.8703V18.8703ZM12.9123 18.8152L10.8413 16.8542L10.1537 17.5804L12.2247 19.5414L12.9123 18.8152ZM10.8504 16.8631C10.7912 16.8041 10.7922 16.7073 10.8497 16.6502L10.1454 15.9404C9.69284 16.3893 9.69385 17.1225 10.1447 17.5715L10.8504 16.8631ZM10.8514 16.6485L11.3124 16.1865L10.6046 15.4801L10.1436 15.9421L10.8514 16.6485ZM11.312 16.1869L14.085 13.4149L13.378 12.7077L10.605 15.4797L11.312 16.1869ZM14.0851 13.4149L14.5471 12.9529L13.84 12.2457L13.378 12.7077L14.0851 13.4149ZM14.5471 12.9529C14.567 12.9329 14.6043 12.914 14.6555 12.914C14.7067 12.914 14.7441 12.9329 14.764 12.9529L15.4711 12.2457C15.0288 11.8035 14.2822 11.8035 13.84 12.2457L14.5471 12.9529ZM14.7736 12.9623L16.8436 14.9233L17.5314 14.1973L15.4614 12.2363L14.7736 12.9623ZM16.8354 14.9153C16.8628 14.9425 16.8785 14.9779 16.8785 15.0223H17.8785C17.8785 14.7167 17.7602 14.4241 17.5396 14.2053L16.8354 14.9153ZM16.8785 15.0223C16.8785 15.0653 16.8631 15.1008 16.8354 15.1283L17.5396 15.8383C17.7599 15.6198 17.8785 15.3273 17.8785 15.0223H16.8785ZM21.7801 14.1028L15.1841 7.50577L14.4769 8.21282L21.0729 14.8098L21.7801 14.1028ZM15.1841 7.50574C14.5092 6.83089 13.3581 6.82983 12.6842 7.50648L13.3928 8.21211C13.675 7.92877 14.1918 7.9277 14.477 8.21285L15.1841 7.50574ZM12.6852 7.50555L11.7892 8.40055L12.4959 9.10805L13.3919 8.21305L12.6852 7.50555ZM11.789 8.40071L6.41299 13.7757L7.12003 14.4829L12.496 9.10788L11.789 8.40071ZM6.41276 13.7759L5.51776 14.6719L6.22526 15.3787L7.12026 14.4827L6.41276 13.7759ZM5.51867 14.671C4.82646 15.3605 4.82646 16.4821 5.51867 17.1716L6.22435 16.463C5.92457 16.1645 5.92457 15.6781 6.22435 15.3796L5.51867 14.671ZM5.51793 17.1708L12.1139 23.7678L12.8211 23.0608L6.22509 16.4638L5.51793 17.1708ZM12.1154 23.7693C12.4476 24.0987 12.8915 24.2853 13.3635 24.2853V23.2853C13.1595 23.2853 12.9674 23.2059 12.8196 23.0593L12.1154 23.7693ZM13.3635 24.2853C13.8367 24.2853 14.2796 24.0986 14.6116 23.7693L13.9074 23.0593C13.7594 23.206 13.5683 23.2853 13.3635 23.2853V24.2853ZM14.613 23.7679L21.78 16.6019L21.073 15.8947L13.906 23.0607L14.613 23.7679ZM21.7801 16.6019C22.1143 16.2676 22.2975 15.8213 22.2975 15.3523H21.2975C21.2975 15.5573 21.2187 15.749 21.073 15.8947L21.7801 16.6019ZM22.2975 15.3523C22.2975 14.8827 22.1145 14.4358 21.7793 14.102L21.0737 14.8106C21.2185 14.9548 21.2975 15.1459 21.2975 15.3523H22.2975Z" fill="#10103F"></path>
+                                </svg>
+                            </i>
+                            <span>Carpintería</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9715 24.2362C31.9715 31.2692 26.2695 36.9712 19.2365 36.9712C12.2015 36.9712 6.49951 31.2692 6.49951 24.2362C6.49951 17.2022 12.2015 11.5002 19.2365 11.5002C26.2695 11.5002 31.9715 17.2022 31.9715 24.2362Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9715 24.2362C31.9715 31.2692 26.2695 36.9712 19.2365 36.9712C12.2015 36.9712 6.49951 31.2692 6.49951 24.2362C6.49951 17.2022 12.2015 11.5002 19.2365 11.5002C26.2695 11.5002 31.9715 17.2022 31.9715 24.2362Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.7881 24.2362C28.7881 29.5112 24.5121 33.7882 19.2361 33.7882C13.9611 33.7882 9.68408 29.5112 9.68408 24.2362C9.68408 18.9612 13.9611 14.6832 19.2361 14.6832C24.5121 14.6832 28.7881 18.9612 28.7881 24.2362Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.6044 24.2362C25.6044 27.7532 22.7524 30.6032 19.2364 30.6032C15.7184 30.6032 12.8684 27.7532 12.8684 24.2362C12.8684 20.7182 15.7184 17.8682 19.2364 17.8682C22.7524 17.8682 25.6044 20.7182 25.6044 24.2362Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4198 24.2361C22.4198 25.9941 20.9938 27.4201 19.2358 27.4201C17.4778 27.4201 16.0518 25.9941 16.0518 24.2361C16.0518 22.4771 17.4778 21.0511 19.2358 21.0511C20.9938 21.0511 22.4198 22.4771 22.4198 24.2361Z" fill="#10103F"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4198 24.2361C22.4198 25.9941 20.9938 27.4201 19.2358 27.4201C17.4778 27.4201 16.0518 25.9941 16.0518 24.2361C16.0518 22.4771 17.4778 21.0511 19.2358 21.0511C20.9938 21.0511 22.4198 22.4771 22.4198 24.2361Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M41.3565 36.9717H19.9065" stroke="#10103F" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span>Alfombra</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.506 16.8764L17.993 24.1734C17.765 24.6544 17.646 25.1804 17.646 25.7134V41.8474H30.571V25.7134C30.571 25.1804 30.452 24.6544 30.224 24.1734L26.645 16.8234" fill="#D5DBF1"></path>
+                                    <path d="M21.506 16.8764L17.993 24.1734C17.765 24.6544 17.646 25.1804 17.646 25.7134V41.8474H30.571V25.7134C30.571 25.1804 30.452 24.6544 30.224 24.1734L26.645 16.8234" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.8019 10.8618V17.4008H21.3489V12.1568" fill="#15123F"></path>
+                                    <path d="M26.8019 10.8618V17.4008H21.3489V12.1568" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.258 9.37149C27.548 9.37449 22.891 12.5205 18.936 12.2445C18.146 12.2445 17.5 11.5985 17.5 10.8075V7.93549C17.5 7.14549 18.146 6.50049 18.936 6.50049H31.258V9.37149Z" fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.258 9.37149C27.548 9.37449 22.891 12.5205 18.936 12.2445C18.146 12.2445 17.5 11.5985 17.5 10.8075V7.93549C17.5 7.14549 18.146 6.50049 18.936 6.50049H31.258V9.37149Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M26.7549 10.2719C26.7549 10.2719 27.7479 13.5549 30.8299 14.9549" stroke="#10103F" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span>Servicio de limpieza</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8848 17.884L6.49976 40.676H41.3568L31.9718 17.884H15.8848Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M41.356 40.6754H6.5L15.884 17.8844H31.972L41.356 40.6754Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M13.8738 23.2466H34.1808" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M10.5222 31.2906H37.3342" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M39.0153 17.8843H8.84033" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M11.5222 8.49951H17.2252" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path d="M30.6316 8.49951H36.3346" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8628 17.8843V8.49927H15.8838V17.8843" fill="#10103F"></path>
+                                    <path d="M12.8628 17.8843V8.49927H15.8838V17.8843" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9724 17.8843V8.49927H34.9934V17.8843" fill="#10103F"></path>
+                                    <path d="M31.9724 17.8843V8.49927H34.9934V17.8843" stroke="#10103F" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span>Calzadas, patios y paseos</span>
+                        </a>
+
+                        <a href="#">
+                            <i>
+                                <svg width="79" height="80" viewBox="0 0 79 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7983 68.811L31.4478 55.3627L24.6117 48.3477L10.9639 61.796L17.7983 68.811Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.8559 37.8904C34.3216 35.8087 34.3151 33.6704 34.5636 31.5454C35.2115 26.0054 37.2801 21.0387 40.479 16.5604C41.3737 15.3071 42.3967 14.1504 43.3904 12.9754C43.9279 12.3371 44.2315 12.3537 44.8128 12.9504C48.4891 16.7187 52.162 20.4921 55.8366 24.2637C59.4625 27.9854 63.09 31.7087 66.7159 35.4304C67.4077 36.1404 67.4077 36.4137 66.7046 37.0904C62.0736 41.5587 56.6875 44.5637 50.423 45.7937C47.7421 46.3204 45.045 46.4121 42.3739 45.7521C35.6353 43.4287 34.8559 37.8904 34.8559 37.8904Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M30.1922 54.0346L39.4672 44.5896C36.1693 43.3879 35.5295 40.3296 35.5295 40.3296L26.0986 49.9479L30.1922 54.0346Z" fill="#15123F"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M30.1922 54.0346L39.4672 44.5896C36.1693 43.3879 35.5295 40.3296 35.5295 40.3296L26.0986 49.9479L30.1922 54.0346Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span>Paneles de yeso y aislamiento</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9632 31.5078V18.4538V14.7218V11.4428C15.9632 11.1968 15.8902 10.9558 15.7542 10.7518L13.2662 7.01981C12.8042 6.32681 11.6572 6.32681 11.1952 7.01981L8.70924 10.7498C8.57224 10.9548 8.50024 11.1948 8.50024 11.4408V15.9658V17.2098V32.7518V33.9948V40.2158C8.50024 40.9038 9.05724 41.4598 9.74424 41.4598H14.7192C15.4062 41.4598 15.9632 40.9038 15.9632 40.2158V35.2388V31.5078Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9632 31.5078V18.4538V14.7218V11.4428C15.9632 11.1968 15.8902 10.9558 15.7542 10.7518L13.2662 7.01981C12.8042 6.32681 11.6572 6.32681 11.1952 7.01981L8.70924 10.7498C8.57224 10.9548 8.50024 11.1948 8.50024 11.4408V15.9658V17.2098V32.7518V33.9948V40.2158C8.50024 40.9038 9.05724 41.4598 9.74424 41.4598H14.7192C15.4062 41.4598 15.9632 40.9038 15.9632 40.2158V35.2388V31.5078Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.3812 31.5078V18.4538V14.7218V11.4428C28.3812 11.1968 28.3082 10.9558 28.1722 10.7518L25.6842 7.01981C25.2222 6.32681 24.0752 6.32681 23.6132 7.01981L21.1272 10.7498C20.9902 10.9548 20.9182 11.1948 20.9182 11.4408V15.9658V17.2098V32.7518V33.9948V40.2158C20.9182 40.9038 21.4752 41.4598 22.1612 41.4598H27.1372C27.8242 41.4598 28.3812 40.9038 28.3812 40.2158V35.2388V31.5078Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.3812 31.5078V18.4538V14.7218V11.4428C28.3812 11.1968 28.3082 10.9558 28.1722 10.7518L25.6842 7.01981C25.2222 6.32681 24.0752 6.32681 23.6132 7.01981L21.1272 10.7498C20.9902 10.9548 20.9182 11.1948 20.9182 11.4408V15.9658V17.2098V32.7518V33.9948V40.2158C20.9182 40.9038 21.4752 41.4598 22.1612 41.4598H27.1372C27.8242 41.4598 28.3812 40.9038 28.3812 40.2158V35.2388V31.5078Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.7992 31.5078V18.4538V14.7218V11.4428C40.7992 11.1968 40.7262 10.9558 40.5902 10.7518L38.1022 7.01981C37.6402 6.32681 36.4932 6.32681 36.0312 7.01981L33.5442 10.7498C33.4082 10.9548 33.3352 11.1948 33.3352 11.4408V15.9658V17.2098V32.7518V33.9948V40.2158C33.3352 40.9038 33.8932 41.4598 34.5792 41.4598H39.5552C40.2412 41.4598 40.7992 40.9038 40.7992 40.2158V35.2388V31.5078Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.7992 31.5078V18.4538V14.7218V11.4428C40.7992 11.1968 40.7262 10.9558 40.5902 10.7518L38.1022 7.01981C37.6402 6.32681 36.4932 6.32681 36.0312 7.01981L33.5442 10.7498C33.4082 10.9548 33.3352 11.1948 33.3352 11.4408V15.9658V17.2098V32.7518V33.9948V40.2158C33.3352 40.9038 33.8932 41.4598 34.5792 41.4598H39.5552C40.2412 41.4598 40.7992 40.9038 40.7992 40.2158V35.2388V31.5078Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span>Vallas</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.53 38.6136H37.683V10.9996H10.53V38.6136Z" fill="#D5DBF1"></path>
+                                    <path d="M4 24.3465H10.443" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M19.7346 24.3465H28.0186" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M37.8496 24.3465H44.2926" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M10.9902 17.9031H19.2742" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M28.9397 17.9031H37.2227" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M10.9902 30.7899H19.2742" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M28.9397 30.7899H37.2227" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M10.5305 10.9998V38.6138" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M19.2744 10.9998V38.6138" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M28.4785 10.9998V38.6138" stroke="#070441" stroke-linejoin="round"></path>
+                                    <path d="M37.6836 10.9998V38.6138" stroke="#070441" stroke-linejoin="round"></path>
+                                </svg>
+                            </i>
+                            <span>Pisos y madera dura</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.49902 36.8486H42.052V11.5006H6.49902V36.8486Z" fill="white"></path>
+                                    <path d="M6.49976 36.8479V11.4999H42.0528V36.8479" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.95 25.1321L17.853 19.6111C18.02 19.1101 18.49 18.7721 19.019 18.7721H29.534C30.063 18.7721 30.533 19.1101 30.7 19.6111L32.603 25.1321" fill="white"></path>
+                                    <path d="M15.95 25.1321L17.853 19.6111C18.02 19.1101 18.49 18.7721 19.019 18.7721H29.534C30.063 18.7721 30.533 19.1101 30.7 19.6111L32.603 25.1321" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.362 33.7161V36.2821C19.362 36.4301 19.241 36.5511 19.094 36.5511H15.944C15.797 36.5511 15.675 36.4301 15.675 36.2821V33.7161" fill="white"></path>
+                                    <path d="M19.362 33.7161V36.2821C19.362 36.4301 19.241 36.5511 19.094 36.5511H15.944C15.797 36.5511 15.675 36.4301 15.675 36.2821V33.7161" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32.8767 33.7161V36.2821C32.8767 36.4301 32.7567 36.5511 32.6087 36.5511H29.4587C29.3117 36.5511 29.1907 36.4301 29.1907 36.2821V33.7161" fill="white"></path>
+                                    <path d="M32.8767 33.7161V36.2821C32.8767 36.4301 32.7567 36.5511 32.6087 36.5511H29.4587C29.3117 36.5511 29.1907 36.4301 29.1907 36.2821V33.7161" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.3523 33.7161H14.2013C13.6583 33.7161 13.2183 33.2771 13.2183 32.7351V27.8601C13.2183 26.2341 14.5383 24.9141 16.1643 24.9141H32.3883C34.0153 24.9141 35.3343 26.2341 35.3343 27.8601V32.7351C35.3343 33.2771 34.8943 33.7161 34.3523 33.7161Z" fill="#D5DBF1"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.3523 33.7161H14.2013C13.6583 33.7161 13.2183 33.2771 13.2183 32.7351V27.8601C13.2183 26.2341 14.5383 24.9141 16.1643 24.9141H32.3883C34.0153 24.9141 35.3343 26.2341 35.3343 27.8601V32.7351C35.3343 33.2771 34.8943 33.7161 34.3523 33.7161Z" stroke="#10103F" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3131 27.1145C16.3331 27.1145 15.5361 27.9115 15.5361 28.8915C15.5361 29.8725 16.3331 30.6705 17.3131 30.6705C18.2931 30.6705 19.0911 29.8725 19.0911 28.8915C19.0911 27.9115 18.2931 27.1145 17.3131 27.1145Z" fill="#10103F"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.1178 27.1145C30.1378 27.1145 29.3408 27.9115 29.3408 28.8915C29.3408 29.8725 30.1378 30.6705 31.1178 30.6705C32.0978 30.6705 32.8958 29.8725 32.8958 28.8915C32.8958 27.9115 32.0978 27.1145 31.1178 27.1145Z" fill="#10103F"></path>
+                                </svg>
+                            </i>
+                            <span>Garajes, puertas y abridores</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="home-apps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h2>
+                            Obtén la mejor experiencia en nuestra aplicación
+                        </h2>
+                        <p>
+                            Encuentra a Chambix en tu Store preferida:
+                        </p>
+                        <ul>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Precios del proyecto local</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Opciones de pago seguras</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Videollamadas y mensajería</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Cobertura de la Garantía de felicidad</li>
+                        </ul>
+                        <div class="home-apps-rating">
+                            <div class="app-icon">
+                                <img src="~/Content/Images/mobile_app_icon_angi.webp" alt="Alternate Text" />
+                            </div>
+                            <div class="starts-rating"></div>
+                            <span class="rating">4.6</span>
+                            <span class="rating-count">(25 mil)</span>
+                        </div>
+                        <div class="home-apps-stores">
+                            <ul>
+                                <li><a href="#"><img src="~/Content/Images/appstore.png" alt="Alternate Text" /></a></li>
+                                <li><a href="#"><img src="~/Content/Images/playstore.png" alt="Alternate Text" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="home-apps-image">
+                            <img src="~/Content/Images/mobile_app_gaq_angi.webp" alt="Alternate Text" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="home-unete">
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <h2>¿Eres un profesional de servicios para el hogar?</h2>
+                <p>Encuentra ayuda para tu negocio en Chambix ;)</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <!-- TODO: Este link debe llevar a registro -->
+                <a href="#" class="links-primary">Únete a nuestra red</a>
+            </div>
+        </div>
+    </div>
+</div>

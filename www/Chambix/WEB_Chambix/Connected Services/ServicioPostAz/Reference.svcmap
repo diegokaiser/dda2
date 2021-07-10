@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f1944465-8804-4681-8098-1cb603a832b9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioPost.xsd" MetadataType="Schema" ID="cb430821-daf0-4ee3-98bc-df6e241522a3" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioPost1.xsd" MetadataType="Schema" ID="dad16431-63f5-465b-960f-ded713d4cbdb" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioPost.wsdl" MetadataType="Wsdl" ID="9721a722-9fba-4f4b-bf7b-d7f5b2d6346e" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc?wsdl" />
+    <MetadataFile FileName="ServicioPost.disco" MetadataType="Disco" ID="c19cf2c1-2e0a-4f24-9753-f07b7763ec26" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc?disco" />
+    <MetadataFile FileName="ServicioPost2.xsd" MetadataType="Schema" ID="23332d9f-2f30-41c5-872e-00cb7b89eb9a" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

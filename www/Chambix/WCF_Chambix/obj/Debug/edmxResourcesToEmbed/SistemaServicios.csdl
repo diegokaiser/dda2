@@ -6,8 +6,8 @@
     </Key>
     <Property Name="idCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombreCategoria" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="create_at" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="update_at" Type="DateTime" Precision="3" />
     <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_SubCategoria" Relationship="Self.fk_tb_SubCategoria_tb_Categoria" FromRole="tb_Categoria" ToRole="tb_SubCategoria" />
@@ -18,7 +18,7 @@
     </Key>
     <Property Name="idDistrito" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombreDistrito" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="create_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
     <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="update_at" Type="DateTime" Precision="3" />
     <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
@@ -39,8 +39,8 @@
     <Property Name="imagenPost" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="valoracionPost" Type="Int32" />
     <Property Name="estadoPost" Type="Boolean" />
-    <Property Name="create_at" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="update_at" Type="DateTime" Precision="3" />
     <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_Distrito" Relationship="Self.fk_tb_Post_tb_Distrito" FromRole="tb_Post" ToRole="tb_Distrito" />
@@ -59,8 +59,8 @@
     <Property Name="tituloReplica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="descripcionReplica" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="estadoReplica" Type="Boolean" />
-    <Property Name="create_at" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="update_at" Type="DateTime" Precision="3" />
     <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_Testimonio" Relationship="Self.fk_tb_Replica_tb_Testimonio" FromRole="tb_Replica" ToRole="tb_Testimonio" />
@@ -74,8 +74,8 @@
     <Property Name="idPost" Type="Int32" Nullable="false" />
     <Property Name="idUsuario" Type="Int32" Nullable="false" />
     <Property Name="estadoServicio" Type="Boolean" />
-    <Property Name="create_at" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="update_at" Type="DateTime" Precision="3" />
     <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_Post" Relationship="Self.fk_tb_Servicio_tb_Post" FromRole="tb_Servicio" ToRole="tb_Post" />
@@ -88,8 +88,8 @@
     <Property Name="idSubCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idCategoria" Type="Int32" Nullable="false" />
     <Property Name="nombreSubCategoria" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="create_at" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="update_at" Type="DateTime" Precision="3" />
     <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_Categoria" Relationship="Self.fk_tb_SubCategoria_tb_Categoria" FromRole="tb_SubCategoria" ToRole="tb_Categoria" />
@@ -105,8 +105,8 @@
     <Property Name="tituloTestimonio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="descripcionTestimonio" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="estadoTestimonio" Type="Boolean" />
-    <Property Name="create_at" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="update_at" Type="DateTime" Precision="3" />
     <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_Post" Relationship="Self.fk_tb_Testimonio_tb_Post" FromRole="tb_Testimonio" ToRole="tb_Post" />
@@ -120,8 +120,8 @@
     <Property Name="idTipoCuenta" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="precio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-    <Property Name="create_at" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="update_at" Type="DateTime" Precision="3" />
     <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_Usuario" Relationship="Self.fk_tb_Usuario_tb_TipoCuenta" FromRole="tb_TipoCuenta" ToRole="tb_Usuario" />
@@ -144,8 +144,8 @@
     <Property Name="ocupacionUsuario" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
     <Property Name="idTipoCuenta" Type="Byte" Nullable="false" />
     <Property Name="tiempoCuenta" Type="DateTime" Precision="0" />
-    <Property Name="create_at" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="update_at" Type="DateTime" Precision="3" />
     <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_Distrito" Relationship="Self.fk_tb_Usuario_tb_Distrito" FromRole="tb_Usuario" ToRole="tb_Distrito" />
@@ -357,5 +357,114 @@
       <End Role="tb_TipoCuenta" EntitySet="tb_TipoCuenta" />
       <End Role="tb_Usuario" EntitySet="tb_Usuario" />
     </AssociationSet>
+    <FunctionImport Name="usp_ActualizarCategoria">
+      <Parameter Name="vIdCategoria" Mode="In" Type="Int32" />
+      <Parameter Name="vnombreCategoria" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarPost">
+      <Parameter Name="vidPost" Mode="In" Type="Int32" />
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="vidSubcategoria" Mode="In" Type="Int32" />
+      <Parameter Name="vidDistrito" Mode="In" Type="Byte" />
+      <Parameter Name="vtituloPost" Mode="In" Type="String" />
+      <Parameter Name="vdescripcionPost" Mode="In" Type="String" />
+      <Parameter Name="vprecioPost" Mode="In" Type="Decimal" />
+      <Parameter Name="vimagenPost" Mode="In" Type="String" />
+      <Parameter Name="valoracionPost" Mode="In" Type="Int32" />
+      <Parameter Name="vestadoPost" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarReplica">
+      <Parameter Name="vidReplica" Mode="In" Type="Int32" />
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="vidTestimonio" Mode="In" Type="Int32" />
+      <Parameter Name="vtituloReplica" Mode="In" Type="String" />
+      <Parameter Name="vdescripcionReplica" Mode="In" Type="String" />
+      <Parameter Name="vestadoReplica" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarServicio">
+      <Parameter Name="idServicio" Mode="In" Type="Int32" />
+      <Parameter Name="vidPost" Mode="In" Type="Int32" />
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="vestadoServicio" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarTestimonios">
+      <Parameter Name="vidTestimonio" Mode="In" Type="Int32" />
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="vidPost" Mode="In" Type="Int32" />
+      <Parameter Name="vtituloTestimonio" Mode="In" Type="String" />
+      <Parameter Name="vdescripcionTestimonio" Mode="In" Type="String" />
+      <Parameter Name="vestadoTestimonio" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarUsuario">
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="vtipoUsuario" Mode="In" Type="Byte" />
+      <Parameter Name="vestadoUsuario" Mode="In" Type="Boolean" />
+      <Parameter Name="vnombreUsuario" Mode="In" Type="String" />
+      <Parameter Name="vapellidoUsuario" Mode="In" Type="String" />
+      <Parameter Name="vcontrasenaUsuario" Mode="In" Type="String" />
+      <Parameter Name="vidDistrito" Mode="In" Type="Byte" />
+      <Parameter Name="vemailUsuario" Mode="In" Type="String" />
+      <Parameter Name="vcellUsuario" Mode="In" Type="String" />
+      <Parameter Name="vrankUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="vwspUsusario" Mode="In" Type="String" />
+      <Parameter Name="vocupacionUsuario" Mode="In" Type="String" />
+      <Parameter Name="vidTipoCuenta" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarCategoria">
+      <Parameter Name="vIdCategoria" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarPost">
+      <Parameter Name="vidPost" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarReplica">
+      <Parameter Name="vidReplica" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarServicio">
+      <Parameter Name="idServicio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarTestimonios">
+      <Parameter Name="vidTestimonio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarUsuario">
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarCategoria">
+      <Parameter Name="vnombreCategoria" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarPost">
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="vidSubcategoria" Mode="In" Type="Int32" />
+      <Parameter Name="vidDistrito" Mode="In" Type="Byte" />
+      <Parameter Name="vtituloPost" Mode="In" Type="String" />
+      <Parameter Name="vdescripcionPost" Mode="In" Type="String" />
+      <Parameter Name="vprecioPost" Mode="In" Type="Decimal" />
+      <Parameter Name="vimagenPost" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarReplica">
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="vidTestimonio" Mode="In" Type="Int32" />
+      <Parameter Name="vtituloReplica" Mode="In" Type="String" />
+      <Parameter Name="vdescripcionReplica" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarServicio">
+      <Parameter Name="vidPost" Mode="In" Type="Int32" />
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarTestimonios">
+      <Parameter Name="vidUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="vidPost" Mode="In" Type="Int32" />
+      <Parameter Name="vtituloTestimonio" Mode="In" Type="String" />
+      <Parameter Name="vdescripcionTestimonio" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarUsuario">
+      <Parameter Name="vnombreUsuario" Mode="In" Type="String" />
+      <Parameter Name="vapellidoUsuario" Mode="In" Type="String" />
+      <Parameter Name="vcontrasenaUsuario" Mode="In" Type="String" />
+      <Parameter Name="vidDistrito" Mode="In" Type="Byte" />
+      <Parameter Name="vemailUsuario" Mode="In" Type="String" />
+      <Parameter Name="vcellUsuario" Mode="In" Type="String" />
+      <Parameter Name="vwspUsusario" Mode="In" Type="String" />
+      <Parameter Name="vocupacionUsuario" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WEB_Chambix.Models.tb_Servicio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.estadoServicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.create_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.create_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.update_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.update_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tb_Post.tituloPost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tb_Usuario.nombreUsuario)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.estadoServicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.create_at)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.create_by)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.update_at)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.update_by)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tb_Post.tituloPost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tb_Usuario.nombreUsuario)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.idServicio }) |
+                @Html.ActionLink("Details", "Details", new { id = item.idServicio }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.idServicio })
+            </td>
+        </tr>
+    }
+
+</table>

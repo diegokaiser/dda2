@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioPost" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IServicioPost_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_Chambix" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioPost_InsertPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPost" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_InsertPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_UpdatePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePost" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_UpdatePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_LogicDeletePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogicDeletePost" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_LogicDeletePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogicDeletePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPost" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetAllPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPosts" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetAllPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetAllPostsPorCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostsPorCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetAllPostsPorCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostsPorCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetContarPostPorCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarPostPorCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetContarPostPorCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarPostPorCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioPost">
+    <wsdl:operation name="InsertPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/InsertPost" message="tns:IServicioPost_InsertPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/InsertPostResponse" message="tns:IServicioPost_InsertPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/UpdatePost" message="tns:IServicioPost_UpdatePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/UpdatePostResponse" message="tns:IServicioPost_UpdatePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogicDeletePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/LogicDeletePost" message="tns:IServicioPost_LogicDeletePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/LogicDeletePostResponse" message="tns:IServicioPost_LogicDeletePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetPost" message="tns:IServicioPost_GetPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetPostResponse" message="tns:IServicioPost_GetPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetAllPosts" message="tns:IServicioPost_GetAllPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetAllPostsResponse" message="tns:IServicioPost_GetAllPosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostsPorCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetAllPostsPorCategoria" message="tns:IServicioPost_GetAllPostsPorCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetAllPostsPorCategoriaResponse" message="tns:IServicioPost_GetAllPostsPorCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContarPostPorCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetContarPostPorCategoria" message="tns:IServicioPost_GetContarPostPorCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetContarPostPorCategoriaResponse" message="tns:IServicioPost_GetContarPostPorCategoria_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioPost" type="tns:IServicioPost">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertPost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/InsertPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/UpdatePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogicDeletePost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/LogicDeletePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPosts">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetAllPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostsPorCategoria">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetAllPostsPorCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarPostPorCategoria">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetContarPostPorCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_IServicioPost" type="tns:IServicioPost">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IServicioPost_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertPost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/InsertPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/UpdatePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogicDeletePost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/LogicDeletePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPosts">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetAllPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostsPorCategoria">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetAllPostsPorCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarPostPorCategoria">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetContarPostPorCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioPost">
+    <wsdl:port name="BasicHttpBinding_IServicioPost" binding="tns:BasicHttpBinding_IServicioPost">
+      <soap:address location="http://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_IServicioPost" binding="tns:BasicHttpsBinding_IServicioPost">
+      <soap:address location="https://chambixwcf20210708224304.azurewebsites.net/ServicioPost.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
