@@ -26,7 +26,7 @@ namespace WEB_Chambix.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new httptatusCodeResult(httptatusCode.BadRequest);
             }
             tb_Post tb_Post = db.tb_Post.Find(id);
             if (tb_Post == null)
@@ -47,7 +47,7 @@ namespace WEB_Chambix.Controllers
 
         // POST: tb_Post/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // más detalles, vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "idPost,idUsuario,idSubcategoria,idDistrito,tituloPost,descripcionPost,precioPost,imagenPost,valoracionPost,estadoPost,create_at,create_by,update_at,update_by")] tb_Post tb_Post)
@@ -70,7 +70,7 @@ namespace WEB_Chambix.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new httptatusCodeResult(httptatusCode.BadRequest);
             }
             tb_Post tb_Post = db.tb_Post.Find(id);
             if (tb_Post == null)
@@ -85,7 +85,7 @@ namespace WEB_Chambix.Controllers
 
         // POST: tb_Post/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // más detalles, vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "idPost,idUsuario,idSubcategoria,idDistrito,tituloPost,descripcionPost,precioPost,imagenPost,valoracionPost,estadoPost,create_at,create_by,update_at,update_by")] tb_Post tb_Post)
@@ -107,7 +107,7 @@ namespace WEB_Chambix.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new httptatusCodeResult(httptatusCode.BadRequest);
             }
             tb_Post tb_Post = db.tb_Post.Find(id);
             if (tb_Post == null)

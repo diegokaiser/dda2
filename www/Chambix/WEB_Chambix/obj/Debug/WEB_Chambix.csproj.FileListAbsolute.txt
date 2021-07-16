@@ -268,3 +268,7 @@ C:\Users\PERSONAL\Desktop\adsdqwd12dHOLA\dda2\www\Chambix\WEB_Chambix\obj\Debug\
 C:\Users\PERSONAL\Desktop\adsdqwd12dHOLA\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csproj.CopyComplete
 C:\Users\PERSONAL\Desktop\adsdqwd12dHOLA\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.dll
 C:\Users\PERSONAL\Desktop\adsdqwd12dHOLA\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.pdb
+C:\Users\PERSONAL\Desktop\Chambix\adsdqwd12dHOLA\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csprojAssemblyReference.cache
+C:\Users\PERSONAL\Desktop\Chambix\adsdqwd12dHOLA\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csproj.CoreCompileInputs.cache
+C:\Users\PERSONAL\Desktop\Chambix\adsdqwd12dHOLA\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.dll
+C:\Users\PERSONAL\Desktop\Chambix\adsdqwd12dHOLA\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.pdb
