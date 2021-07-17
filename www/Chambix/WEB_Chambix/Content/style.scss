@@ -193,6 +193,9 @@ table {
 }
 
 header {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
     nav {
         margin-bottom: 0;
 
@@ -218,6 +221,7 @@ header {
 .home {
     &-banner {
         margin-bottom: 35px;
+        margin-top: 35px;
         position: relative;
 
         &-hero {
@@ -701,10 +705,26 @@ header {
             margin-bottom: 21px;
         }
     }
+
+    .alert {
+        color: #3d4549;
+        position: absolute;
+        right: 28px;
+        top: 28px;
+        z-index: 99999;
+
+        strong {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
 }
 
 
-/* post */
+/* posts */
 .posts {
     background-color: #edeff6;
     padding: 42px 0 49px 0;
@@ -715,9 +735,6 @@ header {
         border-radius: 4px;
         margin-top: 28px;
         padding: 35px 21px 28px 21px;
-
-        &-body {
-        }
 
         &-title {
             color: #3d4549;
@@ -782,6 +799,219 @@ header {
                     &:hover {
                         background-color: #3f6eed;
                         color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* post */
+.post {
+    background-color: #edeff6;
+    padding: 42px 0 49px 0;
+
+    &_body {
+        background-color: white;
+        border-radius: 8px;
+        margin-top: 14px;
+        padding: 28px 21px 21px 21px;
+
+        &_content {
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 14px;
+            padding: 28px 21px 21px 21px;
+
+            h4 {
+                color: #3d4549;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            p {
+                color: #2e2e2e;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+            }
+
+            .badge {
+                background-color: #eaeaea;
+                border-radius: 4px;
+                color: #3d4549;
+                padding: 7px 10px;
+            }
+
+            .btn {
+                border-radius: 42px !important;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 8px 21px;
+
+                &-primary {
+                    background-color: #ef4624;
+                    border: 2px solid #ef4624;
+                    margin-right: 21px;
+                    transition: .35s ease;
+
+                    &:hover {
+                        background-color: white;
+                        color: #ef4624;
+                    }
+                }
+            }
+        }
+    }
+
+    &_title {
+        color: #3d4549;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    &_author {
+        color: #2e2e2e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+
+    &_rating {
+        &_value {
+            span {
+                background-image: url("../Content/Images/stars_angi.svg");
+                background-position: 0px 0px;
+                display: inline-block;
+                height: 14px;
+                width: 16px;
+
+                &.active {
+                    background-position: 0px 14px;
+                }
+            }
+        }
+    }
+
+    &_comments {
+        &_comment {
+            background-color: #edeff6;
+            border: 1px solid rgba(46, 46, 46, 0.1);
+            border-radius: 8px;
+            margin-top: 21px;
+            padding: 21px 21px 21px 28px;
+
+            p {
+                color: #2e2e2e;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                margin-bottom: 0;
+            }
+        }
+
+        &_r {
+            background-color: #ffffff;
+            border: 1px solid rgba(46, 46, 46, 0.20);
+            border-radius: 8px;
+            margin-top: 21px;
+            padding: 21px 21px 21px 28px;
+
+            p {
+                color: #2e2e2e;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &_raw {
+        margin-top: 14px;
+
+        p {
+            color: #2e2e2e;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+        }
+    }
+
+    .alert {
+        color: #3d4549;
+        position: absolute;
+        right: 28px;
+        top: 28px;
+        z-index: 99999;
+
+        strong {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .modal {
+        &-content {
+            border: 0;
+        }
+
+        &-header {
+            h5 {
+                color: #3d4549;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 21px;
+                line-height: 25px;
+                text-align: center;
+            }
+        }
+
+        &-body {
+            p {
+                color: #2e2e2e;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+            }
+        }
+
+        &-footer {
+            .btn {
+                border-radius: 42px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 8px 21px;
+
+                &-secondary {
+                    background-color: white;
+                    border: 2px solid #3f6eed;
+                    color: #3f6eed;
+                    transition: .35s ease;
+
+                    &:hover {
+                        background-color: #3f6eed;
+                        color: white;
+                    }
+                }
+
+                &-primary {
+                    background-color: #ef4624;
+                    border: 2px solid #ef4624;
+                    margin-right: 21px;
+                    transition: .35s ease;
+
+                    &:hover {
+                        background-color: white;
+                        color: #ef4624;
                     }
                 }
             }
