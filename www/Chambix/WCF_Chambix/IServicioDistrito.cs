@@ -11,8 +11,7 @@ namespace WCF_Chambix
     [ServiceContract]
     public interface IServicioDistrito
     {
-        [OperationContract]
-        void DoWork();
+
         [OperationContract]
         List<DistritoBE> GetAllDistritos();
     }

@@ -18,7 +18,7 @@ namespace WCF_Chambix
         public int idPost { get; set; }
         public int idUsuario { get; set; }
         public Nullable<bool> estadoServicio { get; set; }
-        public System.DateTime create_at { get; set; }
+        public Nullable<System.DateTime> create_at { get; set; }
         public string create_by { get; set; }
         public Nullable<System.DateTime> update_at { get; set; }
         public string update_by { get; set; }

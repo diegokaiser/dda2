@@ -1,0 +1,17 @@
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\WCF_ServiciosWeb.dll.config
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\WCF_ServiciosWeb.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\WCF_ServiciosWeb.pdb
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\EntityFramework.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\EntityFramework.xml
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\obj\Debug\WCF_ServiciosWeb.csprojAssemblyReference.cache
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\obj\Debug\WCF_ServiciosWeb.csproj.CoreCompileInputs.cache
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\obj\Debug\WCF_ServiciosWeb.csproj.CopyComplete
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\obj\Debug\WCF_ServiciosWeb.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\obj\Debug\WCF_ServiciosWeb.pdb
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\System.Data.SqlClient.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\System.Data.SqlClient.xml
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\WCF_Chambix.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\WCF_Chambix.pdb
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_ServiciosWeb\bin\WCF_Chambix.dll.config

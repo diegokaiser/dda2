@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SistemaServiciosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tb_Categoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreCategoria" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_SubCategoria" Relationship="Self.fk_tb_SubCategoria_tb_Categoria" FromRole="tb_Categoria" ToRole="tb_SubCategoria" />
+  </EntityType>
+  <EntityType Name="tb_Distrito">
+    <Key>
+      <PropertyRef Name="idDistrito" />
+    </Key>
+    <Property Name="idDistrito" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreDistrito" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_Post" Relationship="Self.fk_tb_Post_tb_Distrito" FromRole="tb_Distrito" ToRole="tb_Post" />
+    <NavigationProperty Name="tb_Usuario" Relationship="Self.fk_tb_Usuario_tb_Distrito" FromRole="tb_Distrito" ToRole="tb_Usuario" />
+  </EntityType>
+  <EntityType Name="tb_Post">
+    <Key>
+      <PropertyRef Name="idPost" />
+    </Key>
+    <Property Name="idPost" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idSubcategoria" Type="Int32" Nullable="false" />
+    <Property Name="idDistrito" Type="Byte" />
+    <Property Name="tituloPost" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcionPost" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="precioPost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="imagenPost" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="valoracionPost" Type="Int32" />
+    <Property Name="estadoPost" Type="Boolean" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_Distrito" Relationship="Self.fk_tb_Post_tb_Distrito" FromRole="tb_Post" ToRole="tb_Distrito" />
+    <NavigationProperty Name="tb_SubCategoria" Relationship="Self.fk_tb_Post_tb_SubCategoria" FromRole="tb_Post" ToRole="tb_SubCategoria" />
+    <NavigationProperty Name="tb_Usuario" Relationship="Self.fk_tb_Post_tb_Usuario" FromRole="tb_Post" ToRole="tb_Usuario" />
+    <NavigationProperty Name="tb_Servicio" Relationship="Self.fk_tb_Servicio_tb_Post" FromRole="tb_Post" ToRole="tb_Servicio" />
+    <NavigationProperty Name="tb_Testimonio" Relationship="Self.fk_tb_Testimonio_tb_Post" FromRole="tb_Post" ToRole="tb_Testimonio" />
+  </EntityType>
+  <EntityType Name="tb_Replica">
+    <Key>
+      <PropertyRef Name="idReplica" />
+    </Key>
+    <Property Name="idReplica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idTestimonio" Type="Int32" Nullable="false" />
+    <Property Name="tituloReplica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcionReplica" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="estadoReplica" Type="Boolean" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_Testimonio" Relationship="Self.fk_tb_Replica_tb_Testimonio" FromRole="tb_Replica" ToRole="tb_Testimonio" />
+    <NavigationProperty Name="tb_Usuario" Relationship="Self.fk_tb_Replica_tb_Usuario" FromRole="tb_Replica" ToRole="tb_Usuario" />
+  </EntityType>
+  <EntityType Name="tb_Servicio">
+    <Key>
+      <PropertyRef Name="idServicio" />
+    </Key>
+    <Property Name="idServicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idPost" Type="Int32" Nullable="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="estadoServicio" Type="Boolean" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_Post" Relationship="Self.fk_tb_Servicio_tb_Post" FromRole="tb_Servicio" ToRole="tb_Post" />
+    <NavigationProperty Name="tb_Usuario" Relationship="Self.fk_tb_Servicio_tb_Usuario" FromRole="tb_Servicio" ToRole="tb_Usuario" />
+  </EntityType>
+  <EntityType Name="tb_SubCategoria">
+    <Key>
+      <PropertyRef Name="idSubCategoria" />
+    </Key>
+    <Property Name="idSubCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <Property Name="nombreSubCategoria" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_Categoria" Relationship="Self.fk_tb_SubCategoria_tb_Categoria" FromRole="tb_SubCategoria" ToRole="tb_Categoria" />
+    <NavigationProperty Name="tb_Post" Relationship="Self.fk_tb_Post_tb_SubCategoria" FromRole="tb_SubCategoria" ToRole="tb_Post" />
+  </EntityType>
+  <EntityType Name="tb_Testimonio">
+    <Key>
+      <PropertyRef Name="idTestimonio" />
+    </Key>
+    <Property Name="idTestimonio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idPost" Type="Int32" Nullable="false" />
+    <Property Name="tituloTestimonio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcionTestimonio" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="estadoTestimonio" Type="Boolean" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_Post" Relationship="Self.fk_tb_Testimonio_tb_Post" FromRole="tb_Testimonio" ToRole="tb_Post" />
+    <NavigationProperty Name="tb_Replica" Relationship="Self.fk_tb_Replica_tb_Testimonio" FromRole="tb_Testimonio" ToRole="tb_Replica" />
+    <NavigationProperty Name="tb_Usuario" Relationship="Self.fk_tb_Testimonio_tb_Usuario" FromRole="tb_Testimonio" ToRole="tb_Usuario" />
+  </EntityType>
+  <EntityType Name="tb_TipoCuenta">
+    <Key>
+      <PropertyRef Name="idTipoCuenta" />
+    </Key>
+    <Property Name="idTipoCuenta" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_Usuario" Relationship="Self.fk_tb_Usuario_tb_TipoCuenta" FromRole="tb_TipoCuenta" ToRole="tb_Usuario" />
+  </EntityType>
+  <EntityType Name="tb_Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipoUsuario" Type="Byte" />
+    <Property Name="estadoUsuario" Type="Boolean" />
+    <Property Name="nombreUsuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellidoUsuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contrasenaUsuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idDistrito" Type="Byte" />
+    <Property Name="emailUsuario" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cellUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="rankUsuario" Type="Int32" />
+    <Property Name="wspUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ocupacionUsuario" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoCuenta" Type="Byte" Nullable="false" />
+    <Property Name="tiempoCuenta" Type="DateTime" Precision="0" />
+    <Property Name="create_at" Type="DateTime" Precision="3" />
+    <Property Name="create_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="update_at" Type="DateTime" Precision="3" />
+    <Property Name="update_by" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_Distrito" Relationship="Self.fk_tb_Usuario_tb_Distrito" FromRole="tb_Usuario" ToRole="tb_Distrito" />
+    <NavigationProperty Name="tb_Post" Relationship="Self.fk_tb_Post_tb_Usuario" FromRole="tb_Usuario" ToRole="tb_Post" />
+    <NavigationProperty Name="tb_Replica" Relationship="Self.fk_tb_Replica_tb_Usuario" FromRole="tb_Usuario" ToRole="tb_Replica" />
+    <NavigationProperty Name="tb_Servicio" Relationship="Self.fk_tb_Servicio_tb_Usuario" FromRole="tb_Usuario" ToRole="tb_Servicio" />
+    <NavigationProperty Name="tb_Testimonio" Relationship="Self.fk_tb_Testimonio_tb_Usuario" FromRole="tb_Usuario" ToRole="tb_Testimonio" />
+    <NavigationProperty Name="tb_TipoCuenta" Relationship="Self.fk_tb_Usuario_tb_TipoCuenta" FromRole="tb_Usuario" ToRole="tb_TipoCuenta" />
+  </EntityType>
+  <Association Name="fk_tb_SubCategoria_tb_Categoria">
+    <End Role="tb_Categoria" Type="Self.tb_Categoria" Multiplicity="1" />
+    <End Role="tb_SubCategoria" Type="Self.tb_SubCategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Categoria">
+        <PropertyRef Name="idCategoria" />
+      </Principal>
+      <Dependent Role="tb_SubCategoria">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Post_tb_Distrito">
+    <End Role="tb_Distrito" Type="Self.tb_Distrito" Multiplicity="0..1" />
+    <End Role="tb_Post" Type="Self.tb_Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Distrito">
+        <PropertyRef Name="idDistrito" />
+      </Principal>
+      <Dependent Role="tb_Post">
+        <PropertyRef Name="idDistrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Usuario_tb_Distrito">
+    <End Role="tb_Distrito" Type="Self.tb_Distrito" Multiplicity="0..1" />
+    <End Role="tb_Usuario" Type="Self.tb_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Distrito">
+        <PropertyRef Name="idDistrito" />
+      </Principal>
+      <Dependent Role="tb_Usuario">
+        <PropertyRef Name="idDistrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Post_tb_SubCategoria">
+    <End Role="tb_SubCategoria" Type="Self.tb_SubCategoria" Multiplicity="1" />
+    <End Role="tb_Post" Type="Self.tb_Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_SubCategoria">
+        <PropertyRef Name="idSubCategoria" />
+      </Principal>
+      <Dependent Role="tb_Post">
+        <PropertyRef Name="idSubcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Post_tb_Usuario">
+    <End Role="tb_Usuario" Type="Self.tb_Usuario" Multiplicity="1" />
+    <End Role="tb_Post" Type="Self.tb_Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="tb_Post">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Servicio_tb_Post">
+    <End Role="tb_Post" Type="Self.tb_Post" Multiplicity="1" />
+    <End Role="tb_Servicio" Type="Self.tb_Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Post">
+        <PropertyRef Name="idPost" />
+      </Principal>
+      <Dependent Role="tb_Servicio">
+        <PropertyRef Name="idPost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Testimonio_tb_Post">
+    <End Role="tb_Post" Type="Self.tb_Post" Multiplicity="1" />
+    <End Role="tb_Testimonio" Type="Self.tb_Testimonio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Post">
+        <PropertyRef Name="idPost" />
+      </Principal>
+      <Dependent Role="tb_Testimonio">
+        <PropertyRef Name="idPost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Replica_tb_Testimonio">
+    <End Role="tb_Testimonio" Type="Self.tb_Testimonio" Multiplicity="1" />
+    <End Role="tb_Replica" Type="Self.tb_Replica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Testimonio">
+        <PropertyRef Name="idTestimonio" />
+      </Principal>
+      <Dependent Role="tb_Replica">
+        <PropertyRef Name="idTestimonio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Replica_tb_Usuario">
+    <End Role="tb_Usuario" Type="Self.tb_Usuario" Multiplicity="1" />
+    <End Role="tb_Replica" Type="Self.tb_Replica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="tb_Replica">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Servicio_tb_Usuario">
+    <End Role="tb_Usuario" Type="Self.tb_Usuario" Multiplicity="1" />
+    <End Role="tb_Servicio" Type="Self.tb_Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="tb_Servicio">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Testimonio_tb_Usuario">
+    <End Role="tb_Usuario" Type="Self.tb_Usuario" Multiplicity="1" />
+    <End Role="tb_Testimonio" Type="Self.tb_Testimonio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="tb_Testimonio">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_Usuario_tb_TipoCuenta">
+    <End Role="tb_TipoCuenta" Type="Self.tb_TipoCuenta" Multiplicity="1" />
+    <End Role="tb_Usuario" Type="Self.tb_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_TipoCuenta">
+        <PropertyRef Name="idTipoCuenta" />
+      </Principal>
+      <Dependent Role="tb_Usuario">
+        <PropertyRef Name="idTipoCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SistemaServiciosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tb_Categoria" EntityType="Self.tb_Categoria" />
+    <EntitySet Name="tb_Distrito" EntityType="Self.tb_Distrito" />
+    <EntitySet Name="tb_Post" EntityType="Self.tb_Post" />
+    <EntitySet Name="tb_Replica" EntityType="Self.tb_Replica" />
+    <EntitySet Name="tb_Servicio" EntityType="Self.tb_Servicio" />
+    <EntitySet Name="tb_SubCategoria" EntityType="Self.tb_SubCategoria" />
+    <EntitySet Name="tb_Testimonio" EntityType="Self.tb_Testimonio" />
+    <EntitySet Name="tb_TipoCuenta" EntityType="Self.tb_TipoCuenta" />
+    <EntitySet Name="tb_Usuario" EntityType="Self.tb_Usuario" />
+    <AssociationSet Name="fk_tb_SubCategoria_tb_Categoria" Association="Self.fk_tb_SubCategoria_tb_Categoria">
+      <End Role="tb_Categoria" EntitySet="tb_Categoria" />
+      <End Role="tb_SubCategoria" EntitySet="tb_SubCategoria" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Post_tb_Distrito" Association="Self.fk_tb_Post_tb_Distrito">
+      <End Role="tb_Distrito" EntitySet="tb_Distrito" />
+      <End Role="tb_Post" EntitySet="tb_Post" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Usuario_tb_Distrito" Association="Self.fk_tb_Usuario_tb_Distrito">
+      <End Role="tb_Distrito" EntitySet="tb_Distrito" />
+      <End Role="tb_Usuario" EntitySet="tb_Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Post_tb_SubCategoria" Association="Self.fk_tb_Post_tb_SubCategoria">
+      <End Role="tb_SubCategoria" EntitySet="tb_SubCategoria" />
+      <End Role="tb_Post" EntitySet="tb_Post" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Post_tb_Usuario" Association="Self.fk_tb_Post_tb_Usuario">
+      <End Role="tb_Usuario" EntitySet="tb_Usuario" />
+      <End Role="tb_Post" EntitySet="tb_Post" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Servicio_tb_Post" Association="Self.fk_tb_Servicio_tb_Post">
+      <End Role="tb_Post" EntitySet="tb_Post" />
+      <End Role="tb_Servicio" EntitySet="tb_Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Testimonio_tb_Post" Association="Self.fk_tb_Testimonio_tb_Post">
+      <End Role="tb_Post" EntitySet="tb_Post" />
+      <End Role="tb_Testimonio" EntitySet="tb_Testimonio" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Replica_tb_Testimonio" Association="Self.fk_tb_Replica_tb_Testimonio">
+      <End Role="tb_Testimonio" EntitySet="tb_Testimonio" />
+      <End Role="tb_Replica" EntitySet="tb_Replica" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Replica_tb_Usuario" Association="Self.fk_tb_Replica_tb_Usuario">
+      <End Role="tb_Usuario" EntitySet="tb_Usuario" />
+      <End Role="tb_Replica" EntitySet="tb_Replica" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Servicio_tb_Usuario" Association="Self.fk_tb_Servicio_tb_Usuario">
+      <End Role="tb_Usuario" EntitySet="tb_Usuario" />
+      <End Role="tb_Servicio" EntitySet="tb_Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Testimonio_tb_Usuario" Association="Self.fk_tb_Testimonio_tb_Usuario">
+      <End Role="tb_Usuario" EntitySet="tb_Usuario" />
+      <End Role="tb_Testimonio" EntitySet="tb_Testimonio" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_Usuario_tb_TipoCuenta" Association="Self.fk_tb_Usuario_tb_TipoCuenta">
+      <End Role="tb_TipoCuenta" EntitySet="tb_TipoCuenta" />
+      <End Role="tb_Usuario" EntitySet="tb_Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_Chambix" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_Chambix" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="PostBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NombreCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="create_at" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="create_by" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionPost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoPost" type="xs:short" />
+      <xs:element minOccurs="0" name="idDistrito" type="xs:short" />
+      <xs:element minOccurs="0" name="idPost" type="xs:short" />
+      <xs:element minOccurs="0" name="idSubcategoria" type="xs:short" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:short" />
+      <xs:element minOccurs="0" name="imagenPost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="precioPost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="tituloPost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="update_at" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="update_by" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valoracionPost" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostBE" nillable="true" type="tns:PostBE" />
+  <xs:complexType name="ArrayOfPostBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PostBE" nillable="true" type="tns:PostBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPostBE" nillable="true" type="tns:ArrayOfPostBE" />
+</xs:schema>

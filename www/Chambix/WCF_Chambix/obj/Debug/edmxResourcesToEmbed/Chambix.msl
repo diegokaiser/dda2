@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SistemaServiciosModelStoreContainer" CdmEntityContainer="SistemaServiciosEntities1">
+    <EntitySetMapping Name="tb_Categoria">
+      <EntityTypeMapping TypeName="SistemaServiciosModel.tb_Categoria">
+        <MappingFragment StoreEntitySet="tb_Categoria">
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="nombreCategoria" ColumnName="nombreCategoria" />
+          <ScalarProperty Name="create_at" ColumnName="create_at" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="update_at" ColumnName="update_at" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Distrito">
+      <EntityTypeMapping TypeName="SistemaServiciosModel.tb_Distrito">
+        <MappingFragment StoreEntitySet="tb_Distrito">
+          <ScalarProperty Name="idDistrito" ColumnName="idDistrito" />
+          <ScalarProperty Name="nombreDistrito" ColumnName="nombreDistrito" />
+          <ScalarProperty Name="create_at" ColumnName="create_at" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="update_at" ColumnName="update_at" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Post">
+      <EntityTypeMapping TypeName="SistemaServiciosModel.tb_Post">
+        <MappingFragment StoreEntitySet="tb_Post">
+          <ScalarProperty Name="idPost" ColumnName="idPost" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idSubcategoria" ColumnName="idSubcategoria" />
+          <ScalarProperty Name="idDistrito" ColumnName="idDistrito" />
+          <ScalarProperty Name="tituloPost" ColumnName="tituloPost" />
+          <ScalarProperty Name="descripcionPost" ColumnName="descripcionPost" />
+          <ScalarProperty Name="precioPost" ColumnName="precioPost" />
+          <ScalarProperty Name="imagenPost" ColumnName="imagenPost" />
+          <ScalarProperty Name="valoracionPost" ColumnName="valoracionPost" />
+          <ScalarProperty Name="estadoPost" ColumnName="estadoPost" />
+          <ScalarProperty Name="create_at" ColumnName="create_at" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="update_at" ColumnName="update_at" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Replica">
+      <EntityTypeMapping TypeName="SistemaServiciosModel.tb_Replica">
+        <MappingFragment StoreEntitySet="tb_Replica">
+          <ScalarProperty Name="idReplica" ColumnName="idReplica" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idTestimonio" ColumnName="idTestimonio" />
+          <ScalarProperty Name="tituloReplica" ColumnName="tituloReplica" />
+          <ScalarProperty Name="descripcionReplica" ColumnName="descripcionReplica" />
+          <ScalarProperty Name="estadoReplica" ColumnName="estadoReplica" />
+          <ScalarProperty Name="create_at" ColumnName="create_at" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="update_at" ColumnName="update_at" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Servicio">
+      <EntityTypeMapping TypeName="SistemaServiciosModel.tb_Servicio">
+        <MappingFragment StoreEntitySet="tb_Servicio">
+          <ScalarProperty Name="idServicio" ColumnName="idServicio" />
+          <ScalarProperty Name="idPost" ColumnName="idPost" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="estadoServicio" ColumnName="estadoServicio" />
+          <ScalarProperty Name="create_at" ColumnName="create_at" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="update_at" ColumnName="update_at" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_SubCategoria">
+      <EntityTypeMapping TypeName="SistemaServiciosModel.tb_SubCategoria">
+        <MappingFragment StoreEntitySet="tb_SubCategoria">
+          <ScalarProperty Name="idSubCategoria" ColumnName="idSubCategoria" />
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="nombreSubCategoria" ColumnName="nombreSubCategoria" />
+          <ScalarProperty Name="create_at" ColumnName="create_at" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="update_at" ColumnName="update_at" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Testimonio">
+      <EntityTypeMapping TypeName="SistemaServiciosModel.tb_Testimonio">
+        <MappingFragment StoreEntitySet="tb_Testimonio">
+          <ScalarProperty Name="idTestimonio" ColumnName="idTestimonio" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idPost" ColumnName="idPost" />
+          <ScalarProperty Name="tituloTestimonio" ColumnName="tituloTestimonio" />
+          <ScalarProperty Name="descripcionTestimonio" ColumnName="descripcionTestimonio" />
+          <ScalarProperty Name="estadoTestimonio" ColumnName="estadoTestimonio" />
+          <ScalarProperty Name="create_at" ColumnName="create_at" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="update_at" ColumnName="update_at" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_TipoCuenta">
+      <EntityTypeMapping TypeName="SistemaServiciosModel.tb_TipoCuenta">
+        <MappingFragment StoreEntitySet="tb_TipoCuenta">
+          <ScalarProperty Name="idTipoCuenta" ColumnName="idTipoCuenta" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="create_at" ColumnName="create_at" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="update_at" ColumnName="update_at" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Usuario">
+      <EntityTypeMapping TypeName="SistemaServiciosModel.tb_Usuario">
+        <MappingFragment StoreEntitySet="tb_Usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="tipoUsuario" ColumnName="tipoUsuario" />
+          <ScalarProperty Name="estadoUsuario" ColumnName="estadoUsuario" />
+          <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+          <ScalarProperty Name="apellidoUsuario" ColumnName="apellidoUsuario" />
+          <ScalarProperty Name="contrasenaUsuario" ColumnName="contrasenaUsuario" />
+          <ScalarProperty Name="idDistrito" ColumnName="idDistrito" />
+          <ScalarProperty Name="emailUsuario" ColumnName="emailUsuario" />
+          <ScalarProperty Name="cellUsuario" ColumnName="cellUsuario" />
+          <ScalarProperty Name="rankUsuario" ColumnName="rankUsuario" />
+          <ScalarProperty Name="wspUsuario" ColumnName="wspUsuario" />
+          <ScalarProperty Name="ocupacionUsuario" ColumnName="ocupacionUsuario" />
+          <ScalarProperty Name="idTipoCuenta" ColumnName="idTipoCuenta" />
+          <ScalarProperty Name="tiempoCuenta" ColumnName="tiempoCuenta" />
+          <ScalarProperty Name="create_at" ColumnName="create_at" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="update_at" ColumnName="update_at" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarCategoria" FunctionName="SistemaServiciosModel.Store.usp_ActualizarCategoria" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarPost" FunctionName="SistemaServiciosModel.Store.usp_ActualizarPost" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarReplica" FunctionName="SistemaServiciosModel.Store.usp_ActualizarReplica" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarServicio" FunctionName="SistemaServiciosModel.Store.usp_ActualizarServicio" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarTestimonios" FunctionName="SistemaServiciosModel.Store.usp_ActualizarTestimonios" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarUsuario" FunctionName="SistemaServiciosModel.Store.usp_ActualizarUsuario" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarCategoria" FunctionName="SistemaServiciosModel.Store.usp_EliminarCategoria" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarPost" FunctionName="SistemaServiciosModel.Store.usp_EliminarPost" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarReplica" FunctionName="SistemaServiciosModel.Store.usp_EliminarReplica" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarServicio" FunctionName="SistemaServiciosModel.Store.usp_EliminarServicio" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarTestimonios" FunctionName="SistemaServiciosModel.Store.usp_EliminarTestimonios" />
+    <FunctionImportMapping FunctionImportName="usp_EliminarUsuario" FunctionName="SistemaServiciosModel.Store.usp_EliminarUsuario" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarCategoria" FunctionName="SistemaServiciosModel.Store.usp_InsertarCategoria" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarPost" FunctionName="SistemaServiciosModel.Store.usp_InsertarPost" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarReplica" FunctionName="SistemaServiciosModel.Store.usp_InsertarReplica" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarServicio" FunctionName="SistemaServiciosModel.Store.usp_InsertarServicio" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarTestimonios" FunctionName="SistemaServiciosModel.Store.usp_InsertarTestimonios" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarUsuario" FunctionName="SistemaServiciosModel.Store.usp_InsertarUsuario" />
+  </EntityContainerMapping>
+</Mapping>

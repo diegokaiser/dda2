@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SistemaServiciosEntities-Web.config Connection String" description="SistemaServiciosEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/SistemaServicios.csdl|res://*/SistemaServicios.ssdl|res://*/SistemaServicios.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tcp:sistemaservicios.database.windows.net,1433;initial catalog=SistemaServicios;persist security info=True;user id=Administrador;password=Servicios18;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\PERSONAL\\Desktop\\SistemaCine\\ChambixEp3\\dda2\\www\\Chambix\\WCF_ServiciosWeb\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SistemaServiciosEntities']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,14 @@
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Release\WCF_Chambix.dll.config
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Release\WCF_Chambix.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Release\WCF_Chambix.pdb
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Release\EntityFramework.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Release\System.Data.SqlClient.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Release\EntityFramework.xml
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Release\System.Data.SqlClient.xml
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\obj\Release\WCF_Chambix.csprojAssemblyReference.cache
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\obj\Release\WCF_Chambix.csproj.CoreCompileInputs.cache
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\obj\Release\WCF_Chambix.csproj.CopyComplete
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\obj\Release\WCF_Chambix.dll
+C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\obj\Release\WCF_Chambix.pdb

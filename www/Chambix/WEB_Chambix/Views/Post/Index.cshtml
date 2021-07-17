@@ -1,0 +1,101 @@
+﻿@model IEnumerable<WEB_Chambix.Models.tb_Post>
+
+@{
+    ViewBag.Title = "Chambix - Encuentra localmente servicios de mantenimiento y mejora para tu hogar";
+}
+
+@*<section class="posts">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="#" class="card-title">
+                                    <h3>@Html.DisplayFor(modelItem => item.tb_Usuario.nombreUsuario)</h3>
+                                </a>
+                                <div class="card-keys">
+                                    <span class="badge badge-secondary">@Html.DisplayFor(modelItem => item.tb_SubCategoria.nombreSubCategoria)</span>
+                                </div>
+                                <p class="card-text">
+                                    @Html.DisplayFor(modelItem => item.descripcionPost)
+                                </p>
+                                <div class="card-actions">
+                                    @Html.ActionLink("Me interesa", "Post", new { id = item.idPost }, htmlAttributes: new { @class = "btn btn-primary" })
+                                    <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>*@
+@using (Html.BeginForm("Buscar", "Post"))
+{
+
+    <div class="container">
+        <h2>Sellecione el tipo de categoria</h2>
+        <div class="row">
+            <div class="col-3">
+                <tr>
+                    <td>
+                        <input type="radio" name="condicion" value="Todas" checked="true" />
+                        <span>Todas</span>
+                    </td>
+                    <td>
+                        <input type="radio" name="condicion" value="Por Categoria" />
+                        <span>Por Categoría</span>
+                    </td>
+
+                </tr>
+            </div>
+            <div class="col-9">
+                <tr>
+                    <td>
+                        @Html.DropDownList("cboCategorias", (IEnumerable<SelectListItem>)ViewBag.ListarCategorias)
+                    </td>
+                    <td>
+                        <button type="submit" class=" ms-2 btn btn-primary" name="Buscar">Consultar</button>
+                        @*<input type="submit" name="Buscar" />*@
+
+                    </td>
+                </tr>
+            </div>
+        </div>
+    </div>
+
+}
+<br />
+<br />
+<section class="posts">
+    <div class="container">
+        <div class="row">
+            @foreach (var post in ViewBag.ListarPosts)
+            {
+                <div class="col-sm-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" class="card-title">
+                                <h3>@post.tituloPost</h3>
+                            </a>
+                            <div class="card-keys">
+                                <span class="badge badge-secondary">@post.NombreUsuario</span>
+                                <span class="badge badge-secondary">@post.NombreCategoria</span>
+
+                            </div>
+                            <p class="card-text">
+                                @post.descripcionPost)
+                            </p>
+                            <div class="card-actions">
+                                @Html.ActionLink("Me interesa", "Post", new { id = post.idPost }, htmlAttributes: new { @class = "btn btn-primary" })
+                                <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

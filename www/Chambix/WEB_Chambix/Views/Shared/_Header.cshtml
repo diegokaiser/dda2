@@ -1,0 +1,41 @@
+﻿<div class="alert-banner">
+    <div class="ico">
+        <i class="fa fa-info" aria-hidden="true"></i>
+    </div>
+    <span>
+        <a href="#">Nota</a> sobre los proyectos domésticos durante la pandemia de Coronavirus (COVID-19).
+    </span>
+</div>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="~/Content/Images/mobile_app_icon_angi.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-header" aria-controls="bs-header" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-header">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        @Html.ActionLink("Iniciar un proyecto", "Post", "Index", htmlAttributes: new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Únase a nuestra red de profesionales", "Register", "Login", htmlAttributes: new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Publicaciones", "Index", "Post",null, new { @class = "nav-link" })
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar servicio..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+</header>
