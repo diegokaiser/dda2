@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="390fb01c-d1d1-44bb-a3cb-0dfe3ffb9578" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioCategoria.disco" MetadataType="Disco" ID="a9b72c1f-d9fe-4d51-874c-222e4e87711a" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?disco" />
+    <MetadataFile FileName="ServicioCategoria.wsdl" MetadataType="Wsdl" ID="3762cc7e-9b22-404d-844b-5464a2814406" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?wsdl" />
+    <MetadataFile FileName="ServicioCategoria.xsd" MetadataType="Schema" ID="383bcea6-c4f1-484d-b4b8-5ba48e1cb494" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioCategoria1.xsd" MetadataType="Schema" ID="15b0764a-beff-4fa8-904a-00052a266553" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioCategoria2.xsd" MetadataType="Schema" ID="3aa3ac28-d2da-4319-8d95-57d72cb5d7e1" SourceId="1" SourceUrl="https://chambixwcf20210708224304.azurewebsites.net/ServicioCategoria.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

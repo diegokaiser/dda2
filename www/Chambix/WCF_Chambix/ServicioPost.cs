@@ -17,7 +17,6 @@ namespace WCF_Chambix
             try
             {
                 tb_Post objPost = new tb_Post();
-                objPost.idPost          = 0;
                 objPost.idUsuario       = objPostBE.idUsuario;
                 objPost.idSubcategoria  = objPostBE.idSubcategoria;
                 objPost.idDistrito      = Convert.ToByte(objPostBE.idDistrito);
@@ -25,12 +24,6 @@ namespace WCF_Chambix
                 objPost.descripcionPost = objPostBE.descripcionPost;
                 objPost.precioPost      = Convert.ToDecimal(objPostBE.precioPost);
                 objPost.imagenPost      = objPostBE.imagenPost;
-                objPost.valoracionPost  = objPostBE.valoracionPost;
-                objPost.estadoPost      = Convert.ToBoolean(objPostBE.estadoPost);
-                objPost.create_at       = Convert.ToDateTime(objPostBE.create_at);
-                objPost.create_by       = objPostBE.create_by;
-                objPost.update_at       = Convert.ToDateTime(objPostBE.update_at);
-                objPost.update_by       = objPostBE.update_by;
                 Chambix.tb_Post.Add(objPost);
                 Chambix.SaveChanges();
                 return true;
@@ -49,8 +42,9 @@ namespace WCF_Chambix
                 tb_Post objPost = (from objPst in Chambix.tb_Post
                                    where objPst.idPost == objPostBE.idPost
                                    select objPst).FirstOrDefault();
+
                 objPost.idPost          = objPostBE.idPost;
-                objPost.idUsuario       = objPostBE.idUsuario;
+                objPost.idUsuario       = objPost.idUsuario;
                 objPost.idSubcategoria  = objPostBE.idSubcategoria;
                 objPost.idDistrito      = Convert.ToByte(objPostBE.idDistrito);
                 objPost.tituloPost      = objPostBE.tituloPost;
@@ -59,10 +53,6 @@ namespace WCF_Chambix
                 objPost.imagenPost      = objPostBE.imagenPost;
                 objPost.valoracionPost  = objPostBE.valoracionPost;
                 objPost.estadoPost      = Convert.ToBoolean(objPostBE.estadoPost);
-                objPost.create_at       = Convert.ToDateTime(objPostBE.create_at);
-                objPost.create_by       = objPostBE.create_by;
-                objPost.update_at       = Convert.ToDateTime(objPostBE.update_at);
-                objPost.update_by       = objPostBE.update_by;
                 Chambix.SaveChanges();
                 return true;
             }
@@ -110,7 +100,7 @@ namespace WCF_Chambix
                 objPostBE.precioPost      = Convert.ToDecimal(objPost.precioPost);
                 objPostBE.valoracionPost  = Convert.ToInt16(objPost.valoracionPost);
                 objPostBE.estadoPost      = Convert.ToInt16(objPost.estadoPost);
-                objPostBE.create_at       = objPost.create_at;
+                objPostBE.create_at       = (DateTime)objPost.create_at;
                 return objPostBE;
             }
             catch (EntityException ex)
@@ -141,7 +131,9 @@ namespace WCF_Chambix
                     objPostBE.precioPost = Convert.ToDecimal(objPost.precioPost);
                     objPostBE.valoracionPost = Convert.ToInt16(objPost.valoracionPost);
                     objPostBE.estadoPost = Convert.ToInt16(objPost.estadoPost);
-                    objPostBE.create_at = objPost.create_at;
+                    objPostBE.create_at = (DateTime)objPost.create_at;
+                    objPostBE.NombreCategoria = (objPost.tb_SubCategoria.tb_Categoria.nombreCategoria);
+                    objPostBE.NombreUsuario = (objPost.tb_Usuario.nombreUsuario);
                     objPostLists.Add(objPostBE);
                 }
                 return objPostLists;
@@ -152,15 +144,19 @@ namespace WCF_Chambix
             }
         }
 
-        public List<PostBE> GetAllPostsPorCategoria(Int16 idSubCategoria)
+        public List<PostBE> GetAllPostsPorCategoria(Int16 idCategoria)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
             {
                 List<PostBE> objPostLists = new List<PostBE>();
+                //var query = (from objPst in Chambix.tb_Post
+                //             where objPst.estadoPost == true
+                //             && objPst.idSubcategoria == idSubCategoria
+                //             select objPst);
                 var query = (from objPst in Chambix.tb_Post
                              where objPst.estadoPost == true
-                             && objPst.idSubcategoria == idSubCategoria
+                             && objPst.tb_SubCategoria.tb_Categoria.idCategoria == idCategoria
                              select objPst);
                 foreach (var objPost in query)
                 {
@@ -175,7 +171,9 @@ namespace WCF_Chambix
                     objPostBE.precioPost = Convert.ToDecimal(objPost.precioPost);
                     objPostBE.valoracionPost = Convert.ToInt16(objPost.valoracionPost);
                     objPostBE.estadoPost = Convert.ToInt16(objPost.estadoPost);
-                    objPostBE.create_at = objPost.create_at;
+                    objPostBE.create_at = (DateTime)objPost.create_at;
+                    objPostBE.NombreCategoria = (objPost.tb_SubCategoria.tb_Categoria.nombreCategoria);
+                    objPostBE.NombreUsuario = (objPost.tb_Usuario.nombreUsuario);
                     objPostLists.Add(objPostBE);
                 }
                 return objPostLists;

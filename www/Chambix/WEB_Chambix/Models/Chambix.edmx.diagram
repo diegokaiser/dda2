@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9e313190a1ac46a2823ae4265772aa6b" Name="Diagram1">
+        <EntityTypeShape EntityType="SistemaServiciosModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_Categoria" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_Distrito" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_Post" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_Replica" Width="1.5" PointX="13.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_Servicio" Width="1.5" PointX="8.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_SubCategoria" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_Testimonio" Width="1.5" PointX="11.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_TipoCuenta" Width="1.5" PointX="3.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaServiciosModel.tb_Usuario" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_SubCategoria_tb_Categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Post_tb_Distrito" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Usuario_tb_Distrito" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Post_tb_SubCategoria" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Post_tb_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Servicio_tb_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Testimonio_tb_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Replica_tb_Testimonio" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Replica_tb_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Servicio_tb_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Testimonio_tb_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaServiciosModel.fk_tb_Usuario_tb_TipoCuenta" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

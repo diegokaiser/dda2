@@ -23,7 +23,7 @@ namespace WCF_Chambix
     
         public byte idDistrito { get; set; }
         public string nombreDistrito { get; set; }
-        public System.DateTime create_at { get; set; }
+        public Nullable<System.DateTime> create_at { get; set; }
         public string create_by { get; set; }
         public Nullable<System.DateTime> update_at { get; set; }
         public string update_by { get; set; }
