@@ -1,4 +1,6 @@
-.vs/Chambix
-WCF_Chambix/obj/Debug
-WCF_ServiciosWeb/obj/Debug
-WEB_Chambix/obj/Debug
+www/Chambix/.vs/
+www/Chambix/packages/
+www/Chambix/WCF_Chambix/obj/
+www/Chambix/WCF_ServiciosWeb/obj/
+www/Chambix/WEB_Chambix/bin/
+www/Chambix/WEB_Chambix/obj/
