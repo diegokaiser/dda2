@@ -127,7 +127,8 @@ table.table tr td a {
       color: #2E2E2E;
       font-size: 12px; }
   .alert-banner span {
-    font-size: 12px; }
+    font-size: 12px;
+    width: fit-content; }
     .alert-banner span a {
       color: #2E2E2E;
       font-weight: 600;
@@ -449,7 +450,10 @@ header {
 
 /* login */
 .login {
-  margin: 70px 0; }
+  margin: 35px 0; }
+  @media (min-width: 415px) {
+    .login {
+      margin: 70px 0; } }
   .login .form {
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
     border-radius: 21px; }
@@ -458,18 +462,35 @@ header {
       background-color: #070441;
       border-radius: 21px 21px 0 0;
       display: flex;
-      padding: 28px 63px; }
+      flex-wrap: wrap;
+      padding: 21px 28px; }
+      @media (min-width: 415px) {
+        .login .form-heading {
+          flex-wrap: initial;
+          width: initial; } }
       .login .form-heading h2 {
         color: white;
         font-family: 'Montserrat', sans-serif;
         font-size: 35px;
-        margin: 0; }
+        margin: 0 0 14px 0;
+        text-align: center;
+        width: 100%; }
+        @media (min-width: 415px) {
+          .login .form-heading h2 {
+            margin: 0;
+            text-align: unset;
+            width: initial; } }
       .login .form-heading-link {
         color: white;
         font-size: 18px;
-        margin-left: 35px;
+        margin-left: 0 auto;
         position: relative;
-        text-decoration: none; }
+        text-decoration: none;
+        width: 50%; }
+        @media (min-width: 415px) {
+          .login .form-heading-link {
+            margin-left: 35px;
+            width: initial; } }
         .login .form-heading-link::before {
           background-color: #FAA500;
           bottom: -7px;
@@ -481,48 +502,87 @@ header {
           width: 100%;
           transition: .35s ease; }
         .login .form-heading-link:first-of-type {
-          margin-left: auto; }
+          margin-left: initial; }
+          @media (min-width: 415px) {
+            .login .form-heading-link:first-of-type {
+              margin-left: auto; } }
         .login .form-heading-link:hover::before {
           opacity: 1; }
         .login .form-heading-link.active::before {
           opacity: 1;
           background-color: #FF5532; }
+      @media (min-width: 415px) {
+        .login .form-heading {
+          padding: 28px 63px; } }
     .login .form-body {
       border: 1px solid #EAEAEA;
       border-radius: 0 0 21px 21px;
       border-top: 0;
-      padding: 42px 0 42px 63px; }
+      padding: 21px 0; }
+      @media (min-width: 415px) {
+        .login .form-body {
+          padding: 42px 0 42px 63px;
+          padding: 42px; } }
     .login .form-group {
       margin-bottom: 21px; }
   .login .alert {
     color: #3d4549;
+    font-size: 14px;
+    margin: 0 14px;
     position: absolute;
-    right: 28px;
+    right: 0;
     top: 28px;
+    width: calc(100% - 14px - 14px);
     z-index: 99999; }
+    @media (min-width: 415px) {
+      .login .alert {
+        right: 28px;
+        width: initial; } }
     .login .alert strong {
       font-family: 'Montserrat', sans-serif; }
     .login .alert p {
       margin-bottom: 0; }
+    .login .alert button {
+      position: absolute;
+      right: 7px;
+      top: 7px; }
+      @media (min-width: 415px) {
+        .login .alert button {
+          position: initial;
+          right: initial;
+          top: initial; } }
 
 /* posts */
 .posts {
   background-color: #edeff6;
-  padding: 42px 0 49px 0; }
+  padding: 42px 14px; }
+  @media (min-width: 415px) {
+    .posts {
+      padding: 42px 0 49px 0; } }
   .posts .card {
     background-color: white;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    margin-top: 28px;
-    padding: 35px 21px 28px 21px; }
+    margin-top: 14px;
+    padding: 21px 14px 21px 14px; }
+    @media (min-width: 415px) {
+      .posts .card {
+        margin-top: 28px;
+        padding: 35px 21px 28px 21px; } }
+    .posts .card-body {
+      padding: 0; }
     .posts .card-title {
       color: #3d4549;
       text-decoration: none; }
+      .posts .card-title h2,
       .posts .card-title h3 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 21px;
         font-weight: 600;
         margin: 0; }
+      .posts .card-title h2 {
+        font-size: 24px; }
+      .posts .card-title h3 {
+        font-size: 21px; }
     .posts .card-keys {
       margin: 21px 0; }
       .posts .card-keys .badge {
@@ -537,19 +597,34 @@ header {
       line-height: 21px; }
     .posts .card-actions {
       display: flex;
+      flex-wrap: wrap;
       justify-content: flex-start;
       margin-top: 28px; }
+      @media (min-width: 415px) {
+        .posts .card-actions {
+          flex-wrap: initial;
+          margin-bottom: 0;
+          margin-right: 21px; } }
       .posts .card-actions .btn {
         border-radius: 42px;
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         font-weight: 600;
-        padding: 8px 21px; }
+        padding: 8px 21px;
+        width: 100%; }
+        @media (min-width: 415px) {
+          .posts .card-actions .btn {
+            width: initial; } }
         .posts .card-actions .btn-primary {
           background-color: #ef4624;
           border: 2px solid #ef4624;
-          margin-right: 21px;
+          margin-bottom: 14px;
+          margin-right: 0;
           transition: .35s ease; }
+          @media (min-width: 415px) {
+            .posts .card-actions .btn-primary {
+              margin-bottom: 0;
+              margin-right: 21px; } }
           .posts .card-actions .btn-primary:hover {
             background-color: white;
             color: #ef4624; }
@@ -561,11 +636,57 @@ header {
           .posts .card-actions .btn-outline-primary:hover {
             background-color: #3f6eed;
             color: white; }
+    .posts .card-filters {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap; }
+      @media (min-width: 415px) {
+        .posts .card-filters {
+          flex-wrap: initial;
+          margin-right: 28px; } }
+      .posts .card-filters .ml-2 {
+        margin-right: 0;
+        width: 100%; }
+        @media (min-width: 415px) {
+          .posts .card-filters .ml-2 {
+            margin-right: 28px;
+            width: initial; } }
+      .posts .card-filters .form-group {
+        margin-top: 14px; }
+        @media (min-width: 415px) {
+          .posts .card-filters .form-group {
+            margin-top: 0; } }
+      .posts .card-filters button.btn {
+        border-radius: 42px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 21px;
+        width: 100%; }
+        @media (min-width: 415px) {
+          .posts .card-filters button.btn {
+            width: initial; } }
+        .posts .card-filters button.btn-primary {
+          background-color: #ef4624;
+          border: 2px solid #ef4624;
+          margin-bottom: 14px;
+          margin-right: 0;
+          transition: .35s ease; }
+          @media (min-width: 415px) {
+            .posts .card-filters button.btn-primary {
+              margin-bottom: 0;
+              margin-right: 21px; } }
+          .posts .card-filters button.btn-primary:hover {
+            background-color: white;
+            color: #ef4624; }
 
 /* post */
 .post {
   background-color: #edeff6;
-  padding: 42px 0 49px 0; }
+  padding: 42px 14px; }
+  @media (min-width: 415px) {
+    .post {
+      padding: 42px 0 49px 0; } }
   .post_body {
     background-color: white;
     border-radius: 8px;
@@ -591,7 +712,11 @@ header {
         background-color: #eaeaea;
         border-radius: 4px;
         color: #3d4549;
+        margin-bottom: 7px;
         padding: 7px 10px; }
+        @media (min-width: 415px) {
+          .post_body_content .badge {
+            margin-bottom: 0; } }
       .post_body_content .btn {
         border-radius: 42px !important;
         font-family: 'Montserrat', sans-serif;
@@ -658,14 +783,30 @@ header {
       line-height: 21px; }
   .post .alert {
     color: #3d4549;
+    font-size: 14px;
+    margin: 0 14px;
     position: absolute;
-    right: 28px;
+    right: 0;
     top: 28px;
+    width: calc(100% - 14px - 14px);
     z-index: 99999; }
+    @media (min-width: 415px) {
+      .post .alert {
+        right: 28px;
+        width: initial; } }
     .post .alert strong {
       font-family: 'Montserrat', sans-serif; }
     .post .alert p {
       margin-bottom: 0; }
+    .post .alert button {
+      position: absolute;
+      right: 7px;
+      top: 7px; }
+      @media (min-width: 415px) {
+        .post .alert button {
+          position: initial;
+          right: initial;
+          top: initial; } }
   .post .modal-content {
     border: 0; }
   .post .modal-header h5 {
@@ -723,7 +864,10 @@ header {
     list-style: none; }
     .footer-cities ul li {
       margin-top: 10px;
-      width: 25%; }
+      width: 50%; }
+      @media (min-width: 415px) {
+        .footer-cities ul li {
+          width: 25%; } }
       .footer-cities ul li a {
         color: #666;
         text-decoration: none;

@@ -183,6 +183,7 @@ table {
 
     span {
         font-size: 12px;
+        width: fit-content;
 
         a {
             color: #2E2E2E;
@@ -638,7 +639,11 @@ header {
 
 /* login */
 .login {
-    margin: 70px 0;
+    margin: 35px 0;
+
+    @media (min-width: 415px) {
+        margin: 70px 0;
+    }
 
     .form {
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
@@ -649,21 +654,41 @@ header {
             background-color: #070441;
             border-radius: 21px 21px 0 0;
             display: flex;
-            padding: 28px 63px;
+            flex-wrap: wrap;
+            padding: 21px 28px;
+
+            @media (min-width: 415px) {
+                flex-wrap: initial;
+                width: initial;
+            }
 
             h2 {
                 color: white;
                 font-family: 'Montserrat', sans-serif;
                 font-size: 35px;
-                margin: 0;
+                margin: 0 0 14px 0;
+                text-align: center;
+                width: 100%;
+
+                @media (min-width: 415px) {
+                    margin: 0;
+                    text-align: unset;
+                    width: initial;
+                }
             }
 
             &-link {
                 color: white;
                 font-size: 18px;
-                margin-left: 35px;
+                margin-left: 0 auto;
                 position: relative;
                 text-decoration: none;
+                width: 50%;
+
+                @media (min-width: 415px) {
+                    margin-left: 35px;
+                    width: initial;
+                }
 
                 &::before {
                     background-color: #FAA500;
@@ -678,7 +703,11 @@ header {
                 }
 
                 &:first-of-type {
-                    margin-left: auto;
+                    margin-left: initial;
+
+                    @media (min-width: 415px) {
+                        margin-left: auto;
+                    }
                 }
 
                 &:hover {
@@ -694,13 +723,22 @@ header {
                     }
                 }
             }
+
+            @media (min-width: 415px) {
+                padding: 28px 63px;
+            }
         }
 
         &-body {
             border: 1px solid #EAEAEA;
             border-radius: 0 0 21px 21px;
             border-top: 0;
-            padding: 42px 0 42px 63px;
+            padding: 21px 0;
+
+            @media (min-width: 415px) {
+                padding: 42px 0 42px 63px;
+                padding: 42px;
+            }
         }
 
         &-group {
@@ -710,10 +748,18 @@ header {
 
     .alert {
         color: #3d4549;
+        font-size: 14px;
+        margin: 0 14px;
         position: absolute;
-        right: 28px;
+        right: 0;
         top: 28px;
+        width: calc(100% - 14px - 14px);
         z-index: 99999;
+
+        @media (min-width: 415px) {
+            right: 28px;
+            width: initial;
+        }
 
         strong {
             font-family: 'Montserrat', sans-serif;
@@ -722,31 +768,63 @@ header {
         p {
             margin-bottom: 0;
         }
+
+        button {
+            position: absolute;
+            right: 7px;
+            top: 7px;
+
+            @media (min-width: 415px) {
+                position: initial;
+                right: initial;
+                top: initial;
+            }
+        }
     }
 }
-
 
 /* posts */
 .posts {
     background-color: #edeff6;
-    padding: 42px 0 49px 0;
+    padding: 42px 14px;
+
+    @media (min-width: 415px) {
+        padding: 42px 0 49px 0;
+    }
 
     .card {
         background-color: white;
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
         border-radius: 4px;
-        margin-top: 28px;
-        padding: 35px 21px 28px 21px;
+        margin-top: 14px;
+        padding: 21px 14px 21px 14px;
+
+        @media (min-width: 415px) {
+            margin-top: 28px;
+            padding: 35px 21px 28px 21px;
+        }
+
+        &-body {
+            padding: 0;
+        }
 
         &-title {
             color: #3d4549;
             text-decoration: none;
 
+            h2,
             h3 {
                 font-family: 'Montserrat', sans-serif;
-                font-size: 21px;
                 font-weight: 600;
                 margin: 0;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 21px;
             }
         }
 
@@ -770,8 +848,15 @@ header {
 
         &-actions {
             display: flex;
+            flex-wrap: wrap;
             justify-content: flex-start;
             margin-top: 28px;
+
+            @media (min-width: 415px) {
+                flex-wrap: initial;
+                margin-bottom: 0;
+                margin-right: 21px;
+            }
 
             .btn {
                 border-radius: 42px;
@@ -779,12 +864,23 @@ header {
                 font-size: 16px;
                 font-weight: 600;
                 padding: 8px 21px;
+                width: 100%;
+
+                @media (min-width: 415px) {
+                    width: initial;
+                }
 
                 &-primary {
                     background-color: #ef4624;
                     border: 2px solid #ef4624;
-                    margin-right: 21px;
+                    margin-bottom: 14px;
+                    margin-right: 0;
                     transition: .35s ease;
+
+                    @media (min-width: 415px) {
+                        margin-bottom: 0;
+                        margin-right: 21px;
+                    }
 
                     &:hover {
                         background-color: white;
@@ -805,13 +901,79 @@ header {
                 }
             }
         }
+
+        &-filters {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+
+            @media (min-width: 415px) {
+                flex-wrap: initial;
+                margin-right: 28px;
+            }
+
+            .ml-2 {
+                margin-right: 0;
+                width: 100%;
+
+                @media (min-width: 415px) {
+                    margin-right: 28px;
+                    width: initial;
+                }
+            }
+
+            .form-group {
+                margin-top: 14px;
+
+                @media (min-width: 415px) {
+                    margin-top: 0;
+                }
+            }
+
+            button {
+                &.btn {
+                    border-radius: 42px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 8px 21px;
+                    width: 100%;
+
+                    @media (min-width: 415px) {
+                        width: initial;
+                    }
+
+                    &-primary {
+                        background-color: #ef4624;
+                        border: 2px solid #ef4624;
+                        margin-bottom: 14px;
+                        margin-right: 0;
+                        transition: .35s ease;
+
+                        @media (min-width: 415px) {
+                            margin-bottom: 0;
+                            margin-right: 21px;
+                        }
+
+                        &:hover {
+                            background-color: white;
+                            color: #ef4624;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 /* post */
 .post {
     background-color: #edeff6;
-    padding: 42px 0 49px 0;
+    padding: 42px 14px;
+
+    @media (min-width: 415px) {
+        padding: 42px 0 49px 0;
+    }
 
     &_body {
         background-color: white;
@@ -844,7 +1006,12 @@ header {
                 background-color: #eaeaea;
                 border-radius: 4px;
                 color: #3d4549;
+                margin-bottom: 7px;
                 padding: 7px 10px;
+
+                @media (min-width: 415px) {
+                    margin-bottom: 0;
+                }
             }
 
             .btn {
@@ -947,10 +1114,18 @@ header {
 
     .alert {
         color: #3d4549;
+        font-size: 14px;
+        margin: 0 14px;
         position: absolute;
-        right: 28px;
+        right: 0;
         top: 28px;
+        width: calc(100% - 14px - 14px);
         z-index: 99999;
+
+        @media (min-width: 415px) {
+            right: 28px;
+            width: initial;
+        }
 
         strong {
             font-family: 'Montserrat', sans-serif;
@@ -958,6 +1133,18 @@ header {
 
         p {
             margin-bottom: 0;
+        }
+
+        button {
+            position: absolute;
+            right: 7px;
+            top: 7px;
+
+            @media (min-width: 415px) {
+                position: initial;
+                right: initial;
+                top: initial;
+            }
         }
     }
 
@@ -1051,7 +1238,11 @@ header {
 
             li {
                 margin-top: 10px;
-                width: 25%;
+                width: 50%;
+
+                @media (min-width: 415px) {
+                    width: 25%;
+                }
 
                 a {
                     color: #666;

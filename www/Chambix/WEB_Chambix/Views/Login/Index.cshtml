@@ -7,8 +7,8 @@
 <section class="login">
     <div class="container">
         <div class="row">
-            <div class="col"></div>
-            <div class="col-8">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-8">
                 <div class="form">
                     <form id="frm">
                         <div class="form-heading">
@@ -17,19 +17,30 @@
                             @Html.ActionLink("Registrarse", "Register", "Login", htmlAttributes: new { @class = "form-heading-link" })
                         </div>
                         <div class="form-body">
-                            <div class="form-group">
-                                <input type="email" class="form-control" name="emailUsuario" id="login-email" placeholder="Correo electrónico">
-                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="emailUsuario" id="login-email" placeholder="Correo electrónico">
+                                    </div>
 
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="contrasenaUsuario" id="login-password" placeholder="Password">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="contrasenaUsuario" id="login-password" placeholder="Password">
+                                    </div>                                    
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                        <input type="submit" class="btn btn-login" value="Continuar">
+                                    </div>
+                                    <div class="col-6 d-none d-sm-block">
+                                    </div>
+                                </div>
                             </div>
-                            <input type="submit" class="btn btn-login" value="Continuar">
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="col"></div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
         </div>
     </div>
 </section>
