@@ -1,0 +1,95 @@
+﻿
+
+@{
+    ViewBag.Title = "Chambix - TODO: Aquí debe jalar el titulo del post";
+}
+
+<section class="post">
+    <div class="container">
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10 post_body">
+                <h3 class="post_title">Crear publicación</h3>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10 post_body_content">
+                <div class="form">
+                    <form>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <strong>Título de la publicación</strong>
+                                        <input type="text" class="form-control" name="tituloPost" id="post-titulo">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <strong>Descripción</strong>
+                                        <textarea class="form-control" name="descripcionPost" id="login-descripcion"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <strong>Descripción</strong>
+                                        <select class="form-select">
+                                            <option value="">Seleccionar Categoría</option>
+                                            <option value="">TODO: Categoría</option>
+                                            <!-- TODO Loop de categorías -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <strong>Distrito</strong>
+                                        <select class="form-select">
+                                            <option value="">Seleccionar Distrito</option>
+                                            <option value="">TODO: Distrito</option>
+                                            <!-- TODO Loop de distritos -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    &nbsp;
+                                </div>
+                                <div class="col-6">
+                                    &nbsp;
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="submit" class="btn btn-primary" value="Publicar">
+                                </div>
+                                <div class="col-6">
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <!-- TODO: Alerta a mostrar cuando se acepte el modal -->
+        <div class="alert alert-success" alert-dismissible fade show" role="alert">
+            <strong>
+                Felicidades!
+            </strong>
+            Has publicado con éxito :)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+</section>

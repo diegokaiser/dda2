@@ -1,3 +1,159 @@
-﻿@{
+﻿@model IEnumerable<WEB_Chambix.Models.tb_Usuario>
+
+@{
     ViewBag.Title = "Chambix - Encuentra localmente servicios de mantenimiento y mejora para tu hogar";
 }
+
+<section class="login">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8">
+                <div class="form">
+                    <form>
+                        <div class="form-heading">
+                            <h2>Registro de usuarios</h2>
+                            @Html.ActionLink("Iniciar Sesión", "Index", "Login", htmlAttributes: new { @class = "form-heading-link " })
+                            @Html.ActionLink("Registrarse", "Register", "Login", htmlAttributes: new { @class = "form-heading-link active" })
+                        </div>
+                        <div class="form-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>Nombres</strong>
+                                            <input type="text" class="form-control" name="nombreUsuario" id="login-nombre">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>Apellido</strong>
+                                            <input type="text" class="form-control" name="apellidoUsuario" id="login-apellido">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>Contraseña</strong>
+                                            <input type="password" class="form-control" name="contrasenaUsuario" id="login-contrasena">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>Confirmar Contraseña</strong>
+                                            <input type="password" class="form-control" name="recontrasenaUsuario" id="login-recontrasena">
+                                        </div>
+                                    </div>
+                                    <!-- TODO: Solo se necesita validar que contrasenaUsuario y recontrasenaUsuario sean iguales para proceder con el envío -->
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>Correo electrónico</strong>
+                                            <input type="email" class="form-control" name="emailUsuario" id="login-email">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>Distrito</strong>
+                                            <select class="form-select">
+                                                <option value="">Seleccionar</option>
+                                                <option value="distritos">Distritos</option>
+                                                <!-- TODO: Loop de distritos  -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>¿Utlizas Whatsapp con tu número de celular?</strong>
+                                            <select class="form-select">
+                                                <option value="">Seleccionar</option>
+                                                <option value="1">Sí</option>
+                                                <option value="2">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Si es 1, entonces wspUsuario se deshabilita y tendrá el mismo valor que cellUsuario-->
+                                    <div class="col-6">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>Número de celular</strong>
+                                            <input type="text" class="form-control" name="cellUsuario" id="login-cell">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>Número de Whatsapp</strong>
+                                            <input type="text" class="form-control" name="wspUsuario" id="login-wsp">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>¿Qué buscas en Chambix?</strong>
+                                            <select class="form-select">
+                                                <option value="">Seleccionar</option>
+                                                <option value="usuario_cliente">Encontrar servicios para mi hogar</option>
+                                                <option value="usuario_profesional">Ofrecer mis servicios</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- TODO: En caso el valor sea usuario_profesional, se mostrará el siguiente campo y se define el tipo de usuario -->
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <strong>Ocupación</strong>
+                                            <select class="form-select">
+                                                <option value="">Seleccionar</option>
+                                                <option value="usuario_cliente">Encontrar servicios para mi hogar</option>
+                                                <option value="usuario_profesional">Ofrecer mis servicios</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        &nbsp;
+                                    </div>
+                                    <div class="col-6">
+                                        &nbsp;
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="submit" class="btn btn-login" value="Registrarse">
+                                    </div>
+                                    <div class="col-6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <!-- TODO: Alerta a mostrar cuando se acepte el modal -->
+        <div class="alert alert-success" alert-dismissible fade show" role="alert">
+            <strong>
+                Bienvenido!
+            </strong>
+            Te has registrado con éxito :)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+</section>

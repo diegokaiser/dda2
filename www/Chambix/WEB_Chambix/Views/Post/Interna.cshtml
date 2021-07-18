@@ -1,0 +1,103 @@
+﻿
+
+@{
+    ViewBag.Title = "Chambix - TODO: Aquí debe jalar el titulo del post";
+}
+
+<section class="post">
+    <div class="container">
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10 post_body">
+                <h3 class="post_title">TODO: Título del Post</h3>
+                <div class="post_author">
+                    <em>— por + TODO: Nombre del autor del Post</em>
+                    <div class="post_rating">
+                        <div class="post_rating_value">
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <!-- TODO: Loop de acuerdo al valor del valor de rankUsuario -->
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10 post_body_content">
+                <h4>Detalles del servicio</h4>
+                <p>TODO: Contenido del post</p>
+                <span class="badge badge-secondary">TODO: Categoria</span> <span class="badge badge-secondary">TODO: Subcategoria</span> <span class="badge badge-secondary">TODO: Nombre distrito</span>
+                <br /><br />
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Contactar</a>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10 post_body_content">
+                <h4>Comentarios</h4>
+                <div class="post_comments">
+                    <div class="post_comments_comment">
+                        <p>TODO: Contenido del comentario</p>
+                        <p><em>— Por + TODO: Nombre de usuario</em></p>
+                        <div class="post_comments_r">
+                            <p>TODO: Contenido de la replica del comentario</p>
+                        </div>
+                    </div>
+                    <div class="post_comments_comment">
+                        <p>TODO: Contenido del comentario</p>
+                        <p><em>— Por + TODO: Nombre de usuario</em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10 post_raw">
+                <p>
+                    Chambix permite a Profesionales a publicar información sobre ellos mismos y sus negocios en sus perfiles. Chambix no supervisa o verifica la información colocada en lo que reportan en sus servicios profesionales.
+                </p>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <!-- TODO: Cuando den click a Contactar -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">¿Estás seguro de querer contratar este servicio?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>En Chambix queremos darte la seguridad que todos los servicios que contratas son bajo tu total seguridad y certeza.</p>
+                        <p>Por favor, necesitamos que confirmes la contratación del servicio</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Lo voy a pensar nuevamente</button>
+                        <button type="button" class="btn btn-primary">Estoy seguro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TODO: Alerta a mostrar cuando se acepte el modal -->
+        <div class="alert alert-success" alert-dismissible fade show" role="alert">
+            <strong>
+                Genial!
+            </strong>
+            Has contratado los servicios de TODO: Nombre del autor del Post&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+</section>

@@ -60,5 +60,13 @@ namespace WEB_Chambix.Controllers
             ViewBag.ListarCategorias = items;
             return View();
         }
+        public ActionResult Interna()
+        {
+            return View();
+        }
+        public ActionResult Crear()
+        {
+            return View();
+        }
     }
 }
