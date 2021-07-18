@@ -1,0 +1,15 @@
+﻿blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 1em !important;
+    border-left: 5px solid #ffeb8e !important;
+    background: #FFF8DC !important;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}

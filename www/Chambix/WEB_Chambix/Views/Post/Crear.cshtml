@@ -31,7 +31,8 @@
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="form-group">
                                         <strong>Descripción</strong>
-                                        <textarea class="form-control" name="descripcionPost" id="login-descripcion"></textarea>
+                                        <!--<textarea class="form-control" name="descripcionPost" id="login-descripcion"></textarea>-->
+                                        @Html.TextArea("editor", new { rows = 20, style = "width: 100%;", @class = "form-control tinymce" })
                                     </div>
                                 </div>
                             </div>
@@ -93,3 +94,34 @@
         </div>
     </div>
 </section>
+
+@section scripts {
+    @* configuración de tiny mce *@
+    <script type="text/javascript" src="~/Scripts/tinymce/jquery.tinymce.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/tinymce.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/tinymce/plugins/image/plugin.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/plugins/link/plugin.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/plugins/code/plugin.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/plugins/colorpicker/plugin.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/plugins/textcolor/plugin.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/plugins/emoticons/plugin.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/plugins/imagetools/plugin.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/plugins/codesample/plugin.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/tinymce/themes/silver/theme.min.js"></script>
+
+    <script>
+        tinymce.init({
+            selector: ".tinymce",
+            language: 'es',
+            mode: "none",
+            theme: "silver",
+            plugins: "codesample image imagetools emoticons table link code colorpicker textcolor preview searchreplace paste fullscreen noneditable nonbreaking wordcount",
+            browser_spellcheck: true,
+            relative_urls: false,
+            toolbar: "codesample blockquote formatselect fontselect fontsizeselect bold italic underline forecolor backcolor advlist image imagetools link code colorpicker textcolor preview fullscreen noneditable nonbreaking wordcount emoticons",
+            content_css: '/Content/tinymce.css'
+        });
+    </script>
+}

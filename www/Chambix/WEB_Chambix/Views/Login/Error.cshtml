@@ -1,5 +1,38 @@
-﻿@{
+﻿
+
+@{
     ViewBag.Title = "Chambix - Encuentra localmente servicios de mantenimiento y mejora para tu hogar";
 }
 
-:(
+<section class="post">
+    <div class="container">
+
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-8 post_body">
+                <h3 class="post_title">No encontramos lo que estás buscando.</h3>
+                <div class="post_author">
+                    Por favor, intenta de nuevo o regresa a la @Html.ActionLink("página de inicio", "Index").
+                </div>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-8 post_body_content">
+                <h4>Ayúdanos a encontrar lo que estás buscando:</h4>
+                <form action="/" method="post">
+                    <div class="post_body_content_search_container">
+                        <!--  TODO: Este buscador debe listar post de acuerdo a la palabra clave buscada -->
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" name="name" placeholder="¿Qué servicio necesitas?" />
+                        <input type="submit" name="name" value="Buscar" />
+                    </div>
+                </form>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+
+    </div>
+</section>
