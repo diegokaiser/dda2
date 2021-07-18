@@ -96,3 +96,5 @@ C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\ob
 C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\obj\Debug\WCF_Chambix.pdb
 C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Debug\System.Data.SqlClient.dll
 C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WCF_Chambix\bin\Debug\System.Data.SqlClient.xml
+F:\Chambix\www\Chambix\WCF_Chambix\bin\Debug\System.Data.SqlClient.dll
+F:\Chambix\www\Chambix\WCF_Chambix\bin\Debug\System.Data.SqlClient.xml

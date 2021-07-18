@@ -270,3 +270,5 @@ C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WEB_Chambix\ob
 C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csprojAssemblyReference.cache
 C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WEB_Chambix\bin\System.Data.SqlClient.dll
 C:\Users\PERSONAL\Desktop\SistemaCine\ChambixEp3\dda2\www\Chambix\WEB_Chambix\bin\System.Data.SqlClient.xml
+F:\Chambix\www\Chambix\WEB_Chambix\bin\System.Data.SqlClient.dll
+F:\Chambix\www\Chambix\WEB_Chambix\bin\System.Data.SqlClient.xml
