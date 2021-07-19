@@ -1,0 +1,129 @@
+﻿@model IEnumerable<WEB_Chambix.Models.tb_Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estadoUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidoUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contrasenaUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cellUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rankUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wspUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ocupacionUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tiempoCuenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.create_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.create_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.update_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.update_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tb_Distrito.nombreDistrito)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tb_TipoCuenta.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estadoUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidoUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contrasenaUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cellUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rankUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wspUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ocupacionUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tiempoCuenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.create_at)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.create_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.update_at)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.update_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tb_Distrito.nombreDistrito)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tb_TipoCuenta.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idUsuario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idUsuario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idUsuario })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WEB_Chambix.Models;
@@ -9,14 +12,26 @@ namespace WEB_Chambix.Controllers
 {
     public class LoginController : Controller
     {
+        private SistemaServiciosEntities db = new SistemaServiciosEntities();
+
         // GET: Login
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Register()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register([Bind(Include = "idUsuario,tipoUsuario,estadoUsuario,nombreUsuario,apellidoUsuario,contrasenaUsuario,idDistrito,emailUsuario,cellUsuario,rankUsuario,wspUsuario,ocupacionUsuario,idTipoCuenta,tiempoCuenta,create_at,create_by,update_at,update_by")] tb_Usuario tb_Usuario)
         {
+            if (ModelState.IsValid) 
+            {
+                db.tb_Usuario.Add(tb_Usuario);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.idDistrito = new SelectList(db.tb_Distrito, "idDistrito", "nombreDistrito");
+            ViewBag.idTipoCuenta = new SelectList(db.tb_TipoCuenta, "idTipoCuenta", "nombre");
             return View();
         }
 
@@ -24,7 +39,6 @@ namespace WEB_Chambix.Controllers
         {
             try
             {
-                using(SistemaServiciosEntities db = new SistemaServiciosEntities())
                 {
                     var lst = from d in db.tb_Usuario
                               where d.emailUsuario == emailUsuario 

@@ -21,8 +21,6 @@ namespace WEB_Chambix.Controllers
         // GET: Post
         public ActionResult Index(FormCollection fc)
         {
-
-
             //var tb_Post = db.tb_Post.Include(t => t.tb_Distrito).Include(t => t.tb_SubCategoria).Include(t => t.tb_Usuario);
             //ViewData["cboCategorias"] = LlenarCategorias();
             //return View(tb_Post.ToList());
@@ -37,7 +35,7 @@ namespace WEB_Chambix.Controllers
         {
             //Se toman los valores de los controles
             String criterioCategoria = fc["cboCategorias"];
-             String condicion = fc["condicion"];
+            String condicion = fc["condicion"];
 
             if (condicion.Equals("Por Categoria"))
             {

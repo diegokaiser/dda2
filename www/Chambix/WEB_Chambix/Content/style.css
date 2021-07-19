@@ -51,9 +51,6 @@ input,
 select {
   border-radius: 7px !important; }
 
-select {
-  appearance: auto !important; }
-
 table.table tr th {
   font-family: 'Montserrat', sans-serif; }
 
