@@ -78,7 +78,7 @@ namespace WCF_Chambix
             }
         }
 
-        public List<TestimonioBE> GetAllTestimonio()
+        public List<TestimonioBE> GetAllTestimonioId(Int32 id)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
@@ -86,7 +86,9 @@ namespace WCF_Chambix
                 List<TestimonioBE> objTestimonioList = new List<TestimonioBE>();
 
                 var query = (from objTest in Chambix.tb_Testimonio
+                             where objTest.idPost== id
                              select objTest);
+
                 foreach (var objTestimonio in query)
                 {
                     TestimonioBE objTestimonioBE = new TestimonioBE();
@@ -98,6 +100,9 @@ namespace WCF_Chambix
                     objTestimonioBE.descripcionTestimonio = objTestimonio.descripcionTestimonio;
                     objTestimonioBE.estadoTestimonio = (bool)objTestimonio.estadoTestimonio;
                     objTestimonioBE.create_at = (DateTime)objTestimonio.create_at;
+                    objTestimonioBE.NombreUsuario = objTestimonio.tb_Usuario.nombreUsuario;
+                    objTestimonioBE.ApellidoUsuario = objTestimonio.tb_Usuario.apellidoUsuario;
+
                     if (objTestimonio.update_at != null)
                     {
                         objTestimonioBE.update_at = (DateTime)objTestimonio.update_at;
@@ -131,6 +136,10 @@ namespace WCF_Chambix
                 objTestimonioBE.descripcionTestimonio = objTestimonio.descripcionTestimonio;
                 objTestimonioBE.estadoTestimonio = (bool)objTestimonio.estadoTestimonio;
                 objTestimonioBE.create_at = (DateTime)objTestimonio.create_at;
+                objTestimonioBE.NombreUsuario = objTestimonio.tb_Usuario.nombreUsuario;
+                objTestimonioBE.ApellidoUsuario = objTestimonio.tb_Usuario.apellidoUsuario;
+
+
                 if (objTestimonio.update_at != null)
                 {
                     objTestimonioBE.update_at = (DateTime)objTestimonio.update_at;

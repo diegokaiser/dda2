@@ -43,6 +43,7 @@ namespace WCF_Chambix
         private String mvartituloPost;
         private String mvarNombreCategoria;
         private String mvarNombreUsuario;
+        private String mvarApellidoUsuario;
         private String mvardescripcionPost;
         private Decimal mvarprecioPost;
         private String mvarimagenPost;
@@ -52,7 +53,8 @@ namespace WCF_Chambix
         private String mvarcreate_by;
         private DateTime mvarupdate_at;
         private String mvarupdate_by;
-
+        private String mvarNombreDistrito;
+        private String mvarNombreSubCategoria;
         [DataMember]
         public Int16 idPost
         {
@@ -163,5 +165,26 @@ namespace WCF_Chambix
             get { return mvarNombreUsuario; }
             set { mvarNombreUsuario = value; }
         }
+        [DataMember]
+        public String NombreDistrito
+        {
+            get { return mvarNombreDistrito; }
+            set { mvarNombreDistrito = value; }
+        }
+        
+         [DataMember]
+         public String NombreSubCategoria
+        {
+            get { return mvarNombreSubCategoria; }
+            set { mvarNombreSubCategoria = value; }
+        }
+
+        [DataMember]
+        public String ApellidoUsuario
+        {
+            get { return mvarApellidoUsuario; }
+            set { mvarApellidoUsuario = value; }
+        }
+
     }
 }
