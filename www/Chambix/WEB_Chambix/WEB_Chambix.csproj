@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>4.2</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>4.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -144,6 +144,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioTestimonio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PostController.cs" />
@@ -213,6 +218,13 @@
     <Content Include="Connected Services\ServicioCategoria\WEB_Chambix.ServicioCategoria.CategoriaBE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\ServicioCategoria\ServicioCategoria.disco" />
+    <None Include="Connected Services\ServicioCategoria\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioCategoria\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioCategoria\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Connected Services\ServicioPost\ServicioPost.disco" />
     <None Include="Connected Services\ServicioPost\configuration91.svcinfo" />
     <None Include="Connected Services\ServicioPost\configuration.svcinfo" />
@@ -220,10 +232,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\ServicioCategoria\ServicioCategoria.disco" />
-    <None Include="Connected Services\ServicioCategoria\configuration91.svcinfo" />
-    <None Include="Connected Services\ServicioCategoria\configuration.svcinfo" />
-    <None Include="Connected Services\ServicioCategoria\Reference.svcmap">
+    <None Include="Connected Services\ServicioTestimonio\ServicioTestimonio.disco" />
+    <None Include="Connected Services\ServicioTestimonio\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioTestimonio\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioTestimonio\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -382,6 +394,19 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Connected Services\ServicioPost\WEB_Chambix.ServicioPost.PostBE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServicioTestimonio\ServicioTestimonio.wsdl" />
+    <None Include="Connected Services\ServicioTestimonio\ServicioTestimonio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioTestimonio\ServicioTestimonio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioTestimonio\ServicioTestimonio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\ServicioTestimonio\WEB_Chambix.ServicioTestimonio.TestimonioBE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -591,6 +616,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServicioCategoria\" />
     <WCFMetadataStorage Include="Connected Services\ServicioPost\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioTestimonio\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\tinymce\tinymce.d.ts" />

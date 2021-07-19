@@ -3,6 +3,8 @@
   <xs:complexType name="PostBE">
     <xs:sequence>
       <xs:element minOccurs="0" name="NombreCategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreSubCategoria" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="create_at" type="xs:dateTime" />
       <xs:element minOccurs="0" name="create_by" nillable="true" type="xs:string" />

@@ -9,6 +9,9 @@ using System.Web.Mvc;
 using WEB_Chambix.Models;
 using WEB_Chambix.ServicioPost;
 using WEB_Chambix.ServicioCategoria;
+using WEB_Chambix.ServicioTestimonio;
+
+using System.Globalization;
 
 
 namespace WEB_Chambix.Controllers
@@ -17,6 +20,7 @@ namespace WEB_Chambix.Controllers
     {
         ServicioPostClient post = new ServicioPostClient();
         ServicioCategoriaClient categoria= new ServicioCategoriaClient();
+        ServicioTestimonioClient testimonio = new ServicioTestimonioClient();
 
         // GET: Post
         public ActionResult Index(FormCollection fc)
@@ -60,8 +64,18 @@ namespace WEB_Chambix.Controllers
             ViewBag.ListarCategorias = items;
             return View();
         }
-        public ActionResult Interna()
+        public ActionResult Interna(String id)
         {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ViewBag.ObjetoPost = post.GetPost(Convert.ToInt16(id));
+            ViewBag.ListaComentarios = testimonio.GetAllTestimonioId(Convert.ToInt32(id));
+            if (post.GetPost(Convert.ToInt16(id)) == null)
+            {
+                return HttpNotFound();
+            }
             return View();
         }
         public ActionResult Crear()

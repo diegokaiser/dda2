@@ -26,6 +26,12 @@ namespace WEB_Chambix.ServicioPost {
         private string NombreCategoriaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreDistritoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreSubCategoriaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NombreUsuarioField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -89,6 +95,32 @@ namespace WEB_Chambix.ServicioPost {
                 if ((object.ReferenceEquals(this.NombreCategoriaField, value) != true)) {
                     this.NombreCategoriaField = value;
                     this.RaisePropertyChanged("NombreCategoria");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombreDistrito {
+            get {
+                return this.NombreDistritoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreDistritoField, value) != true)) {
+                    this.NombreDistritoField = value;
+                    this.RaisePropertyChanged("NombreDistrito");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombreSubCategoria {
+            get {
+                return this.NombreSubCategoriaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreSubCategoriaField, value) != true)) {
+                    this.NombreSubCategoriaField = value;
+                    this.RaisePropertyChanged("NombreSubCategoria");
                 }
             }
         }

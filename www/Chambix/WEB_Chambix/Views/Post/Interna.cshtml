@@ -1,5 +1,4 @@
 ﻿
-
 @{
     ViewBag.Title = "Chambix - TODO: Aquí debe jalar el titulo del post";
 }
@@ -10,20 +9,28 @@
         <div class="row">
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
             <div class="col-xs-12 col-sm-8 post_body">
-                <h3 class="post_title">TODO: Título del Post</h3>
+                <h3 class="post_title">@ViewBag.ObjetoPost.tituloPost</h3>
                 <div class="post_author">
-                    <em>— por + TODO: Nombre del autor del Post</em>
+                    <em>— por  @ViewBag.ObjetoPost.NombreUsuario</em>
+ 
+
                     <div class="post_rating">
                         <div class="post_rating_value">
-                            <span class="active"></span>
-                            <span class="active"></span>
-                            <span class="active"></span>
-                            <span class="active"></span>
+                            @{ for (int i = 1; i <= 5; i++)
+                                {
+                                    if (i <= @ViewBag.ObjetoPost.valoracionPost)
+                                    {
+                                    <span class="active"></span>
+                                    }
+                                    else{ 
+                                         <span></span>
+                                    }
+                                }
+                                }
                             <!-- TODO: Loop de acuerdo al valor del valor de rankUsuario -->
-                            <span></span>
+                        </div>
                         </div>
                     </div>
-                </div>
             </div>
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
         </div>
@@ -32,8 +39,8 @@
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
             <div class="col-xs-12 col-sm-8 post_body_content">
                 <h4>Detalles del servicio</h4>
-                <p>TODO: Contenido del post</p>
-                <span class="badge badge-secondary">TODO: Categoria</span> <span class="badge badge-secondary">TODO: Subcategoria</span> <span class="badge badge-secondary">TODO: Nombre distrito</span>
+                <p>@ViewBag.ObjetoPost.descripcionPost</p>
+                <span class="badge badge-secondary text-uppercase">@ViewBag.ObjetoPost.NombreCategoria</span> <span class="badge badge-secondary text-uppercase">@ViewBag.ObjetoPost.NombreSubCategoria</span> <span class="badge badge-secondary text-uppercase">@ViewBag.ObjetoPost.NombreDistrito</span>
                 <br /><br />
                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Contactar</a>
             </div>
@@ -46,16 +53,29 @@
                 <h4>Comentarios</h4>
                 <div class="post_comments">
                     <div class="post_comments_comment">
-                        <p>TODO: Contenido del comentario</p>
-                        <p><em>— Por + TODO: Nombre de usuario</em></p>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Comentarios</label>
+                        </div>
+                        <button class="btn btn-secondary my-2" type="button">Comentar</button>
+
+
+                        @*<p>TODO: Contenido del comentario</p>
+            <p><em>— Por + TODO: Nombre de usuario</em></p>*@
                         <div class="post_comments_r">
                             <p>TODO: Contenido de la replica del comentario</p>
                         </div>
                     </div>
-                    <div class="post_comments_comment">
-                        <p>TODO: Contenido del comentario</p>
-                        <p><em>— Por + TODO: Nombre de usuario</em></p>
-                    </div>
+                    @foreach (var comentario in ViewBag.ListaComentarios)
+                    {
+                        <div class="post_comments_comment">
+
+                            <p>@comentario.tituloTestimonio</p>
+                            <p>@comentario.descripcionTestimonio</p>
+                            <p><em>@comentario.idUsuario/em></p>
+                        </div>
+                    }
+
                 </div>
             </div>
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>

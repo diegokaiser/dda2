@@ -41,6 +41,7 @@ namespace WCF_Chambix
         private String mvarcreate_by;
         private DateTime mvarupdate_at;
         private String mvarupdate_by;
+        private String mvarNombreUsuario;
 
         [DataMember]
         public Int32 idReplica

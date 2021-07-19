@@ -101,6 +101,11 @@ namespace WCF_Chambix
                 objPostBE.valoracionPost  = Convert.ToInt16(objPost.valoracionPost);
                 objPostBE.estadoPost      = Convert.ToInt16(objPost.estadoPost);
                 objPostBE.create_at       = (DateTime)objPost.create_at;
+                objPostBE.NombreCategoria = (objPost.tb_SubCategoria.tb_Categoria.nombreCategoria);
+                objPostBE.NombreUsuario = (objPost.tb_Usuario.nombreUsuario); 
+                objPostBE.ApellidoUsuario = (objPost.tb_Usuario.apellidoUsuario);
+                objPostBE.NombreDistrito = (objPost.tb_Distrito.nombreDistrito);
+                objPostBE.NombreSubCategoria = (objPost.tb_SubCategoria.nombreSubCategoria);
                 return objPostBE;
             }
             catch (EntityException ex)
@@ -134,6 +139,10 @@ namespace WCF_Chambix
                     objPostBE.create_at = (DateTime)objPost.create_at;
                     objPostBE.NombreCategoria = (objPost.tb_SubCategoria.tb_Categoria.nombreCategoria);
                     objPostBE.NombreUsuario = (objPost.tb_Usuario.nombreUsuario);
+                    objPostBE.ApellidoUsuario = (objPost.tb_Usuario.apellidoUsuario);
+                    objPostBE.NombreDistrito = (objPost.tb_Distrito.nombreDistrito);
+                    objPostBE.NombreSubCategoria = (objPost.tb_SubCategoria.nombreSubCategoria);
+
                     objPostLists.Add(objPostBE);
                 }
                 return objPostLists;
@@ -173,7 +182,12 @@ namespace WCF_Chambix
                     objPostBE.estadoPost = Convert.ToInt16(objPost.estadoPost);
                     objPostBE.create_at = (DateTime)objPost.create_at;
                     objPostBE.NombreCategoria = (objPost.tb_SubCategoria.tb_Categoria.nombreCategoria);
+                    objPostBE.ApellidoUsuario = (objPost.tb_Usuario.apellidoUsuario);
                     objPostBE.NombreUsuario = (objPost.tb_Usuario.nombreUsuario);
+                    objPostBE.NombreDistrito = (objPost.tb_Distrito.nombreDistrito);
+                    objPostBE.NombreSubCategoria = (objPost.tb_SubCategoria.nombreSubCategoria);
+
+
                     objPostLists.Add(objPostBE);
                 }
                 return objPostLists;

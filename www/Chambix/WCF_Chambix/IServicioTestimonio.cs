@@ -24,7 +24,7 @@ namespace WCF_Chambix
         TestimonioBE GetTestimonio(Int32 idTestimonio);
 
         [OperationContract]
-        List<TestimonioBE> GetAllTestimonio();
+        List<TestimonioBE> GetAllTestimonioId(Int32 idPost);
 
     }
 
@@ -40,6 +40,9 @@ namespace WCF_Chambix
         private String mvarcreate_by;
         private DateTime mvarupdate_at;
         private String mvarupdate_by;
+        private String mvarNombreUsuario;
+        private String mvarApellidoUsuario;
+
 
         [DataMember]
         public Int32 idTestimonio
@@ -110,6 +113,23 @@ namespace WCF_Chambix
             get { return mvarupdate_by; }
             set { mvarupdate_by = value; }
         }
+
+        [DataMember]
+        public String NombreUsuario
+        {
+            get { return mvarNombreUsuario; }
+            set { mvarNombreUsuario = value; }
+        }
+
+        [DataMember]
+        public String ApellidoUsuario
+        {
+            get { return mvarApellidoUsuario; }
+            set { mvarApellidoUsuario = value; }
+        }
+
+        
+
 
     }
 }
