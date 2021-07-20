@@ -74,11 +74,23 @@ namespace WEB_Chambix.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.SesionNombre = Session["SesionNombre"];
             return View();
         }
         public ActionResult Crear()
         {
             return View();
+        }
+
+        public ActionResult SetComentario(String id)
+        {
+            Int16 idUsuario = Convert.ToInt16(Session["Usuarioid"]);
+            Int16 idPost = Convert.ToInt16(Request.Form["idPost"]);
+            String tituloTestimonio = Request.Form["titulo"].ToString();
+            String descripcionTestimonio = Request.Form["comentario"].ToString();
+
+            testimonio.InsertTestimonio(idUsuario, idPost, tituloTestimonio, descripcionTestimonio);
+            return RedirectToAction("Interna/"+ idPost);
         }
     }
 }

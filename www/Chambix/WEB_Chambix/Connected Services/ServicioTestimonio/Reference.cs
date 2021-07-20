@@ -239,10 +239,10 @@ namespace WEB_Chambix.ServicioTestimonio {
     public interface IServicioTestimonio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioTestimonio/InsertTestimonio", ReplyAction="http://tempuri.org/IServicioTestimonio/InsertTestimonioResponse")]
-        bool InsertTestimonio(WEB_Chambix.ServicioTestimonio.TestimonioBE objTestimonioBE);
+        bool InsertTestimonio(short idUsuario, short idPost, string tituloTestimonio, string descripcionTestimonio);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioTestimonio/InsertTestimonio", ReplyAction="http://tempuri.org/IServicioTestimonio/InsertTestimonioResponse")]
-        System.Threading.Tasks.Task<bool> InsertTestimonioAsync(WEB_Chambix.ServicioTestimonio.TestimonioBE objTestimonioBE);
+        System.Threading.Tasks.Task<bool> InsertTestimonioAsync(short idUsuario, short idPost, string tituloTestimonio, string descripcionTestimonio);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioTestimonio/UpdateTestimonio", ReplyAction="http://tempuri.org/IServicioTestimonio/UpdateTestimonioResponse")]
         bool UpdateTestimonio(WEB_Chambix.ServicioTestimonio.TestimonioBE objTestimonioBE);
@@ -296,12 +296,12 @@ namespace WEB_Chambix.ServicioTestimonio {
                 base(binding, remoteAddress) {
         }
         
-        public bool InsertTestimonio(WEB_Chambix.ServicioTestimonio.TestimonioBE objTestimonioBE) {
-            return base.Channel.InsertTestimonio(objTestimonioBE);
+        public bool InsertTestimonio(short idUsuario, short idPost, string tituloTestimonio, string descripcionTestimonio) {
+            return base.Channel.InsertTestimonio(idUsuario, idPost, tituloTestimonio, descripcionTestimonio);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertTestimonioAsync(WEB_Chambix.ServicioTestimonio.TestimonioBE objTestimonioBE) {
-            return base.Channel.InsertTestimonioAsync(objTestimonioBE);
+        public System.Threading.Tasks.Task<bool> InsertTestimonioAsync(short idUsuario, short idPost, string tituloTestimonio, string descripcionTestimonio) {
+            return base.Channel.InsertTestimonioAsync(idUsuario, idPost, tituloTestimonio, descripcionTestimonio);
         }
         
         public bool UpdateTestimonio(WEB_Chambix.ServicioTestimonio.TestimonioBE objTestimonioBE) {

@@ -4,7 +4,10 @@
   <xs:element name="InsertTestimonio">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_Chambix" minOccurs="0" name="objTestimonioBE" nillable="true" type="q1:TestimonioBE" />
+        <xs:element minOccurs="0" name="idUsuario" type="xs:short" />
+        <xs:element minOccurs="0" name="idPost" type="xs:short" />
+        <xs:element minOccurs="0" name="tituloTestimonio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcionTestimonio" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -18,7 +21,7 @@
   <xs:element name="UpdateTestimonio">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_Chambix" minOccurs="0" name="objTestimonioBE" nillable="true" type="q2:TestimonioBE" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_Chambix" minOccurs="0" name="objTestimonioBE" nillable="true" type="q1:TestimonioBE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -53,7 +56,7 @@
   <xs:element name="GetTestimonioResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF_Chambix" minOccurs="0" name="GetTestimonioResult" nillable="true" type="q3:TestimonioBE" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_Chambix" minOccurs="0" name="GetTestimonioResult" nillable="true" type="q2:TestimonioBE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -67,7 +70,7 @@
   <xs:element name="GetAllTestimonioIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCF_Chambix" minOccurs="0" name="GetAllTestimonioIdResult" nillable="true" type="q4:ArrayOfTestimonioBE" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF_Chambix" minOccurs="0" name="GetAllTestimonioIdResult" nillable="true" type="q3:ArrayOfTestimonioBE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
