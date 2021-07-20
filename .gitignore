@@ -2,5 +2,5 @@ www/Chambix/.vs/
 www/Chambix/packages/
 www/Chambix/WCF_Chambix/obj/
 www/Chambix/WCF_ServiciosWeb/obj/
-www/Chambix/WEB_Chambix/bin/
-www/Chambix/WEB_Chambix/obj/
+www/Chambix/WEB_Chambix/bin/**
+www/Chambix/WEB_Chambix/obj/**

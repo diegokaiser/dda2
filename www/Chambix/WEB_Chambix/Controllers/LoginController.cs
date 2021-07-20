@@ -49,10 +49,15 @@ namespace WEB_Chambix.Controllers
                     {
                         tb_Usuario oUser = lst.First();
                         Session["User"] = oUser;
+                        Session["Usuarioid"] = oUser.idUsuario;
+                        Session["SesionNombre"] = oUser.nombreUsuario;
+
+
                         return Content("1");
                     }
                     else
                     {
+                        
                         return Content("Usuario inválido");
                     }
                 }

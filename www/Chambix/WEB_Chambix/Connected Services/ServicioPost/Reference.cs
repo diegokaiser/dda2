@@ -23,6 +23,9 @@ namespace WEB_Chambix.ServicioPost {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ApellidoUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NombreCategoriaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -83,6 +86,19 @@ namespace WEB_Chambix.ServicioPost {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ApellidoUsuario {
+            get {
+                return this.ApellidoUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ApellidoUsuarioField, value) != true)) {
+                    this.ApellidoUsuarioField = value;
+                    this.RaisePropertyChanged("ApellidoUsuario");
+                }
             }
         }
         

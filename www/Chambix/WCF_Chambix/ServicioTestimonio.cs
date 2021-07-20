@@ -12,17 +12,17 @@ namespace WCF_Chambix
     public class ServicioTestimonio : IServicioTestimonio
     {
 
-        public bool InsertTestimonio(TestimonioBE objTestimonioBE)
+        public bool InsertTestimonio(Int16 idUsuario,Int16 idPost, String tituloTestimonio, String descripcionTestimonio)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
             {
                 tb_Testimonio objTestimonio = new tb_Testimonio();
 
-                objTestimonio.idUsuario = objTestimonioBE.idUsuario;
-                objTestimonio.idPost = objTestimonioBE.idPost;
-                objTestimonio.tituloTestimonio = objTestimonioBE.tituloTestimonio;
-                objTestimonio.descripcionTestimonio = objTestimonioBE.descripcionTestimonio;
+                objTestimonio.idUsuario = idUsuario;
+                objTestimonio.idPost = idPost;
+                objTestimonio.tituloTestimonio = tituloTestimonio;
+                objTestimonio.descripcionTestimonio = descripcionTestimonio;
 
                 Chambix.tb_Testimonio.Add(objTestimonio);
                 Chambix.SaveChanges();

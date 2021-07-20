@@ -12,7 +12,7 @@ namespace WCF_Chambix
     public interface IServicioTestimonio
     {
         [OperationContract]
-        Boolean InsertTestimonio(TestimonioBE objTestimonioBE);
+        Boolean InsertTestimonio(Int16 idUsuario, Int16 idPost, String tituloTestimonio, String descripcionTestimonio);
 
         [OperationContract]
         Boolean UpdateTestimonio(TestimonioBE objTestimonioBE);
