@@ -62,17 +62,17 @@
 
                         @*<p>TODO: Contenido del comentario</p>
             <p><em>— Por + TODO: Nombre de usuario</em></p>*@
-                        <div class="post_comments_r">
+                        @*<div class="post_comments_r">
                             <p>TODO: Contenido de la replica del comentario</p>
-                        </div>
+                        </div>*@
                     </div>
                     @foreach (var comentario in ViewBag.ListaComentarios)
                     {
                         <div class="post_comments_comment">
 
-                            <p>@comentario.tituloTestimonio</p>
+                            <h4 class="font-weight-bold">@comentario.tituloTestimonio</h4>
                             <p>@comentario.descripcionTestimonio</p>
-                            <p><em>@comentario.idUsuario/em></p>
+                            <p><em>— por  @comentario.NombreUsuario</em></p>
                         </div>
                     }
 
