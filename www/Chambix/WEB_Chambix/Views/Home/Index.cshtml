@@ -43,7 +43,18 @@
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6321 26.701H27.7711V23.235H20.6321V26.701Z" fill="#10103F"></path>
                             </svg>
                         </a>
-                        <a href="#">Plomería</a></li>
+                        <!--<a href="#">Plomería</a>-->
+                        @Html.ActionLink(
+                            "Plomería",
+                            "Buscar",
+                            "Post",
+                            new { 
+                                condicion = "Por Categoria", 
+                                criterioCategoria = "Plomeria"
+                            },
+                            null
+                        )
+                    </li>
                     <li>
                         <a href="#" class="ico">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +72,18 @@
                                 <path d="M18.3726 28.1866H29.8296" stroke="#070441"></path>
                             </svg>
                         </a>
-                        <a href="#">Remodelación de cocina</a>
+                        <!--<a href="#">Remodelación de cocina</a>-->
+                        @Html.ActionLink(
+                            "Remodelación de cocina",
+                            "Buscar",
+                            "Post",
+                            new
+                                 {
+                                condicion = "Por Categoria",
+                                criterioCategoria = "Remodelacion de cocina"
+                            },
+                            null
+                        )
                     </li>
                     <li>
                         <a href="#" class="ico">
