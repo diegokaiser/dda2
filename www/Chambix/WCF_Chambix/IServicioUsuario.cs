@@ -12,7 +12,7 @@ namespace WCF_Chambix
     public interface IServicioUsuario
     {
         [OperationContract]
-        Boolean InsertUser(UserBE objPostBE);
+        Boolean InsertUser(String nombreUsuario, String apellidoUsuario, String contrasenaUsuario, Int16 idDistrito, String emailUsuario, String cellUsuario, String wspUsuario, String ocupacionUsuario);
 
         [OperationContract]
         Boolean UpdateUser(UserBE objUserBE);

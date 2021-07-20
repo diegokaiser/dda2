@@ -139,12 +139,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioDistrito\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServicioPost\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\ServicioTestimonio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServicioUsuario\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -226,6 +236,19 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServicioDistrito\ServicioDistrito.wsdl" />
+    <None Include="Connected Services\ServicioDistrito\ServicioDistrito.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioDistrito\ServicioDistrito1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioDistrito\ServicioDistrito2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\ServicioDistrito\WEB_Chambix.ServicioDistrito.DistritoBE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServicioPost\ServicioPost.disco" />
     <None Include="Connected Services\ServicioPost\configuration91.svcinfo" />
     <None Include="Connected Services\ServicioPost\configuration.svcinfo" />
@@ -237,6 +260,20 @@
     <None Include="Connected Services\ServicioTestimonio\configuration91.svcinfo" />
     <None Include="Connected Services\ServicioTestimonio\configuration.svcinfo" />
     <None Include="Connected Services\ServicioTestimonio\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioDistrito\ServicioDistrito.disco" />
+    <None Include="Connected Services\ServicioDistrito\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioDistrito\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioDistrito\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioUsuario\ServicioUsuario.disco" />
+    <None Include="Connected Services\ServicioUsuario\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioUsuario\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioUsuario\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -408,6 +445,19 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Connected Services\ServicioTestimonio\WEB_Chambix.ServicioTestimonio.TestimonioBE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServicioUsuario\ServicioUsuario.wsdl" />
+    <None Include="Connected Services\ServicioUsuario\ServicioUsuario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioUsuario\ServicioUsuario1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioUsuario\ServicioUsuario2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\ServicioUsuario\WEB_Chambix.ServicioUsuario.UserBE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -622,8 +672,10 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServicioCategoria\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioDistrito\" />
     <WCFMetadataStorage Include="Connected Services\ServicioPost\" />
     <WCFMetadataStorage Include="Connected Services\ServicioTestimonio\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioUsuario\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\tinymce\tinymce.d.ts" />

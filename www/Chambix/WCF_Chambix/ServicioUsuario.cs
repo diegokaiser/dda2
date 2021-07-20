@@ -11,7 +11,7 @@ namespace WCF_Chambix
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioUsuario" en el código y en el archivo de configuración a la vez.
     public class ServicioUsuario : IServicioUsuario
     {
-        public Boolean InsertUser(UserBE objUserBE)
+        public Boolean InsertUser(String nombreUsuario, String apellidoUsuario, String contrasenaUsuario,Int16 idDistrito,String emailUsuario, String cellUsuario, String wspUsuario ,String ocupacionUsuario)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
 
@@ -19,16 +19,14 @@ namespace WCF_Chambix
             try
             {
                 tb_Usuario objUser = new tb_Usuario();
-                objUser.nombreUsuario = objUserBE.nombreUsuario;
-                objUser.apellidoUsuario = objUserBE.apellidoUsuario;
-                objUser.contrasenaUsuario = objUserBE.contrasenaUsuario;
-                objUser.idDistrito = Convert.ToByte(objUserBE.idDistrito);
-                objUser.emailUsuario = objUserBE.emailUsuario;
-                objUser.cellUsuario = objUserBE.cellUsuario;
-                objUser.wspUsuario = objUserBE.wspUsuario;
-                objUser.ocupacionUsuario = objUserBE.ocupacionUsuario;
-                objUser.create_at = objUserBE.create_at;
-                objUser.create_by = objUserBE.create_by;
+                objUser.nombreUsuario = nombreUsuario;
+                objUser.apellidoUsuario = apellidoUsuario;
+                objUser.contrasenaUsuario = contrasenaUsuario;
+                objUser.idDistrito = Convert.ToByte(idDistrito);
+                objUser.emailUsuario = emailUsuario;
+                objUser.cellUsuario = cellUsuario;
+                objUser.wspUsuario = wspUsuario;
+                objUser.ocupacionUsuario = ocupacionUsuario;
 
                 Chambix.tb_Usuario.Add(objUser);
                 Chambix.SaveChanges();

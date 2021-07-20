@@ -7,12 +7,18 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WEB_Chambix.Models;
+using WEB_Chambix.ServicioDistrito;
+using WEB_Chambix.ServicioUsuario;
+
 
 namespace WEB_Chambix.Controllers
 {
     public class LoginController : Controller
     {
         private SistemaServiciosEntities db = new SistemaServiciosEntities();
+        ServicioDistritoClient distrito = new ServicioDistritoClient();
+        ServicioUsuarioClient usuario = new ServicioUsuarioClient();
+
 
         // GET: Login
         public ActionResult Index()
@@ -73,5 +79,41 @@ namespace WEB_Chambix.Controllers
         {
             return View();
         }
+
+        public ActionResult Register()
+        {
+            ViewData["cboDistritos"] = LlenarDistritos(); 
+
+            return View();
+        }
+
+        public ActionResult LlenarDistritos()
+        {
+            List<SelectListItem> items = new SelectList(distrito.GetAllDistritos(),
+                "idDistrito", "nombreDistrito").ToList();
+            items.Insert(0, (new SelectListItem { Text = "Distrito", Value = "0" }));
+            ViewBag.ListarDistritos = items;
+            return View();
+        }
+
+        public ActionResult EnviarRegistro(FormCollection fc) {
+            //confirmarcontasena
+
+            Int16 dis = Convert.ToInt16(fc["cboDistritos"]);
+
+            String nombre = Request.Form["nombre"].ToString();
+            String apellido = Request.Form["apellido"].ToString();
+            String contasena = Request.Form["contrasena"].ToString();
+            String correo = Request.Form["correo"].ToString();
+            Int16 distrito = dis;
+            String celular = Request.Form["celular"].ToString();
+            String ocupacion = Request.Form["ocupacion"].ToString();
+            String wsp = Request.Form["wsp"].ToString();
+            usuario.InsertUser(nombre, apellido, contasena, distrito,correo , celular, ocupacion, wsp);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
+
