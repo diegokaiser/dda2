@@ -159,6 +159,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PostController.cs" />
@@ -647,6 +648,7 @@
     <Content Include="Views\tb_Usuario\Details.cshtml" />
     <Content Include="Views\tb_Usuario\Edit.cshtml" />
     <Content Include="Views\tb_Usuario\Index.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
