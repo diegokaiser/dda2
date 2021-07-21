@@ -14,7 +14,7 @@ namespace WEB_Chambix.Controllers
             return View();
         }
 
-        public ActionResult Interna()
+        public ActionResult DatosPersonales()
         {
             return View();
         }

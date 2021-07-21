@@ -1681,7 +1681,7 @@ header {
 
         &_link {
             border-top: 1px solid #ced4da;
-            min-width: 140px;
+            min-width: 190px;
 
             a {
                 color: #666;
@@ -1692,7 +1692,7 @@ header {
                 text-decoration: none;
 
                 &:hover {
-                    text-decoration: none;
+                    text-decoration: underline;
                 }
             }
 
@@ -1731,6 +1731,7 @@ header {
         margin-top: 14px;
         padding: 28px 21px 21px 21px;
 
+        &_form,
         &_posts {
             background-color: white;
             border-radius: 8px;
@@ -1793,6 +1794,43 @@ header {
                     font-size: 21px;
                     font-family: 'Montserrat', sans-serif;
                     margin-top: 4px;
+                }
+            }
+        }
+
+        &_form {
+            padding: 28px 21px 21px 21px;
+
+            form {
+                width: 100%;
+            }
+
+            .form-group {
+                margin-bottom: 21px;
+
+                .btn {
+                    border-radius: 42px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 8px 21px;
+                    width: 100%;
+
+                    @media (min-width: 415px) {
+                        width: initial;
+                    }
+
+                    &-outline-primary {
+                        background-color: white;
+                        border: 2px solid #3f6eed;
+                        color: #3f6eed;
+                        transition: .35s ease;
+
+                        &:hover {
+                            background-color: #3f6eed;
+                            color: white;
+                        }
+                    }
                 }
             }
         }
