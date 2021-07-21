@@ -1185,3 +1185,63 @@ header {
       z-index: 9999; }
     .users:hover i {
       color: white; }
+
+.accounts {
+  background-color: #edeff6;
+  padding: 42px 14px; }
+  @media (min-width: 415px) {
+    .accounts {
+      padding: 42px 0 49px 0; } }
+  .accounts_body {
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 14px;
+    padding: 28px 21px 21px 21px; }
+    .accounts_body_posts {
+      background-color: white;
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 14px;
+      padding: 14px 21px 21px 21px; }
+      .accounts_body_posts_post {
+        align-items: center;
+        background-color: #edeff6;
+        border: 1px solid rgba(46, 46, 46, 0.1);
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        padding: 21px 21px 21px 28px;
+        margin-top: 14px;
+        width: 49%; }
+        .accounts_body_posts_post a {
+          color: #3d4549;
+          font-family: 'Montserrat', sans-serif;
+          text-decoration: none; }
+        .accounts_body_posts_post_review span {
+          background-image: url("Images/stars_angi.svg");
+          background-position: 0px 0px;
+          display: inline-block;
+          height: 14px;
+          width: 16px; }
+          .accounts_body_posts_post_review span.active {
+            background-position: 0px 14px; }
+      .accounts_body_posts_card {
+        align-items: center;
+        background-color: #edeff6;
+        border: 1px solid rgba(46, 46, 46, 0.1);
+        border-radius: 8px;
+        color: #3d4549;
+        display: flex;
+        flex-direction: column;
+        padding: 21px 21px 21px 28px;
+        margin-top: 14px;
+        width: 24%; }
+        .accounts_body_posts_card i {
+          font-size: 28px;
+          margin-bottom: 4px; }
+        .accounts_body_posts_card h2 {
+          font-size: 21px;
+          font-family: 'Montserrat', sans-serif;
+          margin-top: 4px; }

@@ -149,6 +149,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioServicio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServicioTestimonio\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -257,6 +262,19 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServicioServicio\ServicioServicio.wsdl" />
+    <None Include="Connected Services\ServicioServicio\ServicioServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioServicio\ServicioServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioServicio\ServicioServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\ServicioServicio\WEB_Chambix.ServicioServicio.ServicioBE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServicioTestimonio\ServicioTestimonio.disco" />
     <None Include="Connected Services\ServicioTestimonio\configuration91.svcinfo" />
     <None Include="Connected Services\ServicioTestimonio\configuration.svcinfo" />
@@ -275,6 +293,13 @@
     <None Include="Connected Services\ServicioUsuario\configuration91.svcinfo" />
     <None Include="Connected Services\ServicioUsuario\configuration.svcinfo" />
     <None Include="Connected Services\ServicioUsuario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioServicio\ServicioServicio.disco" />
+    <None Include="Connected Services\ServicioServicio\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioServicio\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioServicio\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -648,6 +673,7 @@
     <Content Include="Views\tb_Usuario\Details.cshtml" />
     <Content Include="Views\tb_Usuario\Edit.cshtml" />
     <Content Include="Views\tb_Usuario\Index.cshtml" />
+    <Content Include="Views\Post\Filtros.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -678,6 +704,7 @@
     <WCFMetadataStorage Include="Connected Services\ServicioCategoria\" />
     <WCFMetadataStorage Include="Connected Services\ServicioDistrito\" />
     <WCFMetadataStorage Include="Connected Services\ServicioPost\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioServicio\" />
     <WCFMetadataStorage Include="Connected Services\ServicioTestimonio\" />
     <WCFMetadataStorage Include="Connected Services\ServicioUsuario\" />
   </ItemGroup>

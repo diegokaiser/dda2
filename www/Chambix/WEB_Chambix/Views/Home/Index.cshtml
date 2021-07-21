@@ -11,11 +11,11 @@
                 <div class="home-banner-hero-content">
                     <h1><span>Encuentra</span><span>localmente</span><span>profesionales</span><span>de</span><span>confianza</span>para cualquier proyecto en tu hogar</h1>
                     <div class="home-banner-hero-content-search">
-                        <form action="/" method="post">
+                        <form action="/post/Filtros" method="post">
                             <div class="home-banner-hero-content-search-container">
                                 <!--  TODO: Este buscador debe listar post de acuerdo a la palabra clave buscada -->
                                 <i class="fa fa-search" aria-hidden="true"></i>
-                                <input type="text" name="name" placeholder="¿Qué servicio necesitas?" />
+                                <input type="text" name="buscar" placeholder="¿Qué servicio necesitas?" />
                                 <input type="submit" name="name" value="Buscar" />
                             </div>
                         </form>
@@ -520,6 +520,7 @@
             <div class="col-sm-12 col-md-4">
                 <!-- TODO: Este link debe llevar a registro -->
                 @Html.ActionLink("Únete a nuestra red", "Register", "Login", null, new { @class = "links-primary" })
+
             </div>
         </div>
     </div>

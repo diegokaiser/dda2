@@ -13,5 +13,10 @@ namespace WEB_Chambix.Controllers
         {
             return View();
         }
+
+        public ActionResult Interna()
+        {
+            return View();
+        }
     }
 }

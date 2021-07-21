@@ -30,8 +30,9 @@
                         @Html.ActionLink("Publicaciones", "Index", "Post", null, new { @class = "nav-link to-Post" })
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar servicio..." aria-label="Search">
+     
+                <form action="/Post/Filtros" method="post" class="d-flex">                    
+                    <input class="form-control me-2" type="search" name="buscar" id="buscar" placeholder="Buscar servicio..." aria-label="Search" value="">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                     <div class="users">
                         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
@@ -45,6 +46,7 @@
                         </div>
                     </div>                    
                 </form>
+               
             </div>
 
         </div>

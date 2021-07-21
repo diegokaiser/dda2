@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.Data.Entity.Core;
+using System.Data.Linq.SqlClient;
 
 namespace WCF_Chambix
 {
@@ -210,6 +211,50 @@ namespace WCF_Chambix
                      select objPst).Count()
                     );
                 return cantPostPorCategoria;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public List<PostBE>GetPostLike(String palabraClave)
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+               
+                List<PostBE> listaPost = new List<PostBE>();
+                //tb_Post objPosdt = (from objPst in Chambix.usp_CategoriaFiltroLike(palabraClave)
+
+                //                   select objPst).FirstOrDefault();
+                var query = Chambix.usp_CategoriaLike(palabraClave);
+
+                foreach (var objPost in query)
+                {
+
+
+                    PostBE objPostBE = new PostBE();
+                    objPostBE.idPost = Convert.ToInt16(objPost.idPost);
+                    objPostBE.idUsuario = Convert.ToInt16(objPost.idUsuario);
+                    objPostBE.idSubcategoria = Convert.ToInt16(objPost.idSubcategoria);
+                    objPostBE.idDistrito = Convert.ToInt16(objPost.idDistrito);
+                    objPostBE.tituloPost = objPost.tituloPost;
+                    objPostBE.descripcionPost = objPost.descripcionPost;
+                    objPostBE.imagenPost = objPost.imagenPost;
+                    objPostBE.precioPost = Convert.ToDecimal(objPost.precioPost);
+                    objPostBE.valoracionPost = Convert.ToInt16(objPost.valoracionPost);
+                    objPostBE.estadoPost = Convert.ToInt16(objPost.estadoPost);
+                    objPostBE.create_at = (DateTime)objPost.create_at;
+                    objPostBE.NombreCategoria = (objPost.nombreCategoria);
+                    objPostBE.NombreUsuario = (objPost.nombreUsuario);
+                    objPostBE.ApellidoUsuario = (objPost.apellidoUsuario);
+                    objPostBE.NombreDistrito = (objPost.nombreDistrito);
+                    objPostBE.NombreSubCategoria = (objPost.nombreSubCategoria);
+                    listaPost.Add(objPostBE);
+                }
+                return listaPost;
+
             }
             catch (EntityException ex)
             {

@@ -97,4 +97,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetPostLike">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="palabraClave" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPostLikeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCF_Chambix" minOccurs="0" name="GetPostLikeResult" nillable="true" type="q7:ArrayOfPostBE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

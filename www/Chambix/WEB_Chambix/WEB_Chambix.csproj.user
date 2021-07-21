@@ -23,6 +23,7 @@
     <WebStackScaffolding_DbContextTypeFullName>WEB_Chambix.Models.SistemaServiciosEntities</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
     <ToolsVersionPromptShown>4.1</ToolsVersionPromptShown>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
