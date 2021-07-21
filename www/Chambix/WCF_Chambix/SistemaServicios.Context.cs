@@ -418,5 +418,23 @@ namespace WCF_Chambix
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_InsertarUsuario", vnombreUsuarioParameter, vapellidoUsuarioParameter, vcontrasenaUsuarioParameter, vidDistritoParameter, vemailUsuarioParameter, vcellUsuarioParameter, vwspUsusarioParameter, vocupacionUsuarioParameter);
         }
+    
+        public virtual ObjectResult<usp_CategoriaFiltroLike_Result> usp_CategoriaFiltroLike(string palabra)
+        {
+            var palabraParameter = palabra != null ?
+                new ObjectParameter("palabra", palabra) :
+                new ObjectParameter("palabra", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_CategoriaFiltroLike_Result>("usp_CategoriaFiltroLike", palabraParameter);
+        }
+    
+        public virtual ObjectResult<usp_CategoriaLike_Result> usp_CategoriaLike(string palabra)
+        {
+            var palabraParameter = palabra != null ?
+                new ObjectParameter("palabra", palabra) :
+                new ObjectParameter("palabra", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_CategoriaLike_Result>("usp_CategoriaLike", palabraParameter);
+        }
     }
 }

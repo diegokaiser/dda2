@@ -466,5 +466,45 @@
       <Parameter Name="vwspUsusario" Mode="In" Type="String" />
       <Parameter Name="vocupacionUsuario" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="usp_CategoriaFiltroLike" ReturnType="Collection(SistemaServiciosModel.usp_CategoriaFiltroLike_Result)">
+      <Parameter Name="palabra" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_CategoriaLike" ReturnType="Collection(SistemaServiciosModel.usp_CategoriaLike_Result)">
+      <Parameter Name="palabra" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="usp_CategoriaFiltroLike_Result">
+    <Property Type="Int32" Name="idPost" Nullable="false" />
+    <Property Type="Int32" Name="idUsuario" Nullable="false" />
+    <Property Type="Int32" Name="idSubcategoria" Nullable="false" />
+    <Property Type="Byte" Name="idDistrito" Nullable="true" />
+    <Property Type="String" Name="tituloPost" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="descripcionPost" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="precioPost" Nullable="true" Precision="19" />
+    <Property Type="String" Name="imagenPost" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="valoracionPost" Nullable="true" />
+    <Property Type="Boolean" Name="estadoPost" Nullable="true" />
+    <Property Type="DateTime" Name="create_at" Nullable="true" Precision="23" />
+    <Property Type="String" Name="create_by" Nullable="true" MaxLength="40" />
+    <Property Type="DateTime" Name="update_at" Nullable="true" Precision="23" />
+    <Property Type="String" Name="update_by" Nullable="true" MaxLength="40" />
+  </ComplexType>
+  <ComplexType Name="usp_CategoriaLike_Result">
+    <Property Type="Int32" Name="idPost" Nullable="false" />
+    <Property Type="Int32" Name="idUsuario" Nullable="false" />
+    <Property Type="Int32" Name="idSubcategoria" Nullable="false" />
+    <Property Type="Byte" Name="idDistrito" Nullable="true" />
+    <Property Type="String" Name="tituloPost" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="descripcionPost" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="imagenPost" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="precioPost" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="valoracionPost" Nullable="true" />
+    <Property Type="Boolean" Name="estadoPost" Nullable="true" />
+    <Property Type="DateTime" Name="create_at" Nullable="true" Precision="23" />
+    <Property Type="String" Name="nombreUsuario" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="apellidoUsuario" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="nombreDistrito" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="nombreCategoria" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="nombreSubCategoria" Nullable="false" MaxLength="100" />
+  </ComplexType>
 </Schema>

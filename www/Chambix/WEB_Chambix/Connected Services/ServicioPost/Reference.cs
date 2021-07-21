@@ -391,6 +391,12 @@ namespace WEB_Chambix.ServicioPost {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetContarPostPorCategoria", ReplyAction="http://tempuri.org/IServicioPost/GetContarPostPorCategoriaResponse")]
         System.Threading.Tasks.Task<short> GetContarPostPorCategoriaAsync(short idPost);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetPostLike", ReplyAction="http://tempuri.org/IServicioPost/GetPostLikeResponse")]
+        WEB_Chambix.ServicioPost.PostBE[] GetPostLike(string palabraClave);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetPostLike", ReplyAction="http://tempuri.org/IServicioPost/GetPostLikeResponse")]
+        System.Threading.Tasks.Task<WEB_Chambix.ServicioPost.PostBE[]> GetPostLikeAsync(string palabraClave);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -474,6 +480,14 @@ namespace WEB_Chambix.ServicioPost {
         
         public System.Threading.Tasks.Task<short> GetContarPostPorCategoriaAsync(short idPost) {
             return base.Channel.GetContarPostPorCategoriaAsync(idPost);
+        }
+        
+        public WEB_Chambix.ServicioPost.PostBE[] GetPostLike(string palabraClave) {
+            return base.Channel.GetPostLike(palabraClave);
+        }
+        
+        public System.Threading.Tasks.Task<WEB_Chambix.ServicioPost.PostBE[]> GetPostLikeAsync(string palabraClave) {
+            return base.Channel.GetPostLikeAsync(palabraClave);
         }
     }
 }

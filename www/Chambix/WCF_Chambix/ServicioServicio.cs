@@ -11,15 +11,15 @@ namespace WCF_Chambix
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioServicio" en el código y en el archivo de configuración a la vez.
     public class ServicioServicio : IServicioServicio
     {
-        public Boolean InsertServicio(ServicioBE objServicioBE)
+        public Boolean InsertServicio( Int16 idUsuario,Int16 idPost)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
             {
                 tb_Servicio objServicio = new tb_Servicio();
                 
-                objServicio.idPost = objServicioBE.idPost;
-                objServicio.idUsuario= objServicioBE.idUsuario;
+                objServicio.idPost = idPost;
+                objServicio.idUsuario= idUsuario;
                 Chambix.tb_Servicio.Add(objServicio);
                 Chambix.SaveChanges();             
                 return true;

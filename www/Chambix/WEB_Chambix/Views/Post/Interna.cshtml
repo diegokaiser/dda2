@@ -116,8 +116,11 @@
                         <p>Por favor, necesitamos que confirmes la contratación del servicio</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Lo voy a pensar nuevamente</button>
-                        <button type="button" class="btn btn-primary">Estoy seguro</button>
+                        <form action="/Post/AceptarServicio" method="post">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Lo voy a pensar nuevamente</button>
+                            <input type="hidden" name="postId" id="postId" value=@ViewBag.ObjetoPost.idPost />
+                            <button type="submit" class="btn btn-primary">Estoy seguro</button>
+                        </form>
                     </div>
                 </div>
             </div>

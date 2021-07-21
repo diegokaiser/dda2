@@ -10,6 +10,8 @@ using WEB_Chambix.Models;
 using WEB_Chambix.ServicioPost;
 using WEB_Chambix.ServicioCategoria;
 using WEB_Chambix.ServicioTestimonio;
+using WEB_Chambix.ServicioServicio;
+
 
 using System.Globalization;
 
@@ -21,6 +23,7 @@ namespace WEB_Chambix.Controllers
         ServicioPostClient post = new ServicioPostClient();
         ServicioCategoriaClient categoria= new ServicioCategoriaClient();
         ServicioTestimonioClient testimonio = new ServicioTestimonioClient();
+        ServicioServicioClient servicio = new ServicioServicioClient();
 
         // GET: Post
         public ActionResult Index(FormCollection fc)
@@ -29,7 +32,6 @@ namespace WEB_Chambix.Controllers
             //ViewData["cboCategorias"] = LlenarCategorias();
             //return View(tb_Post.ToList());
             ViewBag.ListarPosts = post.GetAllPosts();
-            
             //Para el llenado de los combos
 
             ViewData["cboCategorias"] = LlenarCategorias();
@@ -82,7 +84,7 @@ namespace WEB_Chambix.Controllers
             return View();
         }
 
-        public ActionResult SetComentario(String id)
+        public ActionResult SetComentario()
         {
             Int16 idUsuario = Convert.ToInt16(Session["Usuarioid"]);
             Int16 idPost = Convert.ToInt16(Request.Form["idPost"]);
@@ -91,6 +93,25 @@ namespace WEB_Chambix.Controllers
 
             testimonio.InsertTestimonio(idUsuario, idPost, tituloTestimonio, descripcionTestimonio);
             return RedirectToAction("Interna/"+ idPost);
+        }
+
+        public ActionResult AceptarServicio()
+        {
+            Int16 idUsuario = Convert.ToInt16(Session["Usuarioid"]);
+            Int16 postId = Convert.ToInt16(Request.Form["postId"]);
+
+            servicio.InsertServicio(idUsuario, postId);
+
+            return RedirectToAction("Interna/" + postId);
+        }
+        
+
+        public ActionResult Filtros()
+        {
+            String palabra = Convert.ToString(Request.Form["buscar"]);
+            ViewData["cboCategorias"] = LlenarCategorias();
+            ViewBag.ListarPosts = post.GetPostLike(palabra);
+            return View();
         }
     }
 }

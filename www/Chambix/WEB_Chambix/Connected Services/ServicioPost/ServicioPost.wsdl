@@ -74,6 +74,12 @@
   <wsdl:message name="IServicioPost_GetContarPostPorCategoria_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetContarPostPorCategoriaResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicioPost_GetPostLike_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostLike" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetPostLike_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostLikeResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicioPost">
     <wsdl:operation name="InsertPost">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/InsertPost" message="tns:IServicioPost_InsertPost_InputMessage" />
@@ -102,6 +108,10 @@
     <wsdl:operation name="GetContarPostPorCategoria">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetContarPostPorCategoria" message="tns:IServicioPost_GetContarPostPorCategoria_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetContarPostPorCategoriaResponse" message="tns:IServicioPost_GetContarPostPorCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostLike">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetPostLike" message="tns:IServicioPost_GetPostLike_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetPostLikeResponse" message="tns:IServicioPost_GetPostLike_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicioPost" type="tns:IServicioPost">
@@ -169,6 +179,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetPostLike">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetPostLike" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="BasicHttpsBinding_IServicioPost" type="tns:IServicioPost">
     <wsp:PolicyReference URI="#BasicHttpsBinding_IServicioPost_policy" />
@@ -229,6 +248,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetContarPostPorCategoria">
       <soap:operation soapAction="http://tempuri.org/IServicioPost/GetContarPostPorCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostLike">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetPostLike" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

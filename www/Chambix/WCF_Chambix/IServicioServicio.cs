@@ -12,7 +12,7 @@ namespace WCF_Chambix
     public interface IServicioServicio
     {
         [OperationContract]
-        Boolean InsertServicio(ServicioBE objServicioBE);
+        Boolean InsertServicio(Int16 idUsuario, Int16 idPost);
 
         [OperationContract]
         Boolean UpdateServicio(ServicioBE objServicioBE);

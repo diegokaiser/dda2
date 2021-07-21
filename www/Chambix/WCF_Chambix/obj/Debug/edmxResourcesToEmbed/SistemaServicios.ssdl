@@ -328,6 +328,12 @@
     <Parameter Name="vocupacionUsuario" Type="varchar" Mode="In" />
     <Parameter Name="vidTipoCuenta" Type="tinyint" Mode="In" />
   </Function>
+  <Function Name="usp_CategoriaFiltroLike" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="palabra" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_CategoriaLike" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="palabra" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="usp_EliminarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="vIdCategoria" Type="int" Mode="In" />
   </Function>

@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\PERSONAL\Desktop\Isil\Isil-2021-01\Desarrollo de aplicaciones II\ProyectoServicios\dda2\www\Chambix\WCF_Chambix\SistemaServicios.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\PERSONAL\Desktop\ChambixFinal Repo\Chambix\dda2\www\Chambix\WCF_Chambix\SistemaServicios.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

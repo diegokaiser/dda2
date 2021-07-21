@@ -1,0 +1,103 @@
+﻿@model IEnumerable<WEB_Chambix.Models.tb_Post>
+
+@{
+    ViewBag.Title = "Chambix - Encuentra localmente servicios de mantenimiento y mejora para tu hogar";
+}
+
+@*<section class="posts">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="#" class="card-title">
+                                    <h3>@Html.DisplayFor(modelItem => item.tb_Usuario.nombreUsuario)</h3>
+                                </a>
+                                <div class="card-keys">
+                                    <span class="badge badge-secondary">@Html.DisplayFor(modelItem => item.tb_SubCategoria.nombreSubCategoria)</span>
+                                </div>
+                                <p class="card-text">
+                                    @Html.DisplayFor(modelItem => item.descripcionPost)
+                                </p>
+                                <div class="card-actions">
+                                    @Html.ActionLink("Me interesa", "Post", new { id = item.idPost }, htmlAttributes: new { @class = "btn btn-primary" })
+                                    <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>*@
+
+<section class="posts">
+    <div class="container">
+        <div class="row">
+            @using (Html.BeginForm("Buscar", "Post"))
+            {
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h2>Seleccione el tipo de categoria</h2>
+                            </div>
+                            <div class="card-filters">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input type="radio" name="condicion" value="Todas" id="condicion1" checked="checked" />
+                                        <label class="form-check-label" for="condicion1">Todas</label>
+                                    </div>
+                                </div>
+                                <div class="form-group ml-2">
+                                    <div class="form-check">
+                                        <input type="radio" name="condicion" value="Por Categoria" id="condicion2" />
+                                        <label class="form-check-label" for="condicion2">Por Categoria</label>
+                                    </div>
+                                </div>
+                                <div class="form-group ml-2">
+                                    @Html.DropDownList("cboCategorias", (IEnumerable<SelectListItem>)ViewBag.ListarCategorias, htmlAttributes: new { @class = "form-select" })
+                                </div>
+                                <div class="form-group ml-2">
+                                    <button type="submit" class="btn btn-primary" name="Buscar">Consultar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row">
+            @foreach (var post in ViewBag.ListarPosts)
+            {
+                <div class="col-sm-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" class="card-title">
+                                <h3>@post.tituloPost</h3>
+                            </a>
+                            <div class="card-keys">
+                                <span class="badge badge-secondary text-capitalize">@post.NombreDistrito</span>
+                                <span class="badge badge-secondary text-uppercase">@post.NombreCategoria</span>
+
+                            </div>
+                            <p class="card-text">
+                                @post.descripcionPost
+                            </p>
+                            <div class="card-actions">
+                                @Html.ActionLink("Me interesa", "Interna", new { id = post.idPost }, htmlAttributes: new { @class = "btn btn-primary" })
+                                <a href="#" class="btn btn-outline-primary">Precios y horarios</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/chambix/chambix_post.js"></script>
+}
