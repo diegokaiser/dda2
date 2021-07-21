@@ -8,6 +8,26 @@
         <!-- TODO Si el usuario es profesional -->
         <div class="row">
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-10 accounts_body bg-chambixColor">
+                <div class="container">
+                    <din class="row text-center">
+                        <div class="col-4">
+                            <a href="/Account/Index" class="accountA">Mis post </a>
+                                
+                        </div>
+                        <div class="col-4">
+                            <a href="" class="accountA">Mis postulaciones</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="" class="accountA">Estadisticas</a>
+                        </div>
+                    </din>
+                </div>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
             <div class="col-xs-12 col-sm-10 accounts_body">
                 <h3 class="post_title">Mis publicaciones</h3>
             </div>
@@ -17,71 +37,28 @@
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
             <div class="col-xs-12 col-sm-10 accounts_body_posts">
                 <!-- TODO loop de los post publicados por este usuario -->
-                <div class="accounts_body_posts_post">
-                    <a href="#">TODO: Link, titulo del post</a>
-                    <div class="accounts_body_posts_post_review">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
-                </div>
 
-                <div class="accounts_body_posts_post">
-                    <a href="#">TODO: Link, titulo del post</a>
-                    <div class="accounts_body_posts_post_review">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
+                @foreach (var post in ViewBag.ListarPostsPorId)
+                {
+                    <div class="accounts_body_posts_post">
+                        <a href="@Url.Action("Interna", "Post",new{ id =post.idUsuario})"><strong>@post.tituloPost</strong></a>
+                        <div class="accounts_body_posts_post_review">
+                            @{ for (int i = 1; i <= 5; i++)
+                                {
+                                    if (i <= @post.valoracionPost)
+                                    {
+                                        <span class="active"></span>
+                                    }
+                                    else
+                                    {
+                                        <span></span>
+                                    }
+                                }
+                            }
+                        </div>
                     </div>
-                </div>
+                }
 
-                <div class="accounts_body_posts_post">
-                    <a href="#">TODO: Link, titulo del post</a>
-                    <div class="accounts_body_posts_post_review">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="accounts_body_posts_post">
-                    <a href="#">TODO: Link, titulo del post</a>
-                    <div class="accounts_body_posts_post_review">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="accounts_body_posts_post">
-                    <a href="#">TODO: Link, titulo del post</a>
-                    <div class="accounts_body_posts_post_review">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="accounts_body_posts_post">
-                    <a href="#">TODO: Link, titulo del post</a>
-                    <div class="accounts_body_posts_post_review">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
-                </div>
             </div>
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
         </div>

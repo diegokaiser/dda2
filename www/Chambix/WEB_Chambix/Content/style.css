@@ -1269,3 +1269,16 @@ header {
             .accounts_body_form .form-group .btn-outline-primary:hover {
               background-color: #3f6eed;
               color: white; }
+
+.accountA {
+  text-decoration: none;
+  color: white;
+  font-weight: bold; }
+
+.accountA:hover {
+  text-decoration: none;
+  color: #ff6153;
+  font-weight: bold; }
+
+.bg-chambixColor {
+  background-color: #070441; }

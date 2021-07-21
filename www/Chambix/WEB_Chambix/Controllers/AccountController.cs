@@ -13,8 +13,7 @@ namespace WEB_Chambix.Controllers
         public ActionResult Index()
         {
             //Para iterar los post por usuario
-            ViewBag.ListarPostsPorId = post.GetAllPostsPorIdUsuario(Convert.ToInt16(Session["Usuarioid"]));
-
+            ViewBag.ListarPostsPorId = post.GetAllPostsPorIdUsuario(Convert.ToInt16(Session["Usuarioid"]));          
             return View();
         }
 

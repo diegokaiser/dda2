@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Chambix - Encuentra localmente servicios de mantenimiento y mejora para tu hogar";
+}
+
+<section class="accounts">
+    <div class="container">
+
+        <!-- TODO Si el usuario es profesional -->
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-10 accounts_body bg-chambixColor">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <a href="Index" class="accountA">Publicaciones</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="Servicios" class="accountA">Servicios</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="Estadisticas" class="accountA">Estadisticas</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+        <!-- TODO Si el usuario es cliente -->
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-10 accounts_body">
+                <h3 class="post_title">Mis servicios solicitados</h3>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-10 accounts_body_posts">
+                <!-- TODO loop de los post publicados por este usuario -->
+                @foreach (var post in ViewBag.ListarPostsPorId)
+                {
+                    <div class="accounts_body_posts_post">
+                        <a href="@Url.Action("Interna", "Post",new{ id =post.idUsuario})"><strong>@post.tituloPost</strong></a>
+                        <div class="accounts_body_posts_post_review">
+                            @{ for (int i = 1; i <= 5; i++)
+                                {
+                                    if (i <= @post.valoracionPost)
+                                    {
+                                        <span class="active"></span>
+                                    }
+                                    else
+                                    {
+                                        <span></span>
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+
+    </div>
+</section>

@@ -359,7 +359,6 @@ C:\Users\PERSONAL\Desktop\ChambixFinal Repo\Chambix\dda2\www\Chambix\WEB_Chambix
 C:\Users\PERSONAL\Desktop\ChambixFinal Repo\Chambix\dda2\www\Chambix\WEB_Chambix\bin\es\System.Web.WebPages.resources.dll
 C:\Users\PERSONAL\Desktop\ChambixFinal Repo\Chambix\dda2\www\Chambix\WEB_Chambix\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\PERSONAL\Desktop\ChambixFinal Repo\Chambix\dda2\www\Chambix\WEB_Chambix\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\PERSONAL\Desktop\ChambixFinal Repo\Chambix\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csprojAssemblyReference.cache
 C:\Users\PERSONAL\Desktop\ChambixFinal Repo\Chambix\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csproj.CoreCompileInputs.cache
 C:\Users\PERSONAL\Desktop\ChambixFinal Repo\Chambix\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.csproj.CopyComplete
 C:\Users\PERSONAL\Desktop\ChambixFinal Repo\Chambix\dda2\www\Chambix\WEB_Chambix\obj\Debug\WEB_Chambix.dll
