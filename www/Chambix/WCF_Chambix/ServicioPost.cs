@@ -261,5 +261,47 @@ namespace WCF_Chambix
                 throw new Exception(ex.Message);
             }
         }
+
+        public List<PostBE> GetAllPostsPorIdUsuario(Int16 idUsuario)
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                List<PostBE> objPostLists = new List<PostBE>();
+                var query = (from objPst in Chambix.tb_Post
+                             where objPst.estadoPost == true
+                             && objPst.idUsuario == idUsuario
+                             select objPst);
+                foreach (var objPost in query)
+                {
+                    PostBE objPostBE = new PostBE();
+                    objPostBE.idPost = Convert.ToInt16(objPost.idPost);
+                    objPostBE.idUsuario = Convert.ToInt16(objPost.idUsuario);
+                    objPostBE.idSubcategoria = Convert.ToInt16(objPost.idSubcategoria);
+                    objPostBE.idDistrito = Convert.ToInt16(objPost.idDistrito);
+                    objPostBE.tituloPost = objPost.tituloPost;
+                    objPostBE.descripcionPost = objPost.descripcionPost;
+                    objPostBE.imagenPost = objPost.imagenPost;
+                    objPostBE.precioPost = Convert.ToDecimal(objPost.precioPost);
+                    objPostBE.valoracionPost = Convert.ToInt16(objPost.valoracionPost);
+                    objPostBE.estadoPost = Convert.ToInt16(objPost.estadoPost);
+                    objPostBE.create_at = (DateTime)objPost.create_at;
+                    objPostBE.NombreCategoria = (objPost.tb_SubCategoria.tb_Categoria.nombreCategoria);
+                    objPostBE.ApellidoUsuario = (objPost.tb_Usuario.apellidoUsuario);
+                    objPostBE.NombreUsuario = (objPost.tb_Usuario.nombreUsuario);
+                    objPostBE.NombreDistrito = (objPost.tb_Distrito.nombreDistrito);
+                    objPostBE.NombreSubCategoria = (objPost.tb_SubCategoria.nombreSubCategoria);
+
+
+                    objPostLists.Add(objPostBE);
+                }
+                return objPostLists;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

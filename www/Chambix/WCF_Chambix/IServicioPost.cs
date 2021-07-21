@@ -33,6 +33,9 @@ namespace WCF_Chambix
         Int16 GetContarPostPorCategoria(Int16 idPost);
         [OperationContract]
         List<PostBE> GetPostLike(String palabraClave);
+        [OperationContract]
+        List<PostBE> GetAllPostsPorIdUsuario(Int16 idUsuario);
+
     }
     [DataContract]
     [Serializable]
