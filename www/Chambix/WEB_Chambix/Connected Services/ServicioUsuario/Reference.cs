@@ -341,10 +341,10 @@ namespace WEB_Chambix.ServicioUsuario {
         System.Threading.Tasks.Task<bool> InsertUserAsync(string nombreUsuario, string apellidoUsuario, string contrasenaUsuario, short idDistrito, string emailUsuario, string cellUsuario, string wspUsuario, string ocupacionUsuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioUsuario/UpdateUser", ReplyAction="http://tempuri.org/IServicioUsuario/UpdateUserResponse")]
-        bool UpdateUser(WEB_Chambix.ServicioUsuario.UserBE objUserBE);
+        bool UpdateUser(short idUsuario, string nombreUsuario, string apellidoUsuario, string contrasenaUsuario, short idDistrito, string emailUsuario, string cellUsuario, string wspUsuario, string ocupacionUsuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioUsuario/UpdateUser", ReplyAction="http://tempuri.org/IServicioUsuario/UpdateUserResponse")]
-        System.Threading.Tasks.Task<bool> UpdateUserAsync(WEB_Chambix.ServicioUsuario.UserBE objUserBE);
+        System.Threading.Tasks.Task<bool> UpdateUserAsync(short idUsuario, string nombreUsuario, string apellidoUsuario, string contrasenaUsuario, short idDistrito, string emailUsuario, string cellUsuario, string wspUsuario, string ocupacionUsuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioUsuario/LogicDeleteUser", ReplyAction="http://tempuri.org/IServicioUsuario/LogicDeleteUserResponse")]
         bool LogicDeleteUser(WEB_Chambix.ServicioUsuario.UserBE objUserBE);
@@ -424,12 +424,12 @@ namespace WEB_Chambix.ServicioUsuario {
             return base.Channel.InsertUserAsync(nombreUsuario, apellidoUsuario, contrasenaUsuario, idDistrito, emailUsuario, cellUsuario, wspUsuario, ocupacionUsuario);
         }
         
-        public bool UpdateUser(WEB_Chambix.ServicioUsuario.UserBE objUserBE) {
-            return base.Channel.UpdateUser(objUserBE);
+        public bool UpdateUser(short idUsuario, string nombreUsuario, string apellidoUsuario, string contrasenaUsuario, short idDistrito, string emailUsuario, string cellUsuario, string wspUsuario, string ocupacionUsuario) {
+            return base.Channel.UpdateUser(idUsuario, nombreUsuario, apellidoUsuario, contrasenaUsuario, idDistrito, emailUsuario, cellUsuario, wspUsuario, ocupacionUsuario);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateUserAsync(WEB_Chambix.ServicioUsuario.UserBE objUserBE) {
-            return base.Channel.UpdateUserAsync(objUserBE);
+        public System.Threading.Tasks.Task<bool> UpdateUserAsync(short idUsuario, string nombreUsuario, string apellidoUsuario, string contrasenaUsuario, short idDistrito, string emailUsuario, string cellUsuario, string wspUsuario, string ocupacionUsuario) {
+            return base.Channel.UpdateUserAsync(idUsuario, nombreUsuario, apellidoUsuario, contrasenaUsuario, idDistrito, emailUsuario, cellUsuario, wspUsuario, ocupacionUsuario);
         }
         
         public bool LogicDeleteUser(WEB_Chambix.ServicioUsuario.UserBE objUserBE) {

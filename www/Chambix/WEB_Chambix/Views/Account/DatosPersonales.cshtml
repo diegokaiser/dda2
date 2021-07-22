@@ -16,19 +16,19 @@
         <div class="row">
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
             <div class="col-xs-12 col-sm-10 accounts_body_form">
-                <form action="/" method="post">
+                <form action="/Account/UpdateUsuario" method="post">
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
-                                    <strong>Nombres</strong>
-                                    <input class="form-control" type="text" name="name" value=" @ViewBag.UsuarioDatos.nombreUsuario" />
+                                    <strong class="fw-bold">Nombres</strong>
+                                    <input class="form-control" type="text" name="nombres" value=" @ViewBag.UsuarioDatos.nombreUsuario" />
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
-                                    <strong>Apellido</strong>
-                                    <input class="form-control" type="text" name="name" value="@ViewBag.UsuarioDatos.apellidoUsuario" />
+                                    <strong class="fw-bold">Apellido</strong>
+                                    <input class="form-control" type="text" name="apellidos" value="@ViewBag.UsuarioDatos.apellidoUsuario" />
                                 </div>
                             </div>
                         </div>
@@ -36,8 +36,8 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
-                                    <strong>Correo electrónico</strong>
-                                    <input class="form-control" type="email" name="name" value="@ViewBag.UsuarioDatos.emailUsuario" />
+                                    <strong class="fw-bold">Correo electrónico</strong>
+                                    <input class="form-control" type="email" name="correo" value="@ViewBag.UsuarioDatos.emailUsuario" />
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6">
@@ -47,19 +47,39 @@
                         </div>
 
                         <div class="row">
+
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
-                                    <strong>Número de celular</strong>
-                                    <input class="form-control" type="type" name="name" value="@ViewBag.UsuarioDatos.cellUsuario" />
+                                    <strong class="fw-bold">Contraseña</strong>
+                                    <input class="form-control" type="password" name="contrasena" value="@ViewBag.UsuarioDatos.contrasenaUsuario" />
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
-                                    <strong>Ocupación</strong>
-                                    <input class="form-control" type="type" name="name" value="@ViewBag.UsuarioDatos.ocupacionUsuario" />
+                                    <strong class="fw-bold">Ocupación</strong>
+                                    <input class="form-control" type="text" name="ocupacion" value="@ViewBag.UsuarioDatos.ocupacionUsuario" />
                                 </div>
                             </div>
+
+
                         </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <strong class="fw-bold">Número de celular</strong>
+                                    <input class="form-control" type="text" name="celular" value="@ViewBag.UsuarioDatos.cellUsuario" />
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <strong class="fw-bold">wsp</strong>
+                                    <input class="form-control" type="text" name="wsp" value="@ViewBag.UsuarioDatos.wspUsuario" />
+                                </div>
+                            </div>
+
+
+                        </div>
+
 
                         <div class="row">
                             <div class="col-6">

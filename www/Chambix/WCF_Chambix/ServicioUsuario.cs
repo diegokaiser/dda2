@@ -38,28 +38,24 @@ namespace WCF_Chambix
             }
         }
 
-        public Boolean UpdateUser(UserBE objUserBE)
+        public Boolean UpdateUser(Int16 idUsuario,String nombreUsuario,String apellidoUsuario,String contrasenaUsuario,Int16 idDistrito,String emailUsuario,String cellUsuario,String wspUsuario,String ocupacionUsuario)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
             {
                 tb_Usuario objUser = (from objUsr in Chambix.tb_Usuario
-                                      where objUsr.idUsuario == objUserBE.idUsuario
+                                      where objUsr.idUsuario == idUsuario
                                       select objUsr).FirstOrDefault();
 
-                objUser.idUsuario = objUserBE.idUsuario;
-                objUser.tipoUsuario = Convert.ToByte(objUserBE.tipoUsuario);
-                objUser.estadoUsuario = Convert.ToBoolean(objUserBE.estadoUsuario);
-                objUser.nombreUsuario = objUserBE.nombreUsuario;
-                objUser.apellidoUsuario = objUserBE.apellidoUsuario;
-                objUser.contrasenaUsuario = objUserBE.contrasenaUsuario;
-                objUser.idDistrito = Convert.ToByte(objUserBE.idDistrito);
-                objUser.emailUsuario = objUserBE.emailUsuario;
-                objUser.cellUsuario = objUserBE.cellUsuario;
-                objUser.rankUsuario = objUserBE.rankUsuario;
-                objUser.wspUsuario = objUserBE.wspUsuario;
-                objUser.ocupacionUsuario = objUserBE.ocupacionUsuario;
-                objUser.idTipoCuenta = Convert.ToByte(objUserBE.idTipoCuenta);
+                objUser.idUsuario = idUsuario;
+                objUser.nombreUsuario = nombreUsuario;
+                objUser.apellidoUsuario = apellidoUsuario;
+                objUser.contrasenaUsuario = contrasenaUsuario;
+                objUser.idDistrito = Convert.ToByte(idDistrito);
+                objUser.emailUsuario = emailUsuario;
+                objUser.cellUsuario = cellUsuario;
+                objUser.wspUsuario = wspUsuario;
+                objUser.ocupacionUsuario = ocupacionUsuario;
 
                 Chambix.SaveChanges();
                 return true;
