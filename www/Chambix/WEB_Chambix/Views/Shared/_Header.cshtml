@@ -24,10 +24,13 @@
                         @Html.ActionLink("Iniciar una publicación", "Crear", "Post", null, new { @class = "nav-link to-Start" })
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Únase a nuestra red de profesionales", "Register", "Login", null, new { @class = "nav-link to-Join" })
+                        @Html.ActionLink("Ver Publicaciones", "Index", "Post", null, new { @class = "nav-link to-Post" })
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Ver Publicaciones", "Index", "Post", null, new { @class = "nav-link to-Post" })
+                        @*<a href="#"> @Session["SesionNombre"]</a>*@
+                        <a href="@Url.Action("Index", "Account")" class="nav-link to-Post"><strong> @Session["SesionNombre"]</strong></a>
+
+
                     </li>
                 </ul>
      

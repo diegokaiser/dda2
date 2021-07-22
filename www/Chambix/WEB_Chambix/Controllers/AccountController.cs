@@ -87,5 +87,24 @@ namespace WEB_Chambix.Controllers
             return View();
         }
 
+        public ActionResult UpdateUsuario(FormCollection fc)
+        {
+
+            Int16 dis = Convert.ToInt16(fc["cboDistritos"]);
+            Int16 idUsuario = Convert.ToInt16(Session["Usuarioid"]);
+            String nombre = Request.Form["nombres"].ToString();
+            String apellido = Request.Form["apellidos"].ToString();
+            String contasena = Request.Form["contrasena"].ToString();
+            String correo = Request.Form["correo"].ToString();
+            Int16 distrito = dis;
+            String celular = Request.Form["celular"].ToString();
+            String ocupacion = Request.Form["ocupacion"].ToString();
+            String wsp = Request.Form["wsp"].ToString();
+            usuario.UpdateUser(idUsuario, nombre, apellido, contasena, distrito, correo, celular, ocupacion, wsp);
+            return RedirectToAction("DatosPersonales", "Account");
+        }
+
+
+
     }
 }
