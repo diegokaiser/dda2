@@ -66,6 +66,7 @@ namespace WCF_Chambix
             }
         }
 
+
         public Boolean LogicDeleteUser(UserBE objUserBE)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
@@ -117,6 +118,7 @@ namespace WCF_Chambix
             }
         }
 
+
         public List<UserBE> GetAllUsers()
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
@@ -144,6 +146,44 @@ namespace WCF_Chambix
                     objUserBE.idTipoCuenta = objUser.idTipoCuenta;
                     objUserBE.tiempoCuenta = Convert.ToDateTime(objUser.tiempoCuenta);
                     objUserBE.create_at = (DateTime)objUser.create_at;
+                    objUserLists.Add(objUserBE);
+                }
+                return objUserLists;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public List<UserBE> GetAllUsersPostulantes(Int16 idPost)
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                List<UserBE> objUserLists = new List<UserBE>();
+                var query = (from objSer in Chambix.tb_Servicio
+                             where objSer.tb_Usuario.estadoUsuario == true
+                             && objSer.idPost==idPost
+                             select objSer);
+                foreach (var objServicio in query)
+                {
+                    UserBE objUserBE = new UserBE();
+                    objUserBE.idUsuario = Convert.ToInt16(objServicio.tb_Usuario.idUsuario);
+                    objUserBE.tipoUsuario = Convert.ToInt16(objServicio.tb_Usuario.tipoUsuario);
+                    objUserBE.estadoUsuario = Convert.ToInt16(objServicio.tb_Usuario.estadoUsuario);
+                    objUserBE.nombreUsuario = objServicio.tb_Usuario.nombreUsuario;
+                    objUserBE.apellidoUsuario = objServicio.tb_Usuario.apellidoUsuario;
+                    objUserBE.contrasenaUsuario = objServicio.tb_Usuario.contrasenaUsuario;
+                    objUserBE.idDistrito = Convert.ToInt16(objServicio.tb_Usuario.idDistrito);
+                    objUserBE.emailUsuario = objServicio.tb_Usuario.emailUsuario;
+                    objUserBE.cellUsuario = objServicio.tb_Usuario.cellUsuario;
+                    objUserBE.rankUsuario = Convert.ToInt16(objServicio.tb_Usuario.rankUsuario);
+                    objUserBE.wspUsuario = objServicio.tb_Usuario.wspUsuario;
+                    objUserBE.ocupacionUsuario = objServicio.tb_Usuario.ocupacionUsuario;
+                    objUserBE.idTipoCuenta = objServicio.tb_Usuario.idTipoCuenta;
+                    objUserBE.tiempoCuenta = Convert.ToDateTime(objServicio.tb_Usuario.tiempoCuenta);
+                    objUserBE.create_at = (DateTime)objServicio.create_at;
                     objUserLists.Add(objUserBE);
                 }
                 return objUserLists;

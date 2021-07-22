@@ -37,6 +37,10 @@ namespace WCF_Chambix
         List<UserBE> GetAllUsersAdmins();
         [OperationContract]
          Int16 GetContarUsuarios();
+        [OperationContract]
+
+        List<UserBE> GetAllUsersPostulantes(Int16 idPost);
+
 
     }
     [DataContract]
