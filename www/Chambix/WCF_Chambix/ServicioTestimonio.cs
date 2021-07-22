@@ -12,7 +12,7 @@ namespace WCF_Chambix
     public class ServicioTestimonio : IServicioTestimonio
     {
 
-        public bool InsertTestimonio(Int16 idUsuario,Int16 idPost, String tituloTestimonio, String descripcionTestimonio)
+        public bool InsertTestimonio(Int16 idUsuario, Int16 idPost, String tituloTestimonio, String descripcionTestimonio)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
@@ -40,7 +40,7 @@ namespace WCF_Chambix
             try
             {
                 tb_Testimonio objTestimonio = (from objTest in Chambix.tb_Testimonio
-                                           where objTest.idTestimonio == objTestimonioBE.idTestimonio
+                                               where objTest.idTestimonio == objTestimonioBE.idTestimonio
                                                select objTest).FirstOrDefault();
 
                 objTestimonio.idTestimonio = objTestimonioBE.idTestimonio;
@@ -86,7 +86,7 @@ namespace WCF_Chambix
                 List<TestimonioBE> objTestimonioList = new List<TestimonioBE>();
 
                 var query = (from objTest in Chambix.tb_Testimonio
-                             where objTest.idPost== id
+                             where objTest.idPost == id
                              select objTest);
 
                 foreach (var objTestimonio in query)
@@ -154,7 +154,41 @@ namespace WCF_Chambix
             }
         }
 
-
+        public Int16 GetContarTestimonio()
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                Int16 cantidadtesti = Convert.ToInt16(
+                    (from objTesti in Chambix.tb_Servicio
+                     where objTesti.estadoServicio == true
+                     select objTesti).Count()
+                    );
+                return cantidadtesti;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public Int16 GetContarTestimonioIdUsuario(Int16 idUsuario)
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                Int16 cantidadtesti = Convert.ToInt16(
+                    (from objTesti in Chambix.tb_Servicio
+                     where objTesti.estadoServicio == true
+                     && objTesti.idUsuario== idUsuario
+                     select objTesti).Count()
+                    );
+                return cantidadtesti;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
     }
 }

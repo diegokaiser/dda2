@@ -303,5 +303,82 @@ namespace WCF_Chambix
             }
         }
 
+        public List<PostBE> GetAllPostsServiciosPorIdUsuario(Int16 idUsuario)
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                List<PostBE> objPostLists = new List<PostBE>();
+                var query = (from objPst in Chambix.tb_Servicio
+                             where objPst.tb_Post.estadoPost == true
+                             && objPst.idUsuario == idUsuario
+                             select objPst);
+                foreach (var objPost in query)
+                {
+                    PostBE objPostBE = new PostBE();
+                    objPostBE.idPost = Convert.ToInt16(objPost.tb_Post.idPost);
+                    objPostBE.idUsuario = Convert.ToInt16(objPost.tb_Post.idUsuario);
+                    objPostBE.idSubcategoria = Convert.ToInt16(objPost.tb_Post.idSubcategoria);
+                    objPostBE.idDistrito = Convert.ToInt16(objPost.tb_Post.idDistrito);
+                    objPostBE.tituloPost = objPost.tb_Post.tituloPost;
+                    objPostBE.descripcionPost = objPost.tb_Post.descripcionPost;
+                    objPostBE.imagenPost = objPost.tb_Post.imagenPost;
+                    objPostBE.precioPost = Convert.ToDecimal(objPost.tb_Post.precioPost);
+                    objPostBE.valoracionPost = Convert.ToInt16(objPost.tb_Post.valoracionPost);
+                    objPostBE.estadoPost = Convert.ToInt16(objPost.tb_Post.estadoPost);
+                    objPostBE.create_at = (DateTime)objPost.tb_Post.create_at;
+                    objPostBE.NombreCategoria = (objPost.tb_Post.tb_SubCategoria.tb_Categoria.nombreCategoria);
+                    objPostBE.ApellidoUsuario = (objPost.tb_Post.tb_Usuario.apellidoUsuario);
+                    objPostBE.NombreUsuario = (objPost.tb_Post.tb_Usuario.nombreUsuario);
+                    objPostBE.NombreDistrito = (objPost.tb_Post.tb_Distrito.nombreDistrito);
+                    objPostBE.NombreSubCategoria = (objPost.tb_Post.tb_SubCategoria.nombreSubCategoria);
+
+
+                    objPostLists.Add(objPostBE);
+                }
+                return objPostLists;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public Int16 GetContarPost()
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                Int16 cantPost = Convert.ToInt16(
+                    (from objPost in Chambix.tb_Post
+                     where objPost.estadoPost == true
+                     select objPost).Count()
+                    );
+                return cantPost;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public Int16 GetContarPostPorIdUsuario(Int16 idUsuarios)
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                Int16 cantPost = Convert.ToInt16(
+                    (from objPost in Chambix.tb_Post
+                     where objPost.estadoPost == true
+                     && objPost.idUsuario== idUsuarios
+                     select objPost).Count()
+                    );
+                return cantPost;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

@@ -25,6 +25,14 @@ namespace WCF_Chambix
 
         [OperationContract]
         List<ServicioBE> GetAllServicio();
+        [OperationContract]
+        int VerificarServicioExiste(Int16 idUsuario, Int16 idPost);
+        [OperationContract]
+         Int16 GetContarServiciosContratados();
+        [OperationContract]
+        Int16 GetContarServiciosContratadosPorIdUsuario(Int16 idUsuarios);
+
+
 
     }
     [DataContract]

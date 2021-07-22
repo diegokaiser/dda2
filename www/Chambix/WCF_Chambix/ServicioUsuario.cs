@@ -267,5 +267,24 @@ namespace WCF_Chambix
                 throw new Exception(ex.Message);
             }
         }
+
+
+        public Int16 GetContarUsuarios()
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                Int16 cantUsuarios = Convert.ToInt16(
+                    (from objUser in Chambix.tb_Usuario
+                     where objUser.estadoUsuario == true
+                     select objUser).Count()
+                    );
+                return cantUsuarios;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

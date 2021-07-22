@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.Data.Entity.Core;
+using System.Data;
 
 namespace WCF_Chambix
 {
@@ -98,6 +99,62 @@ namespace WCF_Chambix
                     objServiciostLists.Add(objServicioBE);
                 }
                 return objServiciostLists;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public int VerificarServicioExiste(Int16 idUsuario, Int16 idPost)
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                Int16 serviciosRepetidos = Convert.ToInt16(
+                    (from objPst in Chambix.tb_Servicio
+                     where objPst.idPost == idPost
+                     && objPst.idUsuario == idUsuario
+                     select objPst).Count()
+                    );
+                return serviciosRepetidos;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public Int16 GetContarServiciosContratados()
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                Int16 serviciosRepetidos = Convert.ToInt16(
+                    (from cantServi in Chambix.tb_Servicio
+                     where cantServi.estadoServicio == true
+                     select cantServi).Count()
+                    );
+                return serviciosRepetidos;
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public Int16 GetContarServiciosContratadosPorIdUsuario(Int16 idUsuarios)
+        {
+            SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
+            try
+            {
+                Int16 serviciosRepetidos = Convert.ToInt16(
+                    (from cantServi in Chambix.tb_Servicio
+                     where cantServi.estadoServicio == true
+                     && cantServi.idUsuario== idUsuarios
+                     select cantServi).Count()
+                    );
+                return serviciosRepetidos;
             }
             catch (EntityException ex)
             {

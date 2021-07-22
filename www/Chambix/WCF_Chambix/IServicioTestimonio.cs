@@ -25,6 +25,11 @@ namespace WCF_Chambix
 
         [OperationContract]
         List<TestimonioBE> GetAllTestimonioId(Int32 idPost);
+        [OperationContract]
+        Int16 GetContarTestimonio();
+        [OperationContract]
+        Int16 GetContarTestimonioIdUsuario(Int16 idUsuario);
+
 
     }
 

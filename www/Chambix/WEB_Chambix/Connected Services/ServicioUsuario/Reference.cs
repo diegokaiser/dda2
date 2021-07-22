@@ -381,6 +381,12 @@ namespace WEB_Chambix.ServicioUsuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioUsuario/GetAllUsersAdmins", ReplyAction="http://tempuri.org/IServicioUsuario/GetAllUsersAdminsResponse")]
         System.Threading.Tasks.Task<WEB_Chambix.ServicioUsuario.UserBE[]> GetAllUsersAdminsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioUsuario/GetContarUsuarios", ReplyAction="http://tempuri.org/IServicioUsuario/GetContarUsuariosResponse")]
+        short GetContarUsuarios();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioUsuario/GetContarUsuarios", ReplyAction="http://tempuri.org/IServicioUsuario/GetContarUsuariosResponse")]
+        System.Threading.Tasks.Task<short> GetContarUsuariosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -472,6 +478,14 @@ namespace WEB_Chambix.ServicioUsuario {
         
         public System.Threading.Tasks.Task<WEB_Chambix.ServicioUsuario.UserBE[]> GetAllUsersAdminsAsync() {
             return base.Channel.GetAllUsersAdminsAsync();
+        }
+        
+        public short GetContarUsuarios() {
+            return base.Channel.GetContarUsuarios();
+        }
+        
+        public System.Threading.Tasks.Task<short> GetContarUsuariosAsync() {
+            return base.Channel.GetContarUsuariosAsync();
         }
     }
 }

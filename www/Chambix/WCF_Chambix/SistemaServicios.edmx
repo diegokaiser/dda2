@@ -395,6 +395,14 @@
           <Parameter Name="vwspUsusario" Type="varchar" Mode="In" />
           <Parameter Name="vocupacionUsuario" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="usp_ServicioComprobar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idUsuario" Type="int" Mode="In" />
+          <Parameter Name="idPost" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_ServicioComprobarExistencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idUsuario" Type="int" Mode="In" />
+          <Parameter Name="idPost" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="SistemaServiciosModelStoreContainer">
           <EntitySet Name="tb_Categoria" EntityType="Self.tb_Categoria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_Distrito" EntityType="Self.tb_Distrito" Schema="dbo" store:Type="Tables" />
@@ -928,7 +936,15 @@
           <Parameter Name="palabra" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="usp_CategoriaLike" ReturnType="Collection(SistemaServiciosModel.usp_CategoriaLike_Result)">
-            <Parameter Name="palabra" Mode="In" Type="String" />
+          <Parameter Name="palabra" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ServicioComprobarExistencia" ReturnType="Collection(Int32)">
+            <Parameter Name="idUsuario" Mode="In" Type="Int32" />
+            <Parameter Name="idPost" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ServicioComprobar" ReturnType="Collection(Int32)">
+            <Parameter Name="idUsuario" Mode="In" Type="Int32" />
+            <Parameter Name="idPost" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="usp_CategoriaFiltroLike_Result">
@@ -1304,6 +1320,8 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ServicioComprobarExistencia" FunctionName="SistemaServiciosModel.Store.usp_ServicioComprobarExistencia" />
+          <FunctionImportMapping FunctionImportName="usp_ServicioComprobar" FunctionName="SistemaServiciosModel.Store.usp_ServicioComprobar" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

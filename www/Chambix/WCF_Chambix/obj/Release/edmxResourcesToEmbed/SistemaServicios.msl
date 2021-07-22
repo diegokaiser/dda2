@@ -334,5 +334,7 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ServicioComprobarExistencia" FunctionName="SistemaServiciosModel.Store.usp_ServicioComprobarExistencia" />
+    <FunctionImportMapping FunctionImportName="usp_ServicioComprobar" FunctionName="SistemaServiciosModel.Store.usp_ServicioComprobar" />
   </EntityContainerMapping>
 </Mapping>

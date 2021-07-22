@@ -267,6 +267,18 @@ namespace WEB_Chambix.ServicioTestimonio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioTestimonio/GetAllTestimonioId", ReplyAction="http://tempuri.org/IServicioTestimonio/GetAllTestimonioIdResponse")]
         System.Threading.Tasks.Task<WEB_Chambix.ServicioTestimonio.TestimonioBE[]> GetAllTestimonioIdAsync(int idPost);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioTestimonio/GetContarTestimonio", ReplyAction="http://tempuri.org/IServicioTestimonio/GetContarTestimonioResponse")]
+        short GetContarTestimonio();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioTestimonio/GetContarTestimonio", ReplyAction="http://tempuri.org/IServicioTestimonio/GetContarTestimonioResponse")]
+        System.Threading.Tasks.Task<short> GetContarTestimonioAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioTestimonio/GetContarTestimonioIdUsuario", ReplyAction="http://tempuri.org/IServicioTestimonio/GetContarTestimonioIdUsuarioResponse")]
+        short GetContarTestimonioIdUsuario(short idUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioTestimonio/GetContarTestimonioIdUsuario", ReplyAction="http://tempuri.org/IServicioTestimonio/GetContarTestimonioIdUsuarioResponse")]
+        System.Threading.Tasks.Task<short> GetContarTestimonioIdUsuarioAsync(short idUsuario);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -334,6 +346,22 @@ namespace WEB_Chambix.ServicioTestimonio {
         
         public System.Threading.Tasks.Task<WEB_Chambix.ServicioTestimonio.TestimonioBE[]> GetAllTestimonioIdAsync(int idPost) {
             return base.Channel.GetAllTestimonioIdAsync(idPost);
+        }
+        
+        public short GetContarTestimonio() {
+            return base.Channel.GetContarTestimonio();
+        }
+        
+        public System.Threading.Tasks.Task<short> GetContarTestimonioAsync() {
+            return base.Channel.GetContarTestimonioAsync();
+        }
+        
+        public short GetContarTestimonioIdUsuario(short idUsuario) {
+            return base.Channel.GetContarTestimonioIdUsuario(idUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<short> GetContarTestimonioIdUsuarioAsync(short idUsuario) {
+            return base.Channel.GetContarTestimonioIdUsuarioAsync(idUsuario);
         }
     }
 }

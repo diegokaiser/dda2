@@ -100,8 +100,10 @@ namespace WEB_Chambix.Controllers
             Int16 idUsuario = Convert.ToInt16(Session["Usuarioid"]);
             Int16 postId = Convert.ToInt16(Request.Form["postId"]);
 
-            servicio.InsertServicio(idUsuario, postId);
-
+            if (servicio.VerificarServicioExiste(idUsuario, postId) <= 0)
+            {
+                servicio.InsertServicio(idUsuario, postId);
+            }
             return RedirectToAction("Interna/" + postId);
         }
         

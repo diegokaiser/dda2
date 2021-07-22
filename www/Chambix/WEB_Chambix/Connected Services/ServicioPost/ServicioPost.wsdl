@@ -86,6 +86,24 @@
   <wsdl:message name="IServicioPost_GetAllPostsPorIdUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllPostsPorIdUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicioPost_GetAllPostsServiciosPorIdUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostsServiciosPorIdUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetAllPostsServiciosPorIdUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostsServiciosPorIdUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetContarPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarPost" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetContarPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetContarPostPorIdUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarPostPorIdUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPost_GetContarPostPorIdUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarPostPorIdUsuarioResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicioPost">
     <wsdl:operation name="InsertPost">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/InsertPost" message="tns:IServicioPost_InsertPost_InputMessage" />
@@ -122,6 +140,18 @@
     <wsdl:operation name="GetAllPostsPorIdUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetAllPostsPorIdUsuario" message="tns:IServicioPost_GetAllPostsPorIdUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetAllPostsPorIdUsuarioResponse" message="tns:IServicioPost_GetAllPostsPorIdUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostsServiciosPorIdUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetAllPostsServiciosPorIdUsuario" message="tns:IServicioPost_GetAllPostsServiciosPorIdUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetAllPostsServiciosPorIdUsuarioResponse" message="tns:IServicioPost_GetAllPostsServiciosPorIdUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContarPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetContarPost" message="tns:IServicioPost_GetContarPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetContarPostResponse" message="tns:IServicioPost_GetContarPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContarPostPorIdUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPost/GetContarPostPorIdUsuario" message="tns:IServicioPost_GetContarPostPorIdUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPost/GetContarPostPorIdUsuarioResponse" message="tns:IServicioPost_GetContarPostPorIdUsuario_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicioPost" type="tns:IServicioPost">
@@ -207,6 +237,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetAllPostsServiciosPorIdUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetAllPostsServiciosPorIdUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarPost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetContarPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarPostPorIdUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetContarPostPorIdUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="BasicHttpsBinding_IServicioPost" type="tns:IServicioPost">
     <wsp:PolicyReference URI="#BasicHttpsBinding_IServicioPost_policy" />
@@ -285,6 +342,33 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllPostsPorIdUsuario">
       <soap:operation soapAction="http://tempuri.org/IServicioPost/GetAllPostsPorIdUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostsServiciosPorIdUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetAllPostsServiciosPorIdUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarPost">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetContarPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarPostPorIdUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioPost/GetContarPostPorIdUsuario" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

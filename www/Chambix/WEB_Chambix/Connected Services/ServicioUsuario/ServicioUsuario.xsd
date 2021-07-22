@@ -112,4 +112,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetContarUsuarios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContarUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContarUsuariosResult" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

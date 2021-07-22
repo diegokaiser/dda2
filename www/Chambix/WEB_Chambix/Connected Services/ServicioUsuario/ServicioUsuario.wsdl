@@ -80,6 +80,12 @@
   <wsdl:message name="IServicioUsuario_GetAllUsersAdmins_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllUsersAdminsResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicioUsuario_GetContarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IServicioUsuario_GetContarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarUsuariosResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicioUsuario">
     <wsdl:operation name="InsertUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioUsuario/InsertUser" message="tns:IServicioUsuario_InsertUser_InputMessage" />
@@ -112,6 +118,10 @@
     <wsdl:operation name="GetAllUsersAdmins">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioUsuario/GetAllUsersAdmins" message="tns:IServicioUsuario_GetAllUsersAdmins_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicioUsuario/GetAllUsersAdminsResponse" message="tns:IServicioUsuario_GetAllUsersAdmins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioUsuario/GetContarUsuarios" message="tns:IServicioUsuario_GetContarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioUsuario/GetContarUsuariosResponse" message="tns:IServicioUsuario_GetContarUsuarios_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicioUsuario" type="tns:IServicioUsuario">
@@ -188,6 +198,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetContarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IServicioUsuario/GetContarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="BasicHttpsBinding_IServicioUsuario" type="tns:IServicioUsuario">
     <wsp:PolicyReference URI="#BasicHttpsBinding_IServicioUsuario_policy" />
@@ -257,6 +276,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllUsersAdmins">
       <soap:operation soapAction="http://tempuri.org/IServicioUsuario/GetAllUsersAdmins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IServicioUsuario/GetContarUsuarios" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

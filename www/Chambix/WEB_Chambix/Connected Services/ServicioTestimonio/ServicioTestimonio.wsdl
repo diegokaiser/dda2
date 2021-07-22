@@ -62,6 +62,18 @@
   <wsdl:message name="IServicioTestimonio_GetAllTestimonioId_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllTestimonioIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicioTestimonio_GetContarTestimonio_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarTestimonio" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTestimonio_GetContarTestimonio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarTestimonioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTestimonio_GetContarTestimonioIdUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarTestimonioIdUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTestimonio_GetContarTestimonioIdUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContarTestimonioIdUsuarioResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicioTestimonio">
     <wsdl:operation name="InsertTestimonio">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioTestimonio/InsertTestimonio" message="tns:IServicioTestimonio_InsertTestimonio_InputMessage" />
@@ -82,6 +94,14 @@
     <wsdl:operation name="GetAllTestimonioId">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioTestimonio/GetAllTestimonioId" message="tns:IServicioTestimonio_GetAllTestimonioId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicioTestimonio/GetAllTestimonioIdResponse" message="tns:IServicioTestimonio_GetAllTestimonioId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContarTestimonio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTestimonio/GetContarTestimonio" message="tns:IServicioTestimonio_GetContarTestimonio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTestimonio/GetContarTestimonioResponse" message="tns:IServicioTestimonio_GetContarTestimonio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContarTestimonioIdUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioTestimonio/GetContarTestimonioIdUsuario" message="tns:IServicioTestimonio_GetContarTestimonioIdUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioTestimonio/GetContarTestimonioIdUsuarioResponse" message="tns:IServicioTestimonio_GetContarTestimonioIdUsuario_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicioTestimonio" type="tns:IServicioTestimonio">
@@ -131,6 +151,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetContarTestimonio">
+      <soap:operation soapAction="http://tempuri.org/IServicioTestimonio/GetContarTestimonio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarTestimonioIdUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioTestimonio/GetContarTestimonioIdUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="BasicHttpsBinding_IServicioTestimonio" type="tns:IServicioTestimonio">
     <wsp:PolicyReference URI="#BasicHttpsBinding_IServicioTestimonio_policy" />
@@ -173,6 +211,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllTestimonioId">
       <soap:operation soapAction="http://tempuri.org/IServicioTestimonio/GetAllTestimonioId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarTestimonio">
+      <soap:operation soapAction="http://tempuri.org/IServicioTestimonio/GetContarTestimonio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContarTestimonioIdUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioTestimonio/GetContarTestimonioIdUsuario" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

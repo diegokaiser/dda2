@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Chambix - Encuentra localmente servicios de mantenimiento y mejora para tu hogar";
+}
+
+<section class="accounts">
+    <div class="container">
+
+        <!-- TODO Si el usuario es profesional -->
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-10 accounts_body bg-chambixColor">
+                <div class="container">
+                    <din class="row text-center">
+                        <div class="col-4">
+                            <a href="/Account/Index" class="accountA">Mis post </a>
+
+                        </div>
+                        <div class="col-4">
+                            <a href="/Account/Postulaciones" class="accountA">Contactados</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="/Account/Estadisticas" class="accountA">Estadisticas</a>
+                        </div>
+                    </din>
+                </div>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+
+        <!-- TODO Si el usuario es admin -->
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-10 accounts_body">
+                <h3 class="post_title">Estadísticas Chambix</h3>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-10 accounts_body_posts">
+                <div class="accounts_body_posts_card">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    Usuarios registrados
+                    <h2>@ViewBag.usuarios</h2>
+                </div>
+
+                <div class="accounts_body_posts_card">
+                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                    Publicaciones
+                    <h2>@ViewBag.publicaciones </h2>
+                </div>
+
+                <div class="accounts_body_posts_card">
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                    Servicios contratados
+                    <h2>@ViewBag.Servicios</h2>
+                </div>
+
+                <div class="accounts_body_posts_card">
+                    <i class="fa fa-comments-o"  aria-hidden="true"></i>
+                    Comentarios totales
+                    <h2>@ViewBag.Testimonios</h2>
+                </div>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-10 accounts_body">
+                <h3 class="post_title">Estadísticas de @Session["SesionNombre"]</h3>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+        <div class="row">
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+            <div class="col-xs-12 col-sm-10 accounts_body_posts">
+                <div class="accounts_body_posts_card">
+                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                    Publicaciones realizadas
+                    <h2>@ViewBag.publicacionesUsuario</h2>
+                </div>
+
+                <div class="accounts_body_posts_card">
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                    Servicios contratados
+                    <h2>@ViewBag.ServiciosUsuarios</h2>
+                </div>
+
+                <div class="accounts_body_posts_card">
+                    <i class="fa fa-comments-o" aria-hidden="true"></i>
+                    Comentarios realizados
+                    <h2>@ViewBag.TestimoniosUsuarios</h2>
+                </div>
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
+
+    </div>
+</section>

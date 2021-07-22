@@ -34,6 +34,9 @@ namespace WCF_Chambix
 
         [OperationContract]
         List<UserBE> GetAllUsersAdmins();
+        [OperationContract]
+         Int16 GetContarUsuarios();
+
     }
     [DataContract]
     [Serializable]

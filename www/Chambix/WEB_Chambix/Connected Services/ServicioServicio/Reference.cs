@@ -197,6 +197,26 @@ namespace WEB_Chambix.ServicioServicio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioServicio/GetAllServicio", ReplyAction="http://tempuri.org/IServicioServicio/GetAllServicioResponse")]
         System.Threading.Tasks.Task<WEB_Chambix.ServicioServicio.ServicioBE[]> GetAllServicioAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioServicio/VerificarServicioExiste", ReplyAction="http://tempuri.org/IServicioServicio/VerificarServicioExisteResponse")]
+        int VerificarServicioExiste(short idUsuario, short idPost);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioServicio/VerificarServicioExiste", ReplyAction="http://tempuri.org/IServicioServicio/VerificarServicioExisteResponse")]
+        System.Threading.Tasks.Task<int> VerificarServicioExisteAsync(short idUsuario, short idPost);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioServicio/GetContarServiciosContratados", ReplyAction="http://tempuri.org/IServicioServicio/GetContarServiciosContratadosResponse")]
+        short GetContarServiciosContratados();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioServicio/GetContarServiciosContratados", ReplyAction="http://tempuri.org/IServicioServicio/GetContarServiciosContratadosResponse")]
+        System.Threading.Tasks.Task<short> GetContarServiciosContratadosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioServicio/GetContarServiciosContratadosPorIdUsuario", ReplyAction="http://tempuri.org/IServicioServicio/GetContarServiciosContratadosPorIdUsuarioRes" +
+            "ponse")]
+        short GetContarServiciosContratadosPorIdUsuario(short idUsuarios);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioServicio/GetContarServiciosContratadosPorIdUsuario", ReplyAction="http://tempuri.org/IServicioServicio/GetContarServiciosContratadosPorIdUsuarioRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<short> GetContarServiciosContratadosPorIdUsuarioAsync(short idUsuarios);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -256,6 +276,30 @@ namespace WEB_Chambix.ServicioServicio {
         
         public System.Threading.Tasks.Task<WEB_Chambix.ServicioServicio.ServicioBE[]> GetAllServicioAsync() {
             return base.Channel.GetAllServicioAsync();
+        }
+        
+        public int VerificarServicioExiste(short idUsuario, short idPost) {
+            return base.Channel.VerificarServicioExiste(idUsuario, idPost);
+        }
+        
+        public System.Threading.Tasks.Task<int> VerificarServicioExisteAsync(short idUsuario, short idPost) {
+            return base.Channel.VerificarServicioExisteAsync(idUsuario, idPost);
+        }
+        
+        public short GetContarServiciosContratados() {
+            return base.Channel.GetContarServiciosContratados();
+        }
+        
+        public System.Threading.Tasks.Task<short> GetContarServiciosContratadosAsync() {
+            return base.Channel.GetContarServiciosContratadosAsync();
+        }
+        
+        public short GetContarServiciosContratadosPorIdUsuario(short idUsuarios) {
+            return base.Channel.GetContarServiciosContratadosPorIdUsuario(idUsuarios);
+        }
+        
+        public System.Threading.Tasks.Task<short> GetContarServiciosContratadosPorIdUsuarioAsync(short idUsuarios) {
+            return base.Channel.GetContarServiciosContratadosPorIdUsuarioAsync(idUsuarios);
         }
     }
 }

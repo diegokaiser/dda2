@@ -390,6 +390,14 @@
     <Parameter Name="vwspUsusario" Type="varchar" Mode="In" />
     <Parameter Name="vocupacionUsuario" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="usp_ServicioComprobar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUsuario" Type="int" Mode="In" />
+    <Parameter Name="idPost" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ServicioComprobarExistencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idUsuario" Type="int" Mode="In" />
+    <Parameter Name="idPost" Type="int" Mode="In" />
+  </Function>
   <EntityContainer Name="SistemaServiciosModelStoreContainer">
     <EntitySet Name="tb_Categoria" EntityType="Self.tb_Categoria" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_Distrito" EntityType="Self.tb_Distrito" Schema="dbo" store:Type="Tables" />

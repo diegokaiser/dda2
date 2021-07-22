@@ -676,6 +676,8 @@
     <Content Include="Views\Post\Filtros.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Account\DatosPersonales.cshtml" />
+    <Content Include="Views\Account\Estadisticas.cshtml" />
+    <Content Include="Views\Account\Postulaciones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

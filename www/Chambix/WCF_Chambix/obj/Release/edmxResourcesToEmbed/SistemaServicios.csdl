@@ -472,6 +472,14 @@
     <FunctionImport Name="usp_CategoriaLike" ReturnType="Collection(SistemaServiciosModel.usp_CategoriaLike_Result)">
       <Parameter Name="palabra" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="usp_ServicioComprobarExistencia" ReturnType="Collection(Int32)">
+      <Parameter Name="idUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="idPost" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ServicioComprobar" ReturnType="Collection(Int32)">
+      <Parameter Name="idUsuario" Mode="In" Type="Int32" />
+      <Parameter Name="idPost" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="usp_CategoriaFiltroLike_Result">
     <Property Type="Int32" Name="idPost" Nullable="false" />

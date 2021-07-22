@@ -403,6 +403,24 @@ namespace WEB_Chambix.ServicioPost {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetAllPostsPorIdUsuario", ReplyAction="http://tempuri.org/IServicioPost/GetAllPostsPorIdUsuarioResponse")]
         System.Threading.Tasks.Task<WEB_Chambix.ServicioPost.PostBE[]> GetAllPostsPorIdUsuarioAsync(short idUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetAllPostsServiciosPorIdUsuario", ReplyAction="http://tempuri.org/IServicioPost/GetAllPostsServiciosPorIdUsuarioResponse")]
+        WEB_Chambix.ServicioPost.PostBE[] GetAllPostsServiciosPorIdUsuario(short idUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetAllPostsServiciosPorIdUsuario", ReplyAction="http://tempuri.org/IServicioPost/GetAllPostsServiciosPorIdUsuarioResponse")]
+        System.Threading.Tasks.Task<WEB_Chambix.ServicioPost.PostBE[]> GetAllPostsServiciosPorIdUsuarioAsync(short idUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetContarPost", ReplyAction="http://tempuri.org/IServicioPost/GetContarPostResponse")]
+        short GetContarPost();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetContarPost", ReplyAction="http://tempuri.org/IServicioPost/GetContarPostResponse")]
+        System.Threading.Tasks.Task<short> GetContarPostAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetContarPostPorIdUsuario", ReplyAction="http://tempuri.org/IServicioPost/GetContarPostPorIdUsuarioResponse")]
+        short GetContarPostPorIdUsuario(short idUsuarios);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetContarPostPorIdUsuario", ReplyAction="http://tempuri.org/IServicioPost/GetContarPostPorIdUsuarioResponse")]
+        System.Threading.Tasks.Task<short> GetContarPostPorIdUsuarioAsync(short idUsuarios);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -502,6 +520,30 @@ namespace WEB_Chambix.ServicioPost {
         
         public System.Threading.Tasks.Task<WEB_Chambix.ServicioPost.PostBE[]> GetAllPostsPorIdUsuarioAsync(short idUsuario) {
             return base.Channel.GetAllPostsPorIdUsuarioAsync(idUsuario);
+        }
+        
+        public WEB_Chambix.ServicioPost.PostBE[] GetAllPostsServiciosPorIdUsuario(short idUsuario) {
+            return base.Channel.GetAllPostsServiciosPorIdUsuario(idUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<WEB_Chambix.ServicioPost.PostBE[]> GetAllPostsServiciosPorIdUsuarioAsync(short idUsuario) {
+            return base.Channel.GetAllPostsServiciosPorIdUsuarioAsync(idUsuario);
+        }
+        
+        public short GetContarPost() {
+            return base.Channel.GetContarPost();
+        }
+        
+        public System.Threading.Tasks.Task<short> GetContarPostAsync() {
+            return base.Channel.GetContarPostAsync();
+        }
+        
+        public short GetContarPostPorIdUsuario(short idUsuarios) {
+            return base.Channel.GetContarPostPorIdUsuario(idUsuarios);
+        }
+        
+        public System.Threading.Tasks.Task<short> GetContarPostPorIdUsuarioAsync(short idUsuarios) {
+            return base.Channel.GetContarPostPorIdUsuarioAsync(idUsuarios);
         }
     }
 }

@@ -436,5 +436,31 @@ namespace WCF_Chambix
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_CategoriaLike_Result>("usp_CategoriaLike", palabraParameter);
         }
+    
+        public virtual ObjectResult<Nullable<int>> usp_ServicioComprobarExistencia(Nullable<int> idUsuario, Nullable<int> idPost)
+        {
+            var idUsuarioParameter = idUsuario.HasValue ?
+                new ObjectParameter("idUsuario", idUsuario) :
+                new ObjectParameter("idUsuario", typeof(int));
+    
+            var idPostParameter = idPost.HasValue ?
+                new ObjectParameter("idPost", idPost) :
+                new ObjectParameter("idPost", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("usp_ServicioComprobarExistencia", idUsuarioParameter, idPostParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> usp_ServicioComprobar(Nullable<int> idUsuario, Nullable<int> idPost)
+        {
+            var idUsuarioParameter = idUsuario.HasValue ?
+                new ObjectParameter("idUsuario", idUsuario) :
+                new ObjectParameter("idUsuario", typeof(int));
+    
+            var idPostParameter = idPost.HasValue ?
+                new ObjectParameter("idPost", idPost) :
+                new ObjectParameter("idPost", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("usp_ServicioComprobar", idUsuarioParameter, idPostParameter);
+        }
     }
 }
