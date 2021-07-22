@@ -363,10 +363,10 @@ namespace WEB_Chambix.ServicioPost {
         System.Threading.Tasks.Task<bool> UpdatePostAsync(WEB_Chambix.ServicioPost.PostBE objPostBE);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/LogicDeletePost", ReplyAction="http://tempuri.org/IServicioPost/LogicDeletePostResponse")]
-        bool LogicDeletePost(WEB_Chambix.ServicioPost.PostBE objPostBE);
+        bool LogicDeletePost(short idPost);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/LogicDeletePost", ReplyAction="http://tempuri.org/IServicioPost/LogicDeletePostResponse")]
-        System.Threading.Tasks.Task<bool> LogicDeletePostAsync(WEB_Chambix.ServicioPost.PostBE objPostBE);
+        System.Threading.Tasks.Task<bool> LogicDeletePostAsync(short idPost);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/GetPost", ReplyAction="http://tempuri.org/IServicioPost/GetPostResponse")]
         WEB_Chambix.ServicioPost.PostBE GetPost(short idPost);
@@ -466,12 +466,12 @@ namespace WEB_Chambix.ServicioPost {
             return base.Channel.UpdatePostAsync(objPostBE);
         }
         
-        public bool LogicDeletePost(WEB_Chambix.ServicioPost.PostBE objPostBE) {
-            return base.Channel.LogicDeletePost(objPostBE);
+        public bool LogicDeletePost(short idPost) {
+            return base.Channel.LogicDeletePost(idPost);
         }
         
-        public System.Threading.Tasks.Task<bool> LogicDeletePostAsync(WEB_Chambix.ServicioPost.PostBE objPostBE) {
-            return base.Channel.LogicDeletePostAsync(objPostBE);
+        public System.Threading.Tasks.Task<bool> LogicDeletePostAsync(short idPost) {
+            return base.Channel.LogicDeletePostAsync(idPost);
         }
         
         public WEB_Chambix.ServicioPost.PostBE GetPost(short idPost) {

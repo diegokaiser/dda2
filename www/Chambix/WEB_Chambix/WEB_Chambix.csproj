@@ -703,6 +703,7 @@
     <Content Include="Views\Account\DatosPersonales.cshtml" />
     <Content Include="Views\Account\Estadisticas.cshtml" />
     <Content Include="Views\Account\Postulaciones.cshtml" />
+    <Content Include="Views\Account\VerPostulantes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

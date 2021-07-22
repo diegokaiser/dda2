@@ -148,14 +148,17 @@ namespace WEB_Chambix.Controllers
         {
             Int16 usuario = Convert.ToInt16(Session["Usuarioid"]);
             String titulo = Convert.ToString(Request.Form["tituloPost"]);
-            String descripcion = fc["editor"];
+            //String descripcion = fc["editor"];
             Int16 distrito = Convert.ToInt16(fc["cboDistrito"]);
-            String descripcion2 = Convert.ToString(Request.Form["edi"]);
-            var plainText = HtmlUtilities.ConvertToPlainText(string html);
+            String descripcion2 = Convert.ToString(Request.Form["descripcion"]);
             Int16 subCategoria = Convert.ToInt16(fc["cboSubCategoria"]);
 
             post.InsertPost(usuario, subCategoria, distrito, titulo, descripcion2);
-            return View();
+            return RedirectToAction("Index","Home");
+
         }
+
+
+
     }
 }

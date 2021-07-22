@@ -1,6 +1,6 @@
-﻿@{
+﻿@*@{
     ViewBag.Title = "Chambix - Mis datos personales";
-}
+}*@
 
 <section class="accounts">
     <div class="container">
@@ -22,13 +22,13 @@
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
                                     <strong>Nombres</strong>
-                                    <input class="form-control" type="type" name="name" value="" />
+                                    <input class="form-control" type="text" name="name" value=" @ViewBag.UsuarioDatos.nombreUsuario" />
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
                                     <strong>Apellido</strong>
-                                    <input class="form-control" type="type" name="name" value="" />
+                                    <input class="form-control" type="text" name="name" value="@ViewBag.UsuarioDatos.apellidoUsuario" />
                                 </div>
                             </div>
                         </div>
@@ -37,16 +37,12 @@
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
                                     <strong>Correo electrónico</strong>
-                                    <input class="form-control" type="type" name="name" value="" />
+                                    <input class="form-control" type="email" name="name" value="@ViewBag.UsuarioDatos.emailUsuario" />
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6">
-                                <div class="form-group">
-                                    <strong>Distrito</strong>
-                                    <select class="form-select">
-                                        <option value="value">text</option>
-                                    </select>
-                                </div>
+                                @Html.DropDownList("cboDistritos", (IEnumerable<SelectListItem>)ViewBag.ListarDistritos, htmlAttributes: new { @class = "form-select" })
+
                             </div>
                         </div>
 
@@ -54,13 +50,13 @@
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
                                     <strong>Número de celular</strong>
-                                    <input class="form-control" type="type" name="name" value="" />
+                                    <input class="form-control" type="type" name="name" value="@ViewBag.UsuarioDatos.cellUsuario" />
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
                                     <strong>Ocupación</strong>
-                                    <input class="form-control" type="type" name="name" value="" />
+                                    <input class="form-control" type="type" name="name" value="@ViewBag.UsuarioDatos.ocupacionUsuario" />
                                 </div>
                             </div>
                         </div>

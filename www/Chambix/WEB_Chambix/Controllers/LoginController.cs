@@ -57,6 +57,7 @@ namespace WEB_Chambix.Controllers
                         Session["User"] = oUser;
                         Session["Usuarioid"] = oUser.idUsuario;
                         Session["SesionNombre"] = oUser.nombreUsuario;
+                        Session["IdDistrito"] = oUser.idDistrito;
 
 
                         return Content("1");
@@ -112,6 +113,16 @@ namespace WEB_Chambix.Controllers
             usuario.InsertUser(nombre, apellido, contasena, distrito,correo , celular, ocupacion, wsp);
 
             return RedirectToAction("Index");
+        }
+        public ActionResult CerrarSesion( )
+        {
+
+            //Session.Abandon();
+
+            HttpContext.Session.Abandon();
+            HttpContext.Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
+
+            return RedirectToAction("Index","Login");
         }
 
     }

@@ -61,13 +61,13 @@ namespace WCF_Chambix
             }
         }
 
-        public Boolean LogicDeletePost(PostBE objPostBE)
+        public Boolean LogicDeletePost(Int16 idPost)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
             {
                 tb_Post objPost = (from objPst in Chambix.tb_Post
-                                   where objPst.idPost == objPostBE.idPost
+                                   where objPst.idPost == idPost
                                    select objPst).FirstOrDefault();
                 objPost.estadoPost = false;
                 Chambix.SaveChanges();

@@ -1282,3 +1282,17 @@ header {
 
 .bg-chambixColor {
   background-color: #070441; }
+
+.btn-VerPostulantes {
+  background-color: #070441;
+  color: white !important;
+  font-size: 11px !important;
+  border-radius: 18px;
+  padding: 10px; }
+
+.btn-elimnarPost {
+  background-color: #ff6153;
+  color: white !important;
+  font-size: 11px !important;
+  border-radius: 18px;
+  padding: 10px; }

@@ -19,7 +19,8 @@ namespace WCF_Chambix
         Boolean UpdatePost(PostBE objPostBE);
 
         [OperationContract]
-        Boolean LogicDeletePost(PostBE objPostBE);
+        Boolean LogicDeletePost(Int16 idPost);
+
 
         [OperationContract]
         PostBE GetPost(Int16 idPost);
