@@ -59,6 +59,9 @@ namespace WEB_Chambix.Controllers
                         Session["SesionNombre"] = oUser.nombreUsuario;
                         Session["IdDistrito"] = oUser.idDistrito;
                         Session["NombreDistrito"] = oUser.tb_Distrito.nombreDistrito;
+                        Session["Rank"] = oUser.rankUsuario; ;
+
+
 
 
                         return Content("1");
@@ -111,7 +114,7 @@ namespace WEB_Chambix.Controllers
             String celular = Request.Form["celular"].ToString();
             String ocupacion = Request.Form["ocupacion"].ToString();
             String wsp = Request.Form["wsp"].ToString();
-            usuario.InsertUser(nombre, apellido, contasena, distrito,correo , celular, ocupacion, wsp);
+            usuario.InsertUser(nombre, apellido, contasena, distrito,correo , celular, wsp, ocupacion);
 
             return RedirectToAction("Index");
         }
