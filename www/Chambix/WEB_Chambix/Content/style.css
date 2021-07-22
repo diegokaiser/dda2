@@ -1339,3 +1339,13 @@ header {
 
 .bg-chambixColor {
   background-color: #070441; }
+
+.alert {
+  opacity: 0;
+  top: 35px !important;
+  visibility: hidden;
+  transition: .35s ease; }
+  .alert.active {
+    opacity: 1;
+    top: 28px !important;
+    visibility: visible; }

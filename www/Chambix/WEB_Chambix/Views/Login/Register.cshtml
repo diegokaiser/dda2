@@ -11,159 +11,159 @@
             <div class="col-xs-12 col-sm-8">
                 <form class="form" action="/Login/EnviarRegistro" method="post">
 
-                        <div class="form-heading">
-                            <h2>Registro de usuarios</h2>
-                            @Html.ActionLink("Iniciar Sesión", "Index", "Login", htmlAttributes: new { @class = "form-heading-link " })
-                            @Html.ActionLink("Registrarse", "Register", "Login", htmlAttributes: new { @class = "form-heading-link active" })
-                        </div>
-                        <div class="form-body">
-                            <div class="container">
-                                @Html.ValidationSummary(true, "", new { @class = "text-danget" })
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>Nombres</strong>
-                                            <!--<input type="text" class="form-control" name="nombreUsuario" id="login-nombre">-->
-                                            @*@Html.EditorFor(model => model.nombreUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="form-heading">
+                        <h2>Registro de usuarios</h2>
+                        @Html.ActionLink("Iniciar Sesión", "Index", "Login", htmlAttributes: new { @class = "form-heading-link " })
+                        @Html.ActionLink("Registrarse", "Register", "Login", htmlAttributes: new { @class = "form-heading-link active" })
+                    </div>
+                    <div class="form-body">
+                        <div class="container">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danget" })
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>Nombres</strong>
+                                        <!--<input type="text" class="form-control" name="nombreUsuario" id="login-nombre">-->
+                                        @*@Html.EditorFor(model => model.nombreUsuario, new { htmlAttributes = new { @class = "form-control" } })
                                             @Html.ValidationMessageFor(model => model.nombreUsuario, "", new { @class = "text-danger" })*@
-                                            <input class= "form-control" type = "text" name ="nombre" placeholder ="Nombre" id ="nombre" value = "" required />
+                                        <input class="form-control" type="text" name="nombre" placeholder="Nombre" id="nombre" value="" required />
 
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>Apellido</strong>
-                                            <!--<input type="text" class="form-control" name="apellidoUsuario" id="login-apellido">-->
-                                            @*@Html.EditorFor(model => model.apellidoUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                                                @Html.ValidationMessageFor(model => model.apellidoUsuario, "", new { @class = "text-danger" })*@
-                                            <input class="form-control" type="text" name="apellido" placeholder="Apellido" id="apellido" value="" required />
-
-                                        </div>
                                     </div>
                                 </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>Apellido</strong>
+                                        <!--<input type="text" class="form-control" name="apellidoUsuario" id="login-apellido">-->
+                                        @*@Html.EditorFor(model => model.apellidoUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.apellidoUsuario, "", new { @class = "text-danger" })*@
+                                        <input class="form-control" type="text" name="apellido" placeholder="Apellido" id="apellido" value="" required />
 
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>Contraseña</strong>
-                                            <!--<input type="password" class="form-control" name="contrasenaUsuario" id="login-contrasena">-->
-                                            @*@Html.EditorFor(model => model.contrasenaUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.contrasenaUsuario, "", new { @class = "text-danger" })*@
-                                        <input class="form-control" type="password" name="contrasena" placeholder="Contraseña" id="contrasena" value="" required />
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>Confirmar Contraseña</strong>
-                                            <input type="password" class="form-control" name="confirmarcontasena" id="login-recontrasena" placeholder="Confirmar contraseña">
-                                        </div>
-                                    </div>
-                                    <!-- TODO: Solo se necesita validar que contrasenaUsuario y recontrasenaUsuario sean iguales para proceder con el envío -->
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>Correo electrónico</strong>
-                                            <!--<input type="email" class="form-control" name="emailUsuario" id="login-email">-->
-                                            @*@Html.EditorFor(model => model.emailUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.emailUsuario, "", new { @class = "text-danger" })*@
-                                            <input class="form-control" type="email" name="correo" placeholder="Correo" id="corrreo" value="" required />
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>Distrito</strong>
-                                            @*@Html.DropDownList("idDistrito", null, htmlAttributes: new { @class = "form-select" })
-                                            @Html.ValidationMessageFor(model => model.idDistrito, "", new { @class = "text-danger" })*@
-                                             @Html.DropDownList("cboDistritos", (IEnumerable<SelectListItem>)ViewBag.ListarDistritos, htmlAttributes: new { @class = "form-select"})
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>¿Utlizas Whatsapp con tu número de celular?</strong>
-                                            <select class="form-select">
-                                                <option value="">Seleccionar</option>
-                                                <option value="1">Sí</option>
-                                                <option value="2">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!-- Si es 1, entonces wspUsuario se deshabilita y tendrá el mismo valor que cellUsuario-->
-                                    <div class="col-6 d-none d-sm-block">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>Número de celular</strong>
-                                            <!--<input type="text" class="form-control" name="cellUsuario" id="login-cell">-->
-                                            @*@Html.EditorFor(model => model.cellUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.cellUsuario, "", new { @class = "text-danger" })*@
-                                            <input class="form-control" type="text" name="celular" placeholder="Número de Celular" id="celular" value="" required />
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>Número de Whatsapp</strong>
-                                            @*<input type="text" class="form-control" name="wspUsuario" id="login-wsp">*@
-                                            <input class="form-control" type="text" name="wsp" placeholder="Número de Whatsapp" id="login-wsp" value="" required />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>¿Qué buscas en Chambix?</strong>
-                                            <select class="form-select">
-                                                <option value="">Seleccionar</option>
-                                                <option value="usuario_cliente">Encontrar servicios para mi hogar</option>
-                                                <option value="usuario_profesional">Ofrecer mis servicios</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!-- TODO: En caso el valor sea usuario_profesional, se mostrará el siguiente campo y se define el tipo de usuario -->
-                                    <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                            <strong>Ocupación</strong>
-                                            @*@Html.EditorFor(model => model.ocupacionUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.ocupacionUsuario, "", new { @class = "text-danger" })*@
-                                            <input class="form-control" type="text" name="ocupacion" placeholder="Ocupación" id="ocupacion" value="" required />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-6">
-                                        &nbsp;
-                                    </div>
-                                    <div class="col-6">
-                                        &nbsp;
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-6">
-                                        <input type="submit" class="btn btn-login" value="Registrarse">
-                                    </div>
-                                    <div class="col-6 d-none d-sm-block">
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>Contraseña</strong>
+                                        <!--<input type="password" class="form-control" name="contrasenaUsuario" id="login-contrasena">-->
+                                        @*@Html.EditorFor(model => model.contrasenaUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.contrasenaUsuario, "", new { @class = "text-danger" })*@
+                                        <input class="form-control" type="password" name="contrasena" placeholder="Contraseña" id="contrasena" value="" required />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>Confirmar Contraseña</strong>
+                                        <input type="password" class="form-control" name="confirmarcontasena" id="recontrasena" placeholder="Confirmar contraseña">
+                                    </div>
+                                </div>
+                                <!-- TODO: Solo se necesita validar que contrasenaUsuario y recontrasenaUsuario sean iguales para proceder con el envío -->
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>Correo electrónico</strong>
+                                        <!--<input type="email" class="form-control" name="emailUsuario" id="login-email">-->
+                                        @*@Html.EditorFor(model => model.emailUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.emailUsuario, "", new { @class = "text-danger" })*@
+                                        <input class="form-control" type="email" name="correo" placeholder="Correo" id="corrreo" value="" required />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>Distrito</strong>
+                                        @*@Html.DropDownList("idDistrito", null, htmlAttributes: new { @class = "form-select" })
+                                            @Html.ValidationMessageFor(model => model.idDistrito, "", new { @class = "text-danger" })*@
+                                        @Html.DropDownList("cboDistritos", (IEnumerable<SelectListItem>)ViewBag.ListarDistritos, htmlAttributes: new { @class = "form-select" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>¿Utlizas Whatsapp con tu número de celular?</strong>
+                                        <select class="form-select" id="cellWsp">
+                                            <option value="">Seleccionar</option>
+                                            <option value="Si">Sí</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Si es 1, entonces wspUsuario se deshabilita y tendrá el mismo valor que cellUsuario-->
+                                <div class="col-6 d-none d-sm-block">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>Número de celular</strong>
+                                        <!--<input type="text" class="form-control" name="cellUsuario" id="login-cell">-->
+                                        @*@Html.EditorFor(model => model.cellUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.cellUsuario, "", new { @class = "text-danger" })*@
+                                        <input class="form-control" type="text" name="celular" placeholder="Número de Celular" id="celular" value="" required />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>Número de Whatsapp</strong>
+                                        @*<input type="text" class="form-control" name="wspUsuario" id="login-wsp">*@
+                                        <input class="form-control" type="text" name="wsp" placeholder="Número de Whatsapp" id="login-wsp" value="" required />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>¿Qué buscas en Chambix?</strong>
+                                        <select class="form-select">
+                                            <option value="">Seleccionar</option>
+                                            <option value="usuario_cliente">Encontrar servicios para mi hogar</option>
+                                            <option value="usuario_profesional">Ofrecer mis servicios</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- TODO: En caso el valor sea usuario_profesional, se mostrará el siguiente campo y se define el tipo de usuario -->
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <strong>Ocupación</strong>
+                                        @*@Html.EditorFor(model => model.ocupacionUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.ocupacionUsuario, "", new { @class = "text-danger" })*@
+                                        <input class="form-control" type="text" name="ocupacion" placeholder="Ocupación" id="ocupacion" value="" required />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    &nbsp;
+                                </div>
+                                <div class="col-6">
+                                    &nbsp;
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <input type="submit" class="btn btn-login" id="createAccount" value="Registrarse">
+                                </div>
+                                <div class="col-6 d-none d-sm-block">
+                                </div>
+                            </div>
                         </div>
-                    
+                    </div>
+
                 </form>
             </div>
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
         </div>
 
         <!-- TODO: Alerta a mostrar cuando se acepte el modal -->
-        <div class="alert alert-success" alert-dismissible fade show" role="alert">
+        <div class="alert alert-success" id="accountSuccess" alert-dismissible fade show" role="alert">
             <strong>
                 Bienvenido!
             </strong>
@@ -173,3 +173,6 @@
     </div>
 </section>
 
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/chambix/chambix_account.js"></script>
+}
