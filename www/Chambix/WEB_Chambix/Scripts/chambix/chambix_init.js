@@ -84,13 +84,18 @@
     `);
 
     if (Cookies.get("ejemplo") == "0") {
+        console.log("sandalia");
         $('body').prepend('<div class="helper"></div>');
-        $('.helper-alert.join').addClass("active");
+        $('.helper-alert.post').addClass("active");
+
+        /*
         $('.goto-Post').on('click', function (e) {
             e.preventDefault();
             $('.helper-alert.join').removeClass("active");
             $('.helper-alert.post').addClass("active");
         });
+        */
+
         $('.goto-Search').on('click', function (e) {
             e.preventDefault();
             $('.helper-alert.post').removeClass("active");
