@@ -1227,6 +1227,33 @@ header {
           width: 16px; }
           .accounts_body_form_post_review span.active, .accounts_body_posts_post_review span.active {
             background-position: 0px 14px; }
+        .accounts_body_form_post .btn, .accounts_body_posts_post .btn {
+          border-radius: 42px;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 8px 21px;
+          width: 100%; }
+          @media (min-width: 415px) {
+            .accounts_body_form_post .btn, .accounts_body_posts_post .btn {
+              width: initial; } }
+          .accounts_body_form_post .btn-primary, .accounts_body_posts_post .btn-primary {
+            background-color: #ef4624;
+            border: 2px solid #ef4624;
+            color: white;
+            margin-right: 21px;
+            transition: .35s ease; }
+            .accounts_body_form_post .btn-primary:hover, .accounts_body_posts_post .btn-primary:hover {
+              background-color: white;
+              color: #ef4624; }
+          .accounts_body_form_post .btn-outline-primary, .accounts_body_posts_post .btn-outline-primary {
+            background-color: white;
+            border: 2px solid #3f6eed;
+            color: #3f6eed;
+            transition: .35s ease; }
+            .accounts_body_form_post .btn-outline-primary:hover, .accounts_body_posts_post .btn-outline-primary:hover {
+              background-color: #3f6eed;
+              color: white; }
       .accounts_body_form_card, .accounts_body_posts_card {
         align-items: center;
         background-color: #edeff6;
@@ -1245,6 +1272,14 @@ header {
           font-size: 21px;
           font-family: 'Montserrat', sans-serif;
           margin-top: 4px; }
+        .accounts_body_form_card_review span, .accounts_body_posts_card_review span {
+          background-image: url("Images/stars_angi.svg");
+          background-position: 0px 0px;
+          display: inline-block;
+          height: 14px;
+          width: 16px; }
+          .accounts_body_form_card_review span.active, .accounts_body_posts_card_review span.active {
+            background-position: 0px 14px; }
     .accounts_body_form {
       padding: 28px 21px 21px 21px; }
       .accounts_body_form form {
@@ -1261,6 +1296,15 @@ header {
           @media (min-width: 415px) {
             .accounts_body_form .form-group .btn {
               width: initial; } }
+          .accounts_body_form .form-group .btn-primary {
+            background-color: #ef4624;
+            border: 2px solid #ef4624;
+            color: white;
+            margin-right: 21px;
+            transition: .35s ease; }
+            .accounts_body_form .form-group .btn-primary:hover {
+              background-color: white;
+              color: #ef4624; }
           .accounts_body_form .form-group .btn-outline-primary {
             background-color: white;
             border: 2px solid #3f6eed;
@@ -1274,14 +1318,10 @@ header {
   text-decoration: none;
   color: white;
   font-weight: bold; }
-
-.accountA:hover {
-  text-decoration: none;
-  color: #ff6153;
-  font-weight: bold; }
-
-.bg-chambixColor {
-  background-color: #070441; }
+  .accountA:hover, .accountA.active {
+    text-decoration: none;
+    color: #ff6153;
+    font-weight: bold; }
 
 .btn-VerPostulantes {
   background-color: #070441;
@@ -1296,3 +1336,6 @@ header {
   font-size: 11px !important;
   border-radius: 18px;
   padding: 10px; }
+
+.bg-chambixColor {
+  background-color: #070441; }

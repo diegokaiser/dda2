@@ -12,8 +12,7 @@
                 <div class="container">
                     <din class="row text-center">
                         <div class="col-4">
-                            <a href="/Account/Index" class="accountA">Mis post </a>
-                                
+                            <a href="/Account/Index" class="accountA active">Mis publicaciones </a>
                         </div>
                         <div class="col-4">
                             <a href="/Account/Postulaciones" class="accountA">Contactados</a>
@@ -40,44 +39,62 @@
 
                 @foreach (var post in ViewBag.ListarPostsPorId)
                 {
-                <div class="accounts_body_posts_post">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <a href="@Url.Action("Interna", "Post",new{ id =post.idUsuario})"><strong>@post.tituloPost</strong></a>
-                            </div>
-                            <div class="col-6">
-                                <div class="accounts_body_posts_post_review">
-                                    @{ for (int i = 1; i <= 5; i++)
-                                        {
-                                            if (i <= @post.valoracionPost)
+                    <div class="accounts_body_posts_post">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="@Url.Action("Interna", "Post", new { id = post.idUsuario })"><strong>@post.tituloPost</strong></a>
+                                </div>
+                                <div class="col-6">
+                                    <div class="accounts_body_posts_post_review">
+                                        @{ for (int i = 1; i <= 5; i++)
                                             {
-                                                <span class="active"></span>
-                                            }
-                                            else
-                                            {
-                                                <span></span>
+                                                if (i <= @post.valoracionPost)
+                                                {
+                                                    <span class="active"></span>
+                                                }
+                                                else
+                                                {
+                                                    <span></span>
+                                                }
                                             }
                                         }
-                                    }
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <a href="#" class="btn btn-VerPostulantes mt-2">Ver postulantes</a>
-                                <a href="@Url.Action("DeshabilitarPost", "Account",new{ id =@post.idPost})" class="btn btn-elimnarPost mt-2"><strong>Eliminar</strong></a>
-
+                                <div class="col-12">
+                                    <a href="#" class="btn btn-primary mt-2">Ver postulantes</a>
+                                    <!-- TODO #excampleModal + idPost -->
+                                    <a href="#" class="btn btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                        }
-
-                    </div>
-                    <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
-                </div>
-
-
-  
-
+                }
+            </div>
+            <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
+        </div>
     </div>
 </section>
+
+<!-- TODO id="exampleModal" + idPost -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">¿Estás seguro de querer contratar este servicio?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>En Chambix queremos darte la seguridad que todos los servicios que contratas son bajo tu total seguridad y certeza.</p>
+                <p>Por favor, necesitamos que confirmes la contratación del servicio</p>
+            </div>
+            <div class="modal-footer">
+                <form action="/Post/AceptarServicio" method="post">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Lo voy a pensar nuevamente</button>
+                    <input type="hidden" name="postId" id="postId" value="" />
+                    <button type="submit" class="btn btn-primary">Estoy seguro</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

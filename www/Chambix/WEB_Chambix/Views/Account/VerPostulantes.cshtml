@@ -12,8 +12,7 @@
                 <div class="container">
                     <din class="row text-center">
                         <div class="col-4">
-                            <a href="/Account/Index" class="accountA">Mis post </a>
-
+                            <a href="/Account/Index" class="accountA active">Mis publicaciones</a>
                         </div>
                         <div class="col-4">
                             <a href="/Account/Postulaciones" class="accountA">Contactados</a>
@@ -29,22 +28,21 @@
         <div class="row">
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
             <div class="col-xs-12 col-sm-10 accounts_body">
-                <h3 class="post_title">Mis publicaciones</h3>
+                <h3 class="post_title">TODO: Titulo de la publicación</h3>
             </div>
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
         </div>
         <div class="row">
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
             <div class="col-xs-12 col-sm-10 accounts_body_posts">
-                <!-- TODO loop de los post publicados por este usuario -->
-
+                <!-- TODO loop de los post publicados por este usuario -->                
                 @foreach (var post in ViewBag.ListarPostsPorId)
                 {
                     <div class="accounts_body_posts_post">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="@Url.Action("Interna", "Post",new{ id =post.idUsuario})"><strong>@post.tituloPost</strong></a>
+                                    <strong>TODO: Nombre del usuario cliente</strong>
                                 </div>
                                 <div class="col-6">
                                     <div class="accounts_body_posts_post_review">
@@ -63,8 +61,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <a href="#" class="btn btn-VerPostulantes mt-2">Ver postulantes</a>
-                                    <a href="#" class="btn btn-elimnarPost mt-2">Eliminar</a>
+                                    <a href="#" class="btn btn-primary mt-2">Aceptar y contactar</a>
+                                    <a href="#" class="btn btn-outline-primary mt-2">Rechazar</a>
                                 </div>
                             </div>
                         </div>

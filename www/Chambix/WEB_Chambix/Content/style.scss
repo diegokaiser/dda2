@@ -1771,6 +1771,44 @@ header {
                         }
                     }
                 }
+
+                .btn {
+                    border-radius: 42px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 8px 21px;
+                    width: 100%;
+
+                    @media (min-width: 415px) {
+                        width: initial;
+                    }
+
+                    &-primary {
+                        background-color: #ef4624;
+                        border: 2px solid #ef4624;
+                        color: white;
+                        margin-right: 21px;
+                        transition: .35s ease;
+
+                        &:hover {
+                            background-color: white;
+                            color: #ef4624;
+                        }
+                    }
+
+                    &-outline-primary {
+                        background-color: white;
+                        border: 2px solid #3f6eed;
+                        color: #3f6eed;
+                        transition: .35s ease;
+
+                        &:hover {
+                            background-color: #3f6eed;
+                            color: white;
+                        }
+                    }
+                }
             }
 
             &_card {
@@ -1794,6 +1832,20 @@ header {
                     font-size: 21px;
                     font-family: 'Montserrat', sans-serif;
                     margin-top: 4px;
+                }
+
+                &_review {
+                    span {
+                        background-image: url("../Content/Images/stars_angi.svg");
+                        background-position: 0px 0px;
+                        display: inline-block;
+                        height: 14px;
+                        width: 16px;
+
+                        &.active {
+                            background-position: 0px 14px;
+                        }
+                    }
                 }
             }
         }
@@ -1820,6 +1872,19 @@ header {
                         width: initial;
                     }
 
+                    &-primary {
+                        background-color: #ef4624;
+                        border: 2px solid #ef4624;
+                        color: white;
+                        margin-right: 21px;
+                        transition: .35s ease;
+
+                        &:hover {
+                            background-color: white;
+                            color: #ef4624;
+                        }
+                    }
+
                     &-outline-primary {
                         background-color: white;
                         border: 2px solid #3f6eed;
@@ -1837,31 +1902,37 @@ header {
     }
 }
 
-.accountA{
-    text-decoration:none;
-    color:white;
-    font-weight:bold;   
-}
-.accountA:hover {
+.accountA {
     text-decoration: none;
-    color: #ff6153;
+    color: white;
     font-weight: bold;
+
+    &:hover,
+    &.active {
+        text-decoration: none;
+        color: #ff6153;
+        font-weight: bold;
+    }
+}
+
+
+.btn {
+    &-VerPostulantes {
+        background-color: #070441;
+        color: white !important;
+        font-size: 11px !important;
+        border-radius: 18px;
+        padding: 10px;
+    }
+
+    &-elimnarPost {
+        background-color: #ff6153;
+        color: white !important;
+        font-size: 11px !important;
+        border-radius: 18px;
+        padding: 10px;
+    }
 }
 .bg-chambixColor {
     background-color: #070441;
-}
-
-.btn-VerPostulantes {
-    background-color: #070441;
-    color: white !important;
-    font-size: 11px !important;
-    border-radius: 18px;
-    padding: 10px;
-}
-.btn-elimnarPost {
-    background-color: #ff6153;
-    color: white !important;
-    font-size: 11px !important;
-    border-radius: 18px;
-    padding: 10px;
 }

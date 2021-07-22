@@ -111,6 +111,9 @@
         });
         $('.goto-End').on('click', function (e) {
             e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $('body').offset().top
+            }, 0);
             $('.helper-alert.district').removeClass("active");
             $('.helper').remove();
             $('.helper-alert.join').remove();
