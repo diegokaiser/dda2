@@ -53,10 +53,12 @@ namespace WEB_Chambix.Controllers
 
             return View();
         }
-        public ActionResult VerPostulantes()
+        public ActionResult VerPostulantes(String idPost)
         {
-            ViewBag.ListarPostsPorId = post.GetAllPostsServiciosPorIdUsuario(Convert.ToInt16(Session["Usuarioid"]));
-
+           //ViewBag.ListarPostsPorId = post.GetAllPostsServiciosPorIdUsuario(Convert.ToInt16(Session["Usuarioid"]));
+           ViewBag.Post= post.GetPost(Convert.ToInt16(idPost));
+         
+            ViewBag.UsuariosP= usuario.GetAllUsersPostulantes(Convert.ToInt16(idPost));
             return View();
         }
         public ActionResult DeshabilitarPost(String id)

@@ -62,7 +62,11 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <a href="#" class="btn btn-primary mt-2">Ver postulantes</a>
+                                    @*<a href="Account/VerPostulantes" class="btn btn-primary mt-2">Ver postulantes</a>*@
+                                    @*<a href="@Url.Action("VerPostulantes", "Account", new { id = post.idPost })" class="btn btn-primary mt-2"><strong>Ver Postulantes</strong></a>*@
+                                    @Html.ActionLink("Ver Postulantes", "VerPostulantes", "Account", new { idPost = post.idPost }, htmlAttributes: new { @class = "btn btn-primary mt-2" })
+
+
                                     <!-- TODO #excampleModal + idPost -->
                                     <a href="#" class="btn btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
                                 </div>

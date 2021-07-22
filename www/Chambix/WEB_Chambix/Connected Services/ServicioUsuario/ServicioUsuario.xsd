@@ -132,4 +132,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAllUsersPostulantes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPost" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsersPostulantesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCF_Chambix" minOccurs="0" name="GetAllUsersPostulantesResult" nillable="true" type="q7:ArrayOfUserBE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
