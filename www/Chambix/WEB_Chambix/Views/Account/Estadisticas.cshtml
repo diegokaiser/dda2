@@ -94,13 +94,21 @@
                 <div class="accounts_body_posts_card">
                     <i class="fa fa-trophy" aria-hidden="true"></i>
                     Mi Valoración
-                    <div class="accounts_body_posts_card_review">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
+                    
+                <div class="accounts_body_posts_card_review">
+                    @{ for (int i = 1; i <= 5; i++)
+                        {
+                            if (i <= Convert.ToInt16(@Session["Rank"]))
+                            {
+                                <span class="active"></span>
+                            }
+                            else
+                            {
+                                <span></span>
+                            }
+                        }
+                    }
+                </div>
                 </div>
             </div>
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>

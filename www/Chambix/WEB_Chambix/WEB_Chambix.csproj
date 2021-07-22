@@ -511,6 +511,8 @@
     <Content Include="Connected Services\ServicioUsuario\WEB_Chambix.ServicioUsuario.UserBE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\WEBChambixPagina - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\WEBChambixPaginaOficial - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\chambix\chambix_init.js" />
     <Content Include="Scripts\chambix\chambix_post.js" />

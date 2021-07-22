@@ -45,6 +45,7 @@ namespace WEB_Chambix.Controllers
             ViewBag.TestimoniosUsuarios = testimonio.GetContarTestimonioIdUsuario(Convert.ToInt16(Session["Usuarioid"]));
             ViewBag.Servicios = servicio.GetContarServiciosContratados();
             ViewBag.ServiciosUsuarios = servicio.GetContarServiciosContratadosPorIdUsuario(Convert.ToInt16(Session["Usuarioid"]));
+            
             return View();
         }
         public ActionResult Postulaciones()
