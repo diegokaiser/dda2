@@ -12,19 +12,17 @@ namespace WCF_Chambix
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioPost" en el código y en el archivo de configuración a la vez.
     public class ServicioPost : IServicioPost
     {
-        public Boolean InsertPost(PostBE objPostBE)
+        public Boolean InsertPost(Int16 idUsuario,Int16 idSubcategoria, Int16 idDistrito,String tituloPost,String descripcionPost)
         {
             SistemaServiciosEntities Chambix = new SistemaServiciosEntities();
             try
             {
                 tb_Post objPost = new tb_Post();
-                objPost.idUsuario       = objPostBE.idUsuario;
-                objPost.idSubcategoria  = objPostBE.idSubcategoria;
-                objPost.idDistrito      = Convert.ToByte(objPostBE.idDistrito);
-                objPost.tituloPost      = objPostBE.tituloPost;
-                objPost.descripcionPost = objPostBE.descripcionPost;
-                objPost.precioPost      = Convert.ToDecimal(objPostBE.precioPost);
-                objPost.imagenPost      = objPostBE.imagenPost;
+                objPost.idUsuario       = idUsuario;
+                objPost.idSubcategoria  = idSubcategoria;
+                objPost.idDistrito      = Convert.ToByte(idDistrito);
+                objPost.tituloPost      = tituloPost;
+                objPost.descripcionPost = descripcionPost;
                 Chambix.tb_Post.Add(objPost);
                 Chambix.SaveChanges();
                 return true;

@@ -19,7 +19,7 @@
             <div class="col d-none d-sm-none d-md-block d-lg-block d-xl-block"></div>
             <div class="col-xs-12 col-sm-10 post_body_content">
                 <div class="form">
-                    <form>
+                    <form action="/Post/CrearPost" method="post">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-6">
@@ -32,7 +32,7 @@
                                     <div class="form-group">
                                         <strong>Descripción</strong>
                                         <!--<textarea class="form-control" name="descripcionPost" id="login-descripcion"></textarea>-->
-                                        @Html.TextArea("editor", new { rows = 20, style = "width: 100%;",name="tiny", @class = "form-control tinymce" })
+                                        @Html.TextArea("editor", new { rows = 20, style = "width: 100%;" ,name="edi", @class = "form-control tinymce" })
                                     </div>
                                 </div>
                             </div>
@@ -40,22 +40,14 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="form-group">
-                                        <strong>Descripción</strong>
-                                        <select class="form-select">
-                                            <option value="">Seleccionar Categoría</option>
-                                            <option value="">TODO: Categoría</option>
-                                            <!-- TODO Loop de categorías -->
-                                        </select>
+                                        <strong>Categoria</strong>                                                                        
+                                    @Html.DropDownList("cboSubCategoria", (IEnumerable<SelectListItem>)ViewBag.ListarSubCategorias, htmlAttributes: new { @class = "form-select" })                                
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="form-group">
                                         <strong>Distrito</strong>
-                                        <select class="form-select">
-                                            <option value="">Seleccionar Distrito</option>
-                                            <option value="">TODO: Distrito</option>
-                                            <!-- TODO Loop de distritos -->
-                                        </select>
+                                        @Html.DropDownList("cboDistrito", (IEnumerable<SelectListItem>)ViewBag.ListarDistritos, htmlAttributes: new { @class = "form-select" })
                                     </div>
                                 </div>
                             </div>

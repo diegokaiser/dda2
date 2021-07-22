@@ -11,6 +11,11 @@ using WEB_Chambix.ServicioPost;
 using WEB_Chambix.ServicioCategoria;
 using WEB_Chambix.ServicioTestimonio;
 using WEB_Chambix.ServicioServicio;
+using WEB_Chambix.ServicioSubCategoria;
+using WEB_Chambix.ServicioDistrito;
+
+
+
 
 
 using System.Globalization;
@@ -21,9 +26,12 @@ namespace WEB_Chambix.Controllers
     public class PostController : Controller
     {
         ServicioPostClient post = new ServicioPostClient();
-        ServicioCategoriaClient categoria= new ServicioCategoriaClient();
+        ServicioCategoriaClient categoria = new ServicioCategoriaClient();
         ServicioTestimonioClient testimonio = new ServicioTestimonioClient();
         ServicioServicioClient servicio = new ServicioServicioClient();
+        ServicioSubCategoriaClient subCategoria = new ServicioSubCategoriaClient();
+        ServicioDistritoClient distrito = new ServicioDistritoClient();
+
 
         // GET: Post
         public ActionResult Index(FormCollection fc)
@@ -46,7 +54,8 @@ namespace WEB_Chambix.Controllers
             if (condicion.Equals("Por Categoria"))
             {
                 ViewBag.ListarPosts = post.GetAllPostsPorCategoria(Int16.Parse(criterioCategoria));
-            } else
+            }
+            else
             {
                 ViewBag.ListarPosts = post.GetAllPosts();
             }
@@ -79,11 +88,30 @@ namespace WEB_Chambix.Controllers
             ViewBag.SesionNombre = Session["SesionNombre"];
             return View();
         }
-        public ActionResult Crear()
+        public ActionResult Crear(FormCollection fc)
         {
+            ViewData["cboSubCategoria"] = LlenarSubCategorias();
+            ViewData["cboDistrito"] = LlenarDistritos();
+
+
             return View();
         }
-
+        public ActionResult LlenarSubCategorias()
+        {
+            List<SelectListItem> items = new SelectList(subCategoria.GetAllSubCategoria(),
+                "idSubcategoria", "nombreSubcategoria").ToList();
+            items.Insert(0, (new SelectListItem { Text = "Seleccione Categoria", Value = "0" }));
+            ViewBag.ListarSubCategorias = items;
+            return View();
+        }
+        public ActionResult LlenarDistritos()
+        {
+            List<SelectListItem> items = new SelectList(distrito.GetAllDistritos(),
+                "idDistrito", "nombreDistrito").ToList();
+            items.Insert(0, (new SelectListItem { Text = "Seleccione distrito", Value = "0" }));
+            ViewBag.ListarDistritos = items;
+            return View();
+        }
         public ActionResult SetComentario()
         {
             Int16 idUsuario = Convert.ToInt16(Session["Usuarioid"]);
@@ -92,7 +120,7 @@ namespace WEB_Chambix.Controllers
             String descripcionTestimonio = Request.Form["comentario"].ToString();
 
             testimonio.InsertTestimonio(idUsuario, idPost, tituloTestimonio, descripcionTestimonio);
-            return RedirectToAction("Interna/"+ idPost);
+            return RedirectToAction("Interna/" + idPost);
         }
 
         public ActionResult AceptarServicio()
@@ -106,13 +134,27 @@ namespace WEB_Chambix.Controllers
             }
             return RedirectToAction("Interna/" + postId);
         }
-        
+
 
         public ActionResult Filtros()
         {
             String palabra = Convert.ToString(Request.Form["buscar"]);
             ViewData["cboCategorias"] = LlenarCategorias();
             ViewBag.ListarPosts = post.GetPostLike(palabra);
+            return View();
+        }
+        [ValidateInput(false)]
+        public ActionResult CrearPost(FormCollection fc)
+        {
+            Int16 usuario = Convert.ToInt16(Session["Usuarioid"]);
+            String titulo = Convert.ToString(Request.Form["tituloPost"]);
+            String descripcion = fc["editor"];
+            Int16 distrito = Convert.ToInt16(fc["cboDistrito"]);
+            String descripcion2 = Convert.ToString(Request.Form["edi"]);
+            var plainText = HtmlUtilities.ConvertToPlainText(string html);
+            Int16 subCategoria = Convert.ToInt16(fc["cboSubCategoria"]);
+
+            post.InsertPost(usuario, subCategoria, distrito, titulo, descripcion2);
             return View();
         }
     }

@@ -12,7 +12,8 @@ namespace WCF_Chambix
     public interface IServicioPost
     {
         [OperationContract]
-        Boolean InsertPost(PostBE objPostBE);
+        Boolean InsertPost(Int16 idUsuario, Int16 idSubcategoria, Int16 idDistrito, String tituloPost, String descripcionPost);
+
 
         [OperationContract]
         Boolean UpdatePost(PostBE objPostBE);

@@ -71,6 +71,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ServicioSubCategoria.svc" />
     <Content Include="ServicioCategoria.svc" />
     <Content Include="ServicioDistrito.svc" />
     <Content Include="ServicioPost.svc" />

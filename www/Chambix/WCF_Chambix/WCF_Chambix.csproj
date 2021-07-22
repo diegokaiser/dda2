@@ -63,6 +63,7 @@
     <Compile Include="IServicioPost.cs" />
     <Compile Include="IServicioReplica.cs" />
     <Compile Include="IServicioServicio.cs" />
+    <Compile Include="IServicioSubCategoria.cs" />
     <Compile Include="IServicioTestimonio.cs" />
     <Compile Include="IServicioUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="ServicioPost.cs" />
     <Compile Include="ServicioReplica.cs" />
     <Compile Include="ServicioServicio.cs" />
+    <Compile Include="ServicioSubCategoria.cs" />
     <Compile Include="ServicioTestimonio.cs" />
     <Compile Include="ServicioUsuario.cs" />
     <Compile Include="SistemaServicios.Context.cs">

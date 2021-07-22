@@ -351,10 +351,10 @@ namespace WEB_Chambix.ServicioPost {
     public interface IServicioPost {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/InsertPost", ReplyAction="http://tempuri.org/IServicioPost/InsertPostResponse")]
-        bool InsertPost(WEB_Chambix.ServicioPost.PostBE objPostBE);
+        bool InsertPost(short idUsuario, short idSubcategoria, short idDistrito, string tituloPost, string descripcionPost);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/InsertPost", ReplyAction="http://tempuri.org/IServicioPost/InsertPostResponse")]
-        System.Threading.Tasks.Task<bool> InsertPostAsync(WEB_Chambix.ServicioPost.PostBE objPostBE);
+        System.Threading.Tasks.Task<bool> InsertPostAsync(short idUsuario, short idSubcategoria, short idDistrito, string tituloPost, string descripcionPost);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPost/UpdatePost", ReplyAction="http://tempuri.org/IServicioPost/UpdatePostResponse")]
         bool UpdatePost(WEB_Chambix.ServicioPost.PostBE objPostBE);
@@ -450,12 +450,12 @@ namespace WEB_Chambix.ServicioPost {
                 base(binding, remoteAddress) {
         }
         
-        public bool InsertPost(WEB_Chambix.ServicioPost.PostBE objPostBE) {
-            return base.Channel.InsertPost(objPostBE);
+        public bool InsertPost(short idUsuario, short idSubcategoria, short idDistrito, string tituloPost, string descripcionPost) {
+            return base.Channel.InsertPost(idUsuario, idSubcategoria, idDistrito, tituloPost, descripcionPost);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertPostAsync(WEB_Chambix.ServicioPost.PostBE objPostBE) {
-            return base.Channel.InsertPostAsync(objPostBE);
+        public System.Threading.Tasks.Task<bool> InsertPostAsync(short idUsuario, short idSubcategoria, short idDistrito, string tituloPost, string descripcionPost) {
+            return base.Channel.InsertPostAsync(idUsuario, idSubcategoria, idDistrito, tituloPost, descripcionPost);
         }
         
         public bool UpdatePost(WEB_Chambix.ServicioPost.PostBE objPostBE) {
