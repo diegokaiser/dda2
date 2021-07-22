@@ -81,8 +81,8 @@ namespace WEB_Chambix.Controllers
         public ActionResult LlenarDistritos()
         {
             List<SelectListItem> items = new SelectList(distrito.GetAllDistritos(),
-                "idDistrito", "nombreDistrito").ToList();
-            items.Insert(0, (new SelectListItem { Text = "Seleccione distrito", Value =" 0" }));
+                "idDistrito", "nombreDistrito", Session["IdDistrito"].ToString()).ToList();         
+            items.Insert(0, (new SelectListItem { Text = "Seleccione distrito", Value = "0"}));
             ViewBag.ListarDistritos = items;
             return View();
         }

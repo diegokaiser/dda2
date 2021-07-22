@@ -58,6 +58,7 @@ namespace WEB_Chambix.Controllers
                         Session["Usuarioid"] = oUser.idUsuario;
                         Session["SesionNombre"] = oUser.nombreUsuario;
                         Session["IdDistrito"] = oUser.idDistrito;
+                        Session["NombreDistrito"] = oUser.tb_Distrito.nombreDistrito;
 
 
                         return Content("1");
