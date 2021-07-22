@@ -66,7 +66,7 @@
 
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="submit" class="btn btn-primary" value="Publicar">
+                                    <input type="submit" class="btn btn-primary" id="btnPublicar" value="Publicar">
                                 </div>
                                 <div class="col-6">
                                 </div>
@@ -91,32 +91,5 @@
 </section>
 
 @section scripts {
-    @* configuración de tiny mce *@
-    <script type="text/javascript" src="~/Scripts/tinymce/jquery.tinymce.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/tinymce/tinymce.min.js"></script>
-
-    <script type="text/javascript" src="~/Scripts/tinymce/plugins/image/plugin.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/tinymce/plugins/link/plugin.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/tinymce/plugins/code/plugin.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/tinymce/plugins/colorpicker/plugin.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/tinymce/plugins/textcolor/plugin.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/tinymce/plugins/emoticons/plugin.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/tinymce/plugins/imagetools/plugin.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/tinymce/plugins/codesample/plugin.min.js"></script>
-
-    <script type="text/javascript" src="~/Scripts/tinymce/themes/silver/theme.min.js"></script>
-
-    <script>
-        tinymce.init({
-            selector: ".tinymce",
-            language: 'es',
-            mode: "none",
-            theme: "silver",
-            plugins: "codesample image imagetools emoticons table link code colorpicker textcolor preview searchreplace paste fullscreen noneditable nonbreaking wordcount",
-            browser_spellcheck: true,
-            relative_urls: false,
-            toolbar: "codesample blockquote formatselect fontselect fontsizeselect bold italic underline forecolor backcolor advlist image imagetools link code colorpicker textcolor preview fullscreen noneditable nonbreaking wordcount emoticons",
-            content_css: '/Content/tinymce.css'
-        });
-    </script>
+    <script type="text/javascript" src="~/Scripts/chambix/chambix_post.js"></script>
 }

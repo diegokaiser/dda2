@@ -11,4 +11,47 @@
             $('#cboCategorias').prop('disabled', 'disabled');
         }
     });
+
+    var titulo = $('#post-titulo');
+    var descripcion = $('#descripcion');
+    var cboSubCategoria = $('#cboSubCategoria');
+    var cboDistrito = $('#cboDistrito');
+    var btn = $('#btnPublicar');
+
+    btn.prop('disabled', true);
+
+    titulo.on("change", function () {
+        if (titulo.val() > 0 || titulo.val() != "") {
+            descripcion.on("change", function () {
+                if (descripcion.val() > 0 || descripcion.val() != "") {
+                    cboSubCategoria.on("change", function () {
+                        if (cboSubCategoria.val() != "0") {
+                            cboDistrito.on("change", function () {
+                                if (cboDistrito.val() != "0") {
+                                    btn.prop('disabled', false);
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+        }
+    })
+
+
+    var tituloComentario = $('#tituloComentario');
+    var comentario = $('#comentario');
+    var btnComentar = $('#btnComentar');
+
+    btnComentar.prop('disabled', true);
+
+    tituloComentario.on("change", function () {
+        if (tituloComentario.val() > 0 || tituloComentario.val() != "") {
+            comentario.on("change", function () {
+                if (comentario.val() > 0 || comentario.val() != "") {
+                    btnComentar.prop('disabled', false);
+                }
+            })
+        }
+    })
 });

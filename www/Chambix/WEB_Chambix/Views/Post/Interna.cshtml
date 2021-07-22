@@ -11,7 +11,7 @@
                 <h3 class="post_title">@ViewBag.ObjetoPost.tituloPost</h3>
                 <div class="post_author">
                     <em>— por  @ViewBag.ObjetoPost.NombreUsuario  @ViewBag.ObjetoPost.ApellidoUsuario</em>
- 
+
 
                     <div class="post_rating">
                         <div class="post_rating_value">
@@ -19,13 +19,14 @@
                                 {
                                     if (i <= @ViewBag.ObjetoPost.valoracionPost)
                                     {
-                                    <span class="active"></span>
+                                        <span class="active"></span>
                                     }
-                                    else{ 
-                                         <span></span>
+                                    else
+                                    {
+                                        <span></span>
                                     }
                                 }
-                                }
+                            }
                             <!-- TODO: Loop de acuerdo al valor del valor de rankUsuario -->
                         </div>
                     </div>
@@ -56,9 +57,9 @@
                             <div class="container mt-2">
                                 <div class="row">
                                     <div class="col-6">
-                                        <input class="mb-4 form-control" type="text" name="titulo" placeholder="Titulo" id="titulo" value="" required />
+                                        <input class="mb-4 form-control" type="text" name="titulo" placeholder="Titulo" id="tituloComentario" value="" required />
                                         <input type="hidden" name="idPost" id="idPost" value=@ViewBag.ObjetoPost.idPost />
-                                        <input class="btn btn-secondary mb-2" type="submit" name="enviar" value="Comentar" />
+                                        <input class="btn btn-secondary mb-2" type="submit" name="enviar" id="btnComentar" value="Comentar" />
 
                                     </div>
                                     <div class="col-6">
@@ -72,10 +73,10 @@
                         </form>
 
                         @*<p>TODO: Contenido del comentario</p>
-            <p><em>— Por + TODO: Nombre de usuario</em></p>*@
+                            <p><em>— Por + TODO: Nombre de usuario</em></p>*@
                         @*<div class="post_comments_r">
-                            <p>TODO: Contenido de la replica del comentario</p>
-                        </div>*@
+                                <p>TODO: Contenido de la replica del comentario</p>
+                            </div>*@
                     </div>
                     @foreach (var comentario in ViewBag.ListaComentarios)
                     {
@@ -135,3 +136,7 @@
         </div>
     </div>
 </section>
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/chambix/chambix_post.js"></script>
+}
