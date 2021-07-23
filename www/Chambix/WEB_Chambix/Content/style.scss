@@ -1809,6 +1809,18 @@ header {
                         }
                     }
                 }
+
+                &.customers {
+                    color: #3d4549;
+                    .container {
+                        padding: 0;
+                    }
+
+                    h2,
+                    .fw-bold {
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                }
             }
 
             &_card {

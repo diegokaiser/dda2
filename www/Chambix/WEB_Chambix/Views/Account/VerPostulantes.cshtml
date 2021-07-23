@@ -38,7 +38,7 @@
                 <!-- TODO loop de los post publicados por este usuario -->                
                 @foreach (var user in ViewBag.UsuariosP)
                 {
-                    <div class="accounts_body_posts_post">
+                    <div class="accounts_body_posts_post customers">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
@@ -52,7 +52,13 @@
                                         <span class="fw-bold">Correo:</span>  <span>@user.emailUsuario</span>
                                     </p>
                                     <p>
-                                        <span class="fw-bold">Whatsapp:</span>  <span>@user.wspUsuario</span>
+                                        <span class="fw-bold">Whatsapp:</span>
+                                        @{ 
+                                            var a = 51 + user.wspUsuario;
+                                            var b = "?texto=Buenas%20tardes!%20Vi%20tu%20solicitud%20en%20Chambix,%20coordinemos!";
+                                            var ab = a + b;
+                                        }
+                                        <a href="https://wa.me/@ab">@user.wspUsuario</a>
                                     </p>
                                     <p>
                                         <span class="fw-bold">Ocupación:</span>  <span>@user.ocupacionUsuario</span>

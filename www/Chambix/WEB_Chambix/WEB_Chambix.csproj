@@ -340,6 +340,12 @@
     </Content>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\appstore.png" />
+    <Content Include="Content\Images\dark-pattern.svg" />
+    <Content Include="Content\Images\header_footer_sprite.png" />
+    <Content Include="Content\Images\mobile_app_icon_angi.png" />
+    <Content Include="Content\Images\playstore.png" />
+    <Content Include="Content\Images\stars_angi.svg" />
     <Content Include="Content\style.css">
       <DependentUpon>style.scss</DependentUpon>
     </Content>
@@ -511,10 +517,17 @@
     <Content Include="Connected Services\ServicioUsuario\WEB_Chambix.ServicioUsuario.UserBE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Content\Images\fixed-price-9-10-2020.webp" />
+    <Content Include="Content\Images\home-unsplash.webp" />
+    <Content Include="Content\Images\mobile_app_gaq_angi.webp" />
+    <Content Include="Content\Images\mobile_app_icon_angi.webp" />
+    <Content Include="Content\Images\stars_angi.webp" />
     <None Include="Properties\PublishProfiles\WEBChambixPagina - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\WEBChambixPaginaOficial - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\chambix\chambix_account.js" />
     <Content Include="Scripts\chambix\chambix_init.js" />
+    <Content Include="Scripts\chambix\chambix_login.js" />
     <Content Include="Scripts\chambix\chambix_post.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -706,10 +719,10 @@
     <Content Include="Views\Account\Estadisticas.cshtml" />
     <Content Include="Views\Account\Postulaciones.cshtml" />
     <Content Include="Views\Account\VerPostulantes.cshtml" />
+    <Content Include="Views\Account\Servicios.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

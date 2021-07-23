@@ -1254,6 +1254,14 @@ header {
             .accounts_body_form_post .btn-outline-primary:hover, .accounts_body_posts_post .btn-outline-primary:hover {
               background-color: #3f6eed;
               color: white; }
+        .accounts_body_form_post.customers, .accounts_body_posts_post.customers {
+          color: #3d4549; }
+          .accounts_body_form_post.customers .container, .accounts_body_posts_post.customers .container {
+            padding: 0; }
+          .accounts_body_form_post.customers h2,
+          .accounts_body_form_post.customers .fw-bold, .accounts_body_posts_post.customers h2,
+          .accounts_body_posts_post.customers .fw-bold {
+            font-family: 'Montserrat', sans-serif; }
       .accounts_body_form_card, .accounts_body_posts_card {
         align-items: center;
         background-color: #edeff6;
