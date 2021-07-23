@@ -26,7 +26,7 @@
                                         <!--<input type="text" class="form-control" name="nombreUsuario" id="login-nombre">-->
                                         @*@Html.EditorFor(model => model.nombreUsuario, new { htmlAttributes = new { @class = "form-control" } })
                                             @Html.ValidationMessageFor(model => model.nombreUsuario, "", new { @class = "text-danger" })*@
-                                        <input class="form-control" type="text" name="nombre" placeholder="Nombre" id="nombre" value="" required />
+                                        <input class="form-control" type="text" name="nombre" placeholder="Nombre" id="nombre" value="" required autocomplete="off" />
 
                                     </div>
                                 </div>
@@ -36,7 +36,7 @@
                                         <!--<input type="text" class="form-control" name="apellidoUsuario" id="login-apellido">-->
                                         @*@Html.EditorFor(model => model.apellidoUsuario, new { htmlAttributes = new { @class = "form-control" } })
                                             @Html.ValidationMessageFor(model => model.apellidoUsuario, "", new { @class = "text-danger" })*@
-                                        <input class="form-control" type="text" name="apellido" placeholder="Apellido" id="apellido" value="" required />
+                                        <input class="form-control" type="text" name="apellido" placeholder="Apellido" id="apellido" value="" required autocomplete="off" />
 
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
                                         <!--<input type="email" class="form-control" name="emailUsuario" id="login-email">-->
                                         @*@Html.EditorFor(model => model.emailUsuario, new { htmlAttributes = new { @class = "form-control" } })
                                             @Html.ValidationMessageFor(model => model.emailUsuario, "", new { @class = "text-danger" })*@
-                                        <input class="form-control" type="email" name="correo" placeholder="Correo" id="corrreo" value="" required />
+                                        <input class="form-control" type="email" name="correo" placeholder="Correo" id="corrreo" value="" required autocomplete="off" />
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-md-6">
@@ -133,7 +133,7 @@
                                         <strong>Ocupación</strong>
                                         @*@Html.EditorFor(model => model.ocupacionUsuario, new { htmlAttributes = new { @class = "form-control" } })
                                             @Html.ValidationMessageFor(model => model.ocupacionUsuario, "", new { @class = "text-danger" })*@
-                                        <input class="form-control" type="text" name="ocupacion" placeholder="Ocupación" id="ocupacion" value="" required />
+                                        <input class="form-control" type="text" name="ocupacion" placeholder="Ocupación" id="ocupacion" value="" required autocomplete="off" />
                                     </div>
                                 </div>
                             </div>
