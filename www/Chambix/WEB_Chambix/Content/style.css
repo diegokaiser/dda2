@@ -1357,3 +1357,42 @@ header {
     opacity: 1;
     top: 28px !important;
     visibility: visible; }
+
+.modal-content {
+  border: 0; }
+
+.modal-header h5 {
+  color: #3d4549;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center; }
+
+.modal-body p {
+  color: #2e2e2e;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px; }
+
+.modal-footer .btn {
+  border-radius: 42px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 21px; }
+  .modal-footer .btn-secondary {
+    background-color: white;
+    border: 2px solid #3f6eed;
+    color: #3f6eed;
+    transition: .35s ease; }
+    .modal-footer .btn-secondary:hover {
+      background-color: #3f6eed;
+      color: white; }
+  .modal-footer .btn-primary {
+    background-color: #ef4624;
+    border: 2px solid #ef4624;
+    margin-right: 21px;
+    transition: .35s ease; }
+    .modal-footer .btn-primary:hover {
+      background-color: white;
+      color: #ef4624; }
